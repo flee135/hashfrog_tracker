@@ -1,0 +1,146 @@
+{
+  "id": "c0ef7c95d6f347f597ac5c5ad8f31dda",
+  "layoutConfig": {
+    "name": "HashFrog MM",
+    "backgroundColor": "#000000",
+    "width": 290,
+    "height": 440,
+    "fontFamily": null,
+    "fontSize": null,
+    "fontColor": null
+  },
+  "components": [
+    {
+      "id": "bf04a860d41645829c4100c26df6b9e3",
+      "type": "table",
+      "position": [
+        140,
+        5
+      ],
+      "columns": 6,
+      "padding": "3px",
+      "elements": [
+        "MaskPostmanHat",
+        "MaskAllNight",
+        "MaskBlast",
+        "MaskStone",
+        "MaskGreatFairy",
+        "MaskDeku",
+        "MaskKeaton",
+        "MaskBremen",
+        "MaskBunnyHood",
+        "MaskDonGero",
+        "MaskScents",
+        "MaskGoron",
+        "MaskRomani",
+        "MaskCircusLeader",
+        "MaskKafei",
+        "MaskCouple",
+        "MaskTruth",
+        "MaskZora",
+        "MaskKamaro",
+        "MaskGibdo",
+        "MaskGaro",
+        "MaskCaptainHat",
+        "MaskGiant",
+        "MaskFierceDeity"
+      ],
+      "elementsSize": [
+        25,
+        25
+      ],
+      "displayName": "Masks",
+      "elementId": "efe7e58b6c4143a7acfa733531a2e38a"
+    },
+    {
+      "id": "40a85f51e64341d5acbbe2161c89d0dd",
+      "type": "table",
+      "position": [
+        280,
+        5
+      ],
+      "columns": 9,
+      "padding": "3px",
+      "elements": [
+        "SongOath",
+        "SongSonata",
+        "SongLullaby",
+        "SongNewWaveBossaNova",
+        "SongElegy",
+        "SongTime",
+        "SongHealing",
+        "SongEpona",
+        "SongStorms"
+      ],
+      "elementsSize": [
+        25,
+        25
+      ],
+      "displayName": "Songs",
+      "elementId": "efe7e58b6c4143a7acfa733531a2e38a"
+    },
+    {
+      "id": "4007550913404fceb7e350a67d6c5a5c",
+      "type": "table",
+      "position": [
+        35,
+        210
+      ],
+      "columns": 2,
+      "padding": "3px",
+      "elements": [
+        "RemainsGoht",
+        "RemainsGyorg",
+        "RemainsOdolwa",
+        "RemainsTwinmold"
+      ],
+      "elementsSize": [
+        25,
+        25
+      ],
+      "displayName": "Boss Remains",
+      "elementId": "efe7e58b6c4143a7acfa733531a2e38a"
+    },
+    {
+      "id": "317aab066e5c4e72b6c8860101e00089",
+      "type": "table",
+      "displayName": "Items",
+      "position": [
+        5,
+        5
+      ],
+      "columns": 6,
+      "padding": "3px",
+      "elements": [
+        "ItemBow",
+        "ItemFireArrow",
+        "ItemIceArrow",
+        "ItemLightArrow",
+        "ItemBombBag",
+        "ItemPowderKeg",
+        "ItemLens",
+        "ItemHookshot",
+        "UpgradeMirrorShield",
+        "FairyMagic",
+        "ItemBottle",
+        "UpgradeAdultWallet",
+        "ItemPictobox",
+        "TradeItemKafeiLetter",
+        "TradeItemPendant",
+        "TradeItemMamaLetter",
+        "TradeItemMoonTear",
+        "TradeItemRoomKey",
+        "TradeItemLandDeed",
+        "TradeItemSwampDeed",
+        "TradeItemMountainDeed",
+        "TradeItemOceanDeed"
+      ],
+      "elementsSize": [
+        25,
+        25
+      ],
+      "hidden": false,
+      "elementId": "a081121b16f84366bf16e16ca90cd23f"
+    }
+  ]
+}
