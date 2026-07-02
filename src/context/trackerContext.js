@@ -1,7 +1,7 @@
 import _ from "lodash";
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useRef } from "react";
 
-import { getActiveGame } from "../games";
+import { gameKey, getActiveGame } from "../games";
 import { validateLocations as evaluateLocations } from "../utils/validate-locations";
 
 const GENERATOR_VERSION = process.env.REACT_APP_GENERATOR_VERSION;
@@ -37,7 +37,7 @@ function validateLocations(locations, parsedItems, skipRegions = new Set()) {
  */
 function getSettingsStringCache() {
   // Return empty string if no cached value
-  return localStorage.getItem("settings_string") || "";
+  return localStorage.getItem(gameKey("settings_string")) || "";
 }
 
 /**
@@ -45,7 +45,7 @@ function getSettingsStringCache() {
  * @param {string} string - The settings string to cache.
  */
 function setSettingsStringCache(string) {
-  localStorage.setItem("settings_string", string);
+  localStorage.setItem(gameKey("settings_string"), string);
 }
 
 /**
@@ -53,7 +53,7 @@ function setSettingsStringCache(string) {
  * @returns {string} The cached version, or the default from env.
  */
 function getGeneratorVersionCache() {
-  let version = localStorage.getItem("generator_version");
+  let version = localStorage.getItem(gameKey("generator_version"));
   if (!version) {
     // Coming from .env and using it as default
     version = GENERATOR_VERSION;
@@ -66,10 +66,10 @@ function getGeneratorVersionCache() {
  * @param {string} version - The generator version string.
  */
 function setGeneratorVersionCache(version) {
-  localStorage.setItem("generator_version", version);
+  localStorage.setItem(gameKey("generator_version"), version);
 }
 
-// localStorage key for a persisted tracker session (single slot).
+// Base localStorage key for a persisted tracker session (single slot per game).
 const SESSION_KEY = "tracker_session";
 
 /**
@@ -90,7 +90,7 @@ function buildSnapshot(state) {
     // Whether this was a check-tracking session, so Resume opens the right route/size.
     checksEnabled: !_.isEmpty(state.locations),
     // The layout active at save time, used to detect layout changes before resuming.
-    layout: localStorage.getItem("layout"),
+    layout: localStorage.getItem(gameKey("layout")),
     // Game-specific settings that live in the logic singletons, not in reducer state.
     ...getActiveGame().serializeSettings(),
     settings_string: state.settings_string,
@@ -112,7 +112,7 @@ function buildSnapshot(state) {
  */
 function saveSession(state) {
   try {
-    localStorage.setItem(SESSION_KEY, JSON.stringify(buildSnapshot(state)));
+    localStorage.setItem(gameKey(SESSION_KEY), JSON.stringify(buildSnapshot(state)));
   } catch (err) {
     console.warn("Failed to save tracker session:", err);
   }
@@ -124,7 +124,7 @@ function saveSession(state) {
  */
 function loadSession() {
   try {
-    const raw = localStorage.getItem(SESSION_KEY);
+    const raw = localStorage.getItem(gameKey(SESSION_KEY));
     if (!raw) { return null; }
     const snapshot = JSON.parse(raw);
     if (!snapshot || typeof snapshot !== "object") { return null; }

@@ -10,10 +10,9 @@ import InputGroup from "react-bootstrap/InputGroup";
 import LayoutSelector from "../components/LayoutSelector";
 import { useLayout } from "../context/layoutContext";
 import { loadSession, useSettingsString } from "../context/trackerContext";
-import { getActiveGame } from "../games";
+import { gameKey, gameUrl, getActiveGame } from "../games";
 import useDebounce from "../hooks/useDebounce";
 
-const baseURL = process.env.PUBLIC_URL;
 const GENERATOR_VERSION = process.env.REACT_APP_GENERATOR_VERSION;
 
 const PRESETS = getActiveGame().data.settingPresets;
@@ -82,14 +81,14 @@ const TrackerLauncher = () => {
   }, [debouncedVersion, setGeneratorVersionCache]);
 
   const launchTracker = useCallback(() => {
-    let url = `${baseURL}/tracker`;
-    if (checks) { url = `${baseURL}/tracker/checks`; }
+    let url = gameUrl("/tracker");
+    if (checks) { url = gameUrl("/tracker/checks"); }
 
     // Launch with exactly what the launcher currently displays, in case a
     // prior resumeSession overwrote the cached config in localStorage.
-    localStorage.setItem("layout", JSON.stringify(layout));
-    localStorage.setItem("settings_string", checks ? settingsString : "");
-    localStorage.setItem("generator_version", generatorVersion);
+    localStorage.setItem(gameKey("layout"), JSON.stringify(layout));
+    localStorage.setItem(gameKey("settings_string"), checks ? settingsString : "");
+    localStorage.setItem(gameKey("generator_version"), generatorVersion);
 
     const { width, height } = layoutSize;
 
@@ -116,12 +115,12 @@ const TrackerLauncher = () => {
     if (!session) { return; }
 
     // Force the resumed window to reproduce the saved session's config.
-    localStorage.setItem("layout", session.layout);
-    localStorage.setItem("settings_string", session.settings_string);
-    localStorage.setItem("generator_version", session.generator_version);
+    localStorage.setItem(gameKey("layout"), session.layout);
+    localStorage.setItem(gameKey("settings_string"), session.settings_string);
+    localStorage.setItem(gameKey("generator_version"), session.generator_version);
 
     const resumeChecks = !!session.checksEnabled;
-    let url = resumeChecks ? `${baseURL}/tracker/checks` : `${baseURL}/tracker`;
+    let url = resumeChecks ? gameUrl("/tracker/checks") : gameUrl("/tracker");
     url += "?resume=1";
 
     const {

@@ -1,13 +1,13 @@
 import { createContext, useContext, useReducer } from "react";
 
-import { getActiveGame } from "../games";
+import { gameKey, getActiveGame } from "../games";
 
 /**
  * Retrieves the layout from localStorage or returns the active game's default.
  * @returns {object} The initial layout object.
  */
 function getInitialLayout() {
-  const layout = localStorage.getItem("layout");
+  const layout = localStorage.getItem(gameKey("layout"));
   return layout ? JSON.parse(layout) : { ...getActiveGame().data.layouts.default };
 }
 
@@ -17,10 +17,9 @@ function getInitialLayout() {
  */
 function setLayoutCache(layout) {
   const layoutString = JSON.stringify(layout);
-  localStorage.setItem("layout", layoutString);
+  localStorage.setItem(gameKey("layout"), layoutString);
 }
 
-const initialState = getInitialLayout();
 const LayoutContext = createContext();
 
 /**
@@ -51,7 +50,7 @@ function reducer(_state, action) {
  * @returns {object} The context provider.
  */
 function LayoutProvider(props) {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, undefined, getInitialLayout);
 
   return <LayoutContext.Provider value={{ state, dispatch }} {...props} />;
 }

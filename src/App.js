@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import Editor from "./scenes/Editor/Editor";
 import Layout from "./scenes/Layout";
@@ -11,6 +12,14 @@ import Welcome from "./scenes/Welcome";
  * @returns {object} The rendered routes.
  */
 function App() {
+  const location = useLocation();
+
+  // Only the launcher (each game's landing) scrolls; tracker/editor windows are
+  // fixed-size. useLocation is basename-relative, so both "/" and "/mm" land here.
+  useEffect(() => {
+    document.body.style.overflow = location.pathname === "/" ? "auto" : "hidden";
+  }, [location.pathname]);
+
   return (
     <div className="App">
       <Routes>

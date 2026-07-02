@@ -13,6 +13,7 @@ import * as tracker from "./tracker";
 const ootAdapter = {
   id: "oot",
   displayName: "Ocarina of Time Randomizer",
+  basePath: "",
   defaultItems: DEFAULT_ITEMS,
 
   data: {

@@ -2,12 +2,18 @@ import Accordion from "react-bootstrap/Accordion";
 import Badge from "react-bootstrap/Badge";
 import Card from "react-bootstrap/Card";
 import Footer from "../components/Footer";
+import { getActiveGame, listGames } from "../games";
 import TrackerLauncher from "./TrackerLauncher";
 
 import profile_tanjo3 from "../assets/contributors/tanjo3.jpg";
 import profile_wafo from "../assets/contributors/wafo.png";
 
+const PUBLIC_URL = process.env.PUBLIC_URL || "";
+
 const Welcome = () => {
+  const activeGameId = getActiveGame().id;
+  const games = listGames();
+
   return (
     <div className="container py-5">
       {/* Header */}
@@ -15,9 +21,22 @@ const Welcome = () => {
         <h1 className="display-4 fw-bold mb-2">
           HashFrog Tracker
         </h1>
-        <p className="lead text-secondary mb-0">
-          A customizable tracker for Ocarina of Time Randomizer
+        <p className="lead text-secondary mb-3">
+          A customizable tracker for {getActiveGame().displayName}
         </p>
+        {games.length > 1 && (
+          <div className="btn-group" role="group" aria-label="Select game">
+            {games.map(game => (
+              <a
+                key={game.id}
+                href={`${PUBLIC_URL}${game.basePath || "/"}`}
+                className={`btn btn-sm ${game.id === activeGameId ? "btn-info" : "btn-outline-info"}`}
+              >
+                {game.displayName}
+              </a>
+            ))}
+          </div>
+        )}
       </header>
 
       <div className="row g-4">

@@ -1,3 +1,7 @@
+// Must run before the rest of the app's module graph: resolves the active game
+// from the URL and migrates legacy storage.
+import "./bootstrap-game";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom/client";
 
@@ -9,13 +13,14 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { LayoutProvider } from "./context/layoutContext";
 import { TrackerProvider } from "./context/trackerContext";
+import { gameBasename } from "./games";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   /* <React.StrictMode>*/
   <LayoutProvider>
     <TrackerProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={gameBasename()}>
         <App />
       </BrowserRouter>
     </TrackerProvider>
