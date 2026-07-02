@@ -1,100 +1,34 @@
 import _ from "lodash";
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useRef } from "react";
 
-import COMBO_ITEMS from "../data/combo-items.json";
-import COUNTER_TO_ITEM from "../data/counter-to-item.json";
-import DEFAULT_ITEMS from "../data/default-items.json";
-import DUNGEONS from "../data/dungeons.json";
-import ITEMS_JSON from "../data/items.json";
-import UUID_TO_ITEM from "../data/uuid-to-item.json";
-import { getEFKSkipRegions, getSelectedEFKDungeons, isEFK, isEFKLabel } from "../utils/efk";
-import Locations from "../utils/locations";
-import LogicHelper from "../utils/logic-helper";
-import SettingsHelper from "../utils/settings-helper";
+import { getActiveGame } from "../games";
+import { validateLocations as evaluateLocations } from "../utils/validate-locations";
 
 const GENERATOR_VERSION = process.env.REACT_APP_GENERATOR_VERSION;
-
-const COMBO_DERIVATIONS = COMBO_ITEMS;
 
 const TrackerContext = createContext();
 
 /**
  * Converts UUID-based item lists and counters into a logic-compatible items object.
+ * Delegates to the active game's item parser.
  * @param {object} items_list - Map of element IDs to item UUIDs.
  * @param {object} counters - Map of counter names to their values.
  * @param {Array} unchanged_starting_inventory - Starting inventory UUIDs.
  * @returns {object} Parsed items keyed by logic item name.
  */
 function parseItems(items_list, counters, unchanged_starting_inventory) {
-  const items = _.cloneDeep(DEFAULT_ITEMS);
-  const tradeRevert = !SettingsHelper.getSetting("adult_trade_shuffle") && !SettingsHelper.getRenamedAttribute("disable_trade_revert");
-
-  _.forEach(_.union(_.values(items_list), unchanged_starting_inventory), uuid => {
-    const mapping = UUID_TO_ITEM[uuid];
-
-    if (!mapping) {
-      console.warn(`Did not set unknown item: ${uuid}`);
-      return;
-    }
-
-    // Skip ignored items
-    if (mapping.ignore) {
-      return;
-    }
-
-    // Handle multi-items (combo items like tunics_both, boots_both)
-    if (mapping.items) {
-      mapping.items.forEach(itemConfig => {
-        items[itemConfig.item] = itemConfig.value ?? 1;
-      });
-      return;
-    }
-
-    // Handle single item
-    const value = mapping.value ?? 1;
-    items[mapping.item] = Math.max(items[mapping.item] || 0, value);
-
-    // Handle trade revert special cases
-    if (tradeRevert && mapping.tradeRevert) {
-      items[mapping.tradeRevert] = 1;
-    }
-  });
-
-  // Parse counters using mapping
-  _.forEach(counters, (value, counter) => {
-    const itemName = COUNTER_TO_ITEM[counter];
-
-    if (itemName) {
-      items[itemName] = value;
-    } else {
-      console.warn(`Did not set unknown counter with value ${value}: ${counter}`);
-    }
-  });
-
-  return items;
+  return getActiveGame().parseItems(items_list, counters, unchanged_starting_inventory);
 }
 
 /**
- * Revalidates location availability based on current items.
+ * Revalidates location availability based on current items using the active game's evaluator.
  * @param {object} locations - Map of region names to location data.
  * @param {object} parsedItems - Parsed items from parseItems.
  * @param {Set<string>} [skipRegions] - Lobby region names to exclude from traversal.
  * @returns {object} Cloned locations with updated isAvailable flags.
  */
 function validateLocations(locations, parsedItems, skipRegions = new Set()) {
-  const clonedLocations = _.cloneDeep(locations);
-
-  if (!_.isEmpty(clonedLocations)) {
-    LogicHelper.updateItems(parsedItems, skipRegions);
-
-    _.forEach(_.values(clonedLocations), regionLocations => {
-      _.forEach(regionLocations, (locationData, locationName) => {
-        _.set(locationData, "isAvailable", LogicHelper.isLocationAvailable(locationName));
-      });
-    });
-  }
-
-  return clonedLocations;
+  return evaluateLocations(locations, parsedItems, getActiveGame().evaluator, skipRegions);
 }
 
 /**
@@ -157,9 +91,8 @@ function buildSnapshot(state) {
     checksEnabled: !_.isEmpty(state.locations),
     // The layout active at save time, used to detect layout changes before resuming.
     layout: localStorage.getItem("layout"),
-    // MQ/shortcut toggles live in the settings singletons, not in reducer state.
-    mq_dungeons_specific: SettingsHelper.settings?.mq_dungeons_specific || [],
-    dungeon_shortcuts: SettingsHelper.settings?.dungeon_shortcuts || [],
+    // Game-specific settings that live in the logic singletons, not in reducer state.
+    ...getActiveGame().serializeSettings(),
     settings_string: state.settings_string,
     generator_version: state.generator_version,
     items_list: state.items_list,
@@ -221,7 +154,7 @@ function reducer(state, action) {
         _.set(locations, regionName, {});
       } else {
         _.set(locations, [regionName, locationName], {
-          isAvailable: LogicHelper.isLocationAvailable(locationName),
+          isAvailable: getActiveGame().evaluator.isLocationAvailable(locationName),
           isChecked: false,
         });
       }
@@ -254,75 +187,6 @@ function reducer(state, action) {
         return newState;
       }
     }
-    case "MQ_TOGGLE": {
-      // payload = regionName
-
-      // Update MQ dungeons setting in both LogicHelper and SettingsHelper
-      const dungeonsMQ = LogicHelper.settings["mq_dungeons_specific"];
-      let newDungeonsMQ;
-      if (!_.includes(dungeonsMQ, payload)) {
-        newDungeonsMQ = _.union(dungeonsMQ, [payload]);
-      } else {
-        newDungeonsMQ = _.filter(dungeonsMQ, dungeon => dungeon !== payload);
-      }
-      _.set(LogicHelper.settings, "mq_dungeons_specific", newDungeonsMQ);
-      SettingsHelper.settings["mq_dungeons_specific"] = newDungeonsMQ;
-      SettingsHelper.invalidateCachedSets();
-
-      // Modify toggled dungeon to use MQ/non-MQ locations
-      const locations = _.cloneDeep(state.locations);
-      const locationKey = _.includes(LogicHelper.settings.mq_dungeons_specific, payload) ? "dungeon_mq" : "dungeon";
-      _.set(locations, payload, {});
-      _.forEach(Locations.locations[locationKey][payload], (locationData, locationName) => {
-        if (Locations.isProgressLocation(locationData)) {
-          _.set(locations, [payload, locationName], {
-            isAvailable: LogicHelper.isLocationAvailable(locationName),
-            isChecked: false,
-          });
-        }
-      });
-
-      // Validating checks based on items collected
-      const validatedLocations = validateLocations(
-        locations,
-        parseItems(state.items_list, state.counters, state.unchanged_starting_inventory),
-      );
-
-      const newState = {
-        ...state,
-        locations: validatedLocations,
-      };
-      saveSession(newState);
-      return newState;
-    }
-    case "SHORTCUT_TOGGLE": {
-      // payload = regionName
-
-      // Update dungeon shortcuts setting in both LogicHelper and SettingsHelper
-      const shortcuts = LogicHelper.settings.dungeon_shortcuts;
-      let newShortcuts;
-      if (!_.includes(shortcuts, payload)) {
-        newShortcuts = _.union(shortcuts, [payload]);
-      } else {
-        newShortcuts = _.filter(shortcuts, dungeon => dungeon !== payload);
-      }
-      _.set(LogicHelper.settings, "dungeon_shortcuts", newShortcuts);
-      SettingsHelper.settings["dungeon_shortcuts"] = newShortcuts;
-      SettingsHelper.invalidateCachedSets();
-
-      // Revalidate checks based on items collected
-      const validatedLocations = validateLocations(
-        state.locations,
-        parseItems(state.items_list, state.counters, state.unchanged_starting_inventory),
-      );
-
-      const newState = {
-        ...state,
-        locations: validatedLocations,
-      };
-      saveSession(newState);
-      return newState;
-    }
     case "REGION_TOGGLE": {
       // payload = regionName
 
@@ -343,35 +207,8 @@ function reducer(state, action) {
     }
     case "ITEMS_UPDATE_FROM_LOGIC": {
       const settings = payload;
-      const items = [...settings.starting_equipment, ...settings.starting_inventory, ...settings.starting_songs];
 
-      const starting_inventory = items.map(item => {
-        return ITEMS_JSON[item];
-      });
-
-      if (settings.start_with_consumables) {
-        starting_inventory.push("34b2ad3657e94b75b281cec30e617f37");
-        starting_inventory.push("73a0f3f5688745a8bb4a0973d9858960");
-      }
-      if (settings.open_door_of_time && settings.open_forest !== "closed") {
-        starting_inventory.push("c50e8543ab0c4bdaa8a23e6a80ae6d1c");
-      }
-      if (!settings.shuffle_individual_ocarina_notes) {
-        starting_inventory.push("6466793887f9475685558adbae2a4b3e");
-        starting_inventory.push("5598cc877c91426ab4ec083fccb7c22b");
-        starting_inventory.push("506b5e53591b430cbf45855088bfae1b");
-        starting_inventory.push("9ffc29578f514202a80fa5278a3bd281");
-        starting_inventory.push("2d85db579f3c4be49bf48d4853d112e7");
-      }
-
-      // Derive combo UUIDs when all component items are present to
-      // allow combo elements to display the combined state
-      COMBO_DERIVATIONS.forEach(({ components, combo }) => {
-        const hasAllComponents = components.every(uuid => starting_inventory.includes(uuid));
-        if (hasAllComponents && !starting_inventory.includes(combo)) {
-          starting_inventory.push(combo);
-        }
-      });
+      const starting_inventory = getActiveGame().deriveStartingInventory(settings);
 
       // `starting_inventory` will be properly set through `useElement` hook
       const items_list = {};
@@ -406,7 +243,7 @@ function reducer(state, action) {
       // Skip expensive location validation if items didn't actually change
       const locations = _.isEqual(parsedItems, state.items)
         ? state.locations
-        : validateLocations(state.locations, parsedItems, getEFKSkipRegions(state.settings_string, state.labelSelections));
+        : validateLocations(state.locations, parsedItems, getActiveGame().getSkipRegions(state.settings_string, state.labelSelections));
 
       const newState = {
         ...state,
@@ -433,7 +270,7 @@ function reducer(state, action) {
       // Skip expensive location validation if items didn't actually change
       const locations = _.isEqual(parsedItems, state.items)
         ? state.locations
-        : validateLocations(state.locations, parsedItems, getEFKSkipRegions(state.settings_string, state.labelSelections));
+        : validateLocations(state.locations, parsedItems, getActiveGame().getSkipRegions(state.settings_string, state.labelSelections));
 
       const newState = {
         ...state,
@@ -463,12 +300,12 @@ function reducer(state, action) {
       const newLabelSelections = { ...state.labelSelections, [elementId]: { name, value } };
 
       let newState = { ...state, labelSelections: newLabelSelections };
-      if (isEFKLabel(name) && isEFK(state.settings_string)) {
+      if (getActiveGame().shouldRevalidateOnLabel(name, state.settings_string)) {
         // Accessible dungeons changed; revalidate locations against the updated skip regions.
         const locations = validateLocations(
           state.locations,
           state.items,
-          getEFKSkipRegions(state.settings_string, newLabelSelections),
+          getActiveGame().getSkipRegions(state.settings_string, newLabelSelections),
         );
         newState = { ...newState, locations };
       }
@@ -555,29 +392,12 @@ function reducer(state, action) {
       const starting_item_claims = snapshot.starting_item_claims || {};
       const unchanged_starting_inventory = snapshot.unchanged_starting_inventory || [];
 
-      if (snapshot.mq_dungeons_specific) {
-        _.set(LogicHelper.settings, "mq_dungeons_specific", snapshot.mq_dungeons_specific);
-        SettingsHelper.settings["mq_dungeons_specific"] = snapshot.mq_dungeons_specific;
-      }
-      if (snapshot.dungeon_shortcuts) {
-        _.set(LogicHelper.settings, "dungeon_shortcuts", snapshot.dungeon_shortcuts);
-        SettingsHelper.settings["dungeon_shortcuts"] = snapshot.dungeon_shortcuts;
-      }
-      SettingsHelper.invalidateCachedSets();
+      getActiveGame().restoreSettings(snapshot);
 
       const locations = _.cloneDeep(state.locations);
 
-      // Rebuild each dungeon's location list to match the restored MQ setting.
-      _.forEach(_.keys(locations), regionName => {
-        if (!_.includes(DUNGEONS, regionName)) { return; }
-        const locationKey = SettingsHelper.isMQDungeon(regionName) ? "dungeon_mq" : "dungeon";
-        _.set(locations, regionName, {});
-        _.forEach(Locations.locations[locationKey][regionName], (locationData, locationName) => {
-          if (Locations.isProgressLocation(locationData)) {
-            _.set(locations, [regionName, locationName], { isAvailable: false, isChecked: false });
-          }
-        });
-      });
+      // Rebuild game-specific region location lists to match the restored settings.
+      getActiveGame().rebuildRestoredRegions(locations);
 
       _.forEach(snapshot.checkedLocations || {}, (locationNames, regionName) => {
         if (!locations[regionName]) { return; }
@@ -589,7 +409,7 @@ function reducer(state, action) {
       });
 
       const settingsString = snapshot.settings_string || state.settings_string;
-      const skipRegions = isEFK(settingsString) ? getEFKSkipRegions(settingsString, labelSelections) : new Set();
+      const skipRegions = getActiveGame().getSkipRegions(settingsString, labelSelections);
 
       const parsedItems = parseItems(items_list, counters, unchanged_starting_inventory);
       const validatedLocations = validateLocations(locations, parsedItems, skipRegions);
@@ -607,8 +427,16 @@ function reducer(state, action) {
         unchanged_starting_inventory,
       };
     }
-    default:
+    default: {
+      // Game-specific actions (e.g. OoT MQ/shortcut toggles) live on the active adapter.
+      const handler = getActiveGame().extraActions?.[action.type];
+      if (handler) {
+        const newState = { ...state, ...handler(state, payload) };
+        saveSession(newState);
+        return newState;
+      }
       throw new Error();
+    }
   }
 }
 
@@ -620,7 +448,7 @@ function reducer(state, action) {
 function TrackerProvider(props) {
   const initialState = {
     locations: {},
-    items: _.cloneDeep(DEFAULT_ITEMS),
+    items: _.cloneDeep(getActiveGame().defaultItems),
     counters: {},
     starting_inventory: [],
     unchanged_starting_inventory: [],
@@ -819,7 +647,7 @@ const useIconCache = () => {
 
 const useSelectedEFKDungeons = () => {
   const { state: { labelSelections } } = useTracker();
-  return useMemo(() => getSelectedEFKDungeons(labelSelections), [labelSelections]);
+  return useMemo(() => getActiveGame().getSelectedDungeons(labelSelections), [labelSelections]);
 };
 
 const useSettingsString = () => {

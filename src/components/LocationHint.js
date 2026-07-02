@@ -1,8 +1,10 @@
 import { Fragment, useMemo, useState } from "react";
 
-import labelsJSON from "../data/labels.json";
+import { getActiveGame } from "../games";
 import CustomReactSelect from "./CustomReactSelect";
 import Element from "./Element";
+
+const labelsJSON = getActiveGame().data.labels;
 
 const LocationHint = props => {
   const {

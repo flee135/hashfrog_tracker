@@ -1,10 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import Element from "../../components/Element";
+import { iconBaseUrl } from "../../games";
 import { duplicate, generateId, isBase64, splitNameBase64 } from "../../utils/utils";
 import EditorElement from "./EditorElement";
-
-const baseURL = process.env.PUBLIC_URL;
 
 const EditorElementsList = ({ elements, setLayout }) => {
   const [element, setElement] = useState(null);
@@ -60,7 +59,7 @@ const EditorElementsList = ({ elements, setLayout }) => {
       if (isBase64(icon)) {
         return splitNameBase64(icon).file;
       }
-      return `${baseURL}/icons/${icon}`;
+      return `${iconBaseUrl()}/${icon}`;
     });
   }, [element?.icons]);
 

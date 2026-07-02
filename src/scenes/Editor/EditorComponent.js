@@ -1,7 +1,9 @@
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 
-import labelsJSON from "../../data/labels.json";
+import { getActiveGame } from "../../games";
 import { generateId } from "../../utils/utils";
+
+const labelsJSON = getActiveGame().data.labels;
 
 const toNumber = [
   "coordX",

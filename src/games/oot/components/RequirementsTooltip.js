@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-import { getRequirementsStructure, updateRequirementsOwnership } from "../utils/expression-converter";
+import { getRequirementsStructure, updateRequirementsOwnership } from "../logic/expression-converter";
 
 const RequirementsTooltip = ({ locationName, items }) => {
   // Compute the requirements once based on starting items only

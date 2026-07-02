@@ -10,15 +10,15 @@ import InputGroup from "react-bootstrap/InputGroup";
 import LayoutSelector from "../components/LayoutSelector";
 import { useLayout } from "../context/layoutContext";
 import { loadSession, useSettingsString } from "../context/trackerContext";
-import SettingStringsJSON from "../data/setting-strings.json";
+import { getActiveGame } from "../games";
 import useDebounce from "../hooks/useDebounce";
 
 const baseURL = process.env.PUBLIC_URL;
 const GENERATOR_VERSION = process.env.REACT_APP_GENERATOR_VERSION;
 
-const PRESETS = SettingStringsJSON.presets || [];
-const CURRENT_ACTIVE_VERSION = SettingStringsJSON.currentActiveVersion || "9.0.0";
-const GENERATOR_VERSIONS = SettingStringsJSON.supportedVersions || ["9.0.0"];
+const PRESETS = getActiveGame().data.settingPresets;
+const CURRENT_ACTIVE_VERSION = getActiveGame().data.currentActiveVersion;
+const GENERATOR_VERSIONS = getActiveGame().data.supportedVersions;
 
 const TrackerLauncher = () => {
   const [checks, setChecks] = useState(false);

@@ -1,17 +1,14 @@
-import { useCallback, useState } from "react";
+import { Fragment, useCallback, useState } from "react";
 
 import { Link } from "react-router-dom";
 import { useLayout } from "../context/layoutContext";
+import { getActiveGame } from "../games";
 import { readFileAsText } from "../utils/utils";
-
-// Layouts
-import hashfrogJSON from "../layouts/hashfrog.json";
-import linsoJSON from "../layouts/linso.json";
-import escapefromkakJSON from "../layouts/escapefromkak.json";
 
 const LayoutSelector = () => {
   const [key, setKey] = useState(Math.random());
   const { state: layout, dispatch } = useLayout();
+  const presets = getActiveGame().data.layouts.presets;
 
   const handleInputChange = useCallback(
     async event => {
@@ -36,22 +33,7 @@ const LayoutSelector = () => {
   }, [dispatch]);
 
   const applyPreset = useCallback(
-    selected => {
-      let selectedLayout = null;
-      switch (selected) {
-        case "hashfrog":
-          selectedLayout = hashfrogJSON;
-          break;
-        case "linso":
-          selectedLayout = linsoJSON;
-          break;
-        case "escapefromkak":
-          selectedLayout = escapefromkakJSON;
-          break;
-        default:
-          selectedLayout = hashfrogJSON;
-          break;
-      }
+    selectedLayout => {
       dispatch({ type: "LAYOUT_UPDATE", payload: selectedLayout });
       setKey(Math.random());
     },
@@ -85,23 +67,16 @@ const LayoutSelector = () => {
 
       <h5>Layout Presets</h5>
       <ul className="list-unstyled list-horizontal">
-        <li>
-          <button type="button" className="btn btn-link btm-sm p-0" onClick={() => applyPreset("hashfrog")}>
-            HashFrog
-          </button>
-        </li>
-        <li className="list-divider">|</li>
-        <li>
-          <button type="button" className="btn btn-link btm-sm p-0" onClick={() => applyPreset("linso")}>
-            LinSo Like
-          </button>
-        </li>
-        <li className="list-divider">|</li>
-        <li>
-          <button type="button" className="btn btn-link btm-sm p-0" onClick={() => applyPreset("escapefromkak")}>
-            EscapeFromKak
-          </button>
-        </li>
+        {presets.map((preset, index) => (
+          <Fragment key={preset.key}>
+            {index > 0 && <li className="list-divider">|</li>}
+            <li>
+              <button type="button" className="btn btn-link btm-sm p-0" onClick={() => applyPreset(preset.layout)}>
+                {preset.label}
+              </button>
+            </li>
+          </Fragment>
+        ))}
       </ul>
     </div>
   );

@@ -1,8 +1,10 @@
 import { Fragment, useCallback, useState } from "react";
 
-import iconsJSON from "../../data/icons.json";
-import labelsJSON from "../../data/labels.json";
+import { getActiveGame } from "../../games";
 import { splitNameBase64 } from "../../utils/utils";
+
+const iconsJSON = getActiveGame().data.icons;
+const labelsJSON = getActiveGame().data.labels;
 
 const toNumber = [
   "size_width",

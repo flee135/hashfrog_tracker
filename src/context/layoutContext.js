@@ -1,14 +1,14 @@
 import { createContext, useContext, useReducer } from "react";
 
-import defaultLayout from "../layouts/hashfrog.json";
+import { getActiveGame } from "../games";
 
 /**
- * Retrieves the layout from localStorage or returns the default.
+ * Retrieves the layout from localStorage or returns the active game's default.
  * @returns {object} The initial layout object.
  */
 function getInitialLayout() {
   const layout = localStorage.getItem("layout");
-  return layout ? JSON.parse(layout) : { ...defaultLayout };
+  return layout ? JSON.parse(layout) : { ...getActiveGame().data.layouts.default };
 }
 
 /**
@@ -36,6 +36,7 @@ function reducer(_state, action) {
       return { ...action.payload };
     }
     case "LAYOUT_DEFAULT": {
+      const defaultLayout = getActiveGame().data.layouts.default;
       setLayoutCache(defaultLayout);
       return { ...defaultLayout };
     }

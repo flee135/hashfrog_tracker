@@ -2,8 +2,8 @@ import _ from "lodash";
 
 import frog from "../assets/icons/hashfrogsping.gif";
 import { useSessionRestore, useTracker } from "../context/trackerContext";
+import Checks from "../games/oot/scenes/Checks";
 import useLogicInitialization from "../hooks/useLogicInitialization";
-import Checks from "./Checks";
 import Layout from "./Layout";
 
 const TrackerChecks = () => {

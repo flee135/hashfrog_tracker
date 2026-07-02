@@ -3,16 +3,16 @@ import { useEffect, useMemo, useState } from "react";
 import { OverlayTrigger, Popover } from "react-bootstrap";
 
 import RequirementsTooltip from "../components/RequirementsTooltip";
-import { useLayout } from "../context/layoutContext";
-import { useChecks, useLocation, useSelectedEFKDungeons, useSettingsString } from "../context/trackerContext";
+import { useLayout } from "../../../context/layoutContext";
+import { useChecks, useLocation, useSelectedEFKDungeons, useSettingsString } from "../../../context/trackerContext";
 import DUNGEON_CONFIG from "../data/dungeon-config.json";
 import DUNGEONS from "../data/dungeons.json";
 import HINT_REGIONS_SHORT_NAMES from "../data/hint-regions-short-names.json";
-import { getRequirementsStructure } from "../utils/expression-converter";
-import { isEFK, isEFKRelevantRegion } from "../utils/efk";
-import Locations from "../utils/locations";
-import LogicHelper from "../utils/logic-helper";
-import SettingsHelper from "../utils/settings-helper";
+import { getRequirementsStructure } from "../logic/expression-converter";
+import { isEFK, isEFKRelevantRegion } from "../logic/efk";
+import Locations from "../logic/locations";
+import LogicHelper from "../logic/logic-helper";
+import SettingsHelper from "../logic/settings-helper";
 
 const DUNGEON_SHORTCUTS = DUNGEON_CONFIG.dungeonShortcuts;
 

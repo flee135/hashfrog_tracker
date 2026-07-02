@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-import elementsJSON from "../../data/elements.json";
+import { getActiveGame } from "../../games";
 import { duplicate, generateId } from "../../utils/utils";
 import EditorComponent from "./EditorComponent";
+
+const elementsJSON = getActiveGame().data.elements;
 
 const EditorComponentsList = ({ components, setLayout, customElements }) => {
   const [component, setComponent] = useState(null);

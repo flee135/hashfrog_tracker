@@ -1,9 +1,11 @@
 import FileSaver from "file-saver";
 import { useCallback, useMemo, useState } from "react";
 import { useLayout } from "../../context/layoutContext";
+import { getActiveGame } from "../../games";
 import useDebounce from "../../hooks/useDebounce";
-import baseLayout from "../../layouts/base.json";
 import { generateId, readFileAsText } from "../../utils/utils";
+
+const baseLayout = getActiveGame().data.layouts.base;
 import Layout from "../Layout";
 import EditorComponentsList from "./EditorComponentsList";
 import EditorElementsList from "./EditorElementsList";

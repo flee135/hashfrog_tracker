@@ -13,11 +13,11 @@ import SometimesHint from "../components/SometimesHint";
 // Data
 import HintsTable from "../components/HintsTable";
 import Label from "../components/Label";
-import elementsJSON from "../data/elements.json";
+import { getActiveGame, iconBaseUrl } from "../games";
 import LayoutID from "../utils/layout-id";
 import { isBase64, splitNameBase64 } from "../utils/utils";
 
-const baseURL = process.env.PUBLIC_URL;
+const elementsJSON = getActiveGame().data.elements;
 
 const Layout = props => {
   const { state: layoutContext } = useLayout();
@@ -56,7 +56,7 @@ const Layout = props => {
             resolve({ icon: name, image: file });
           });
         }
-        return fetch(`${baseURL}/icons/${icon}`)
+        return fetch(`${iconBaseUrl()}/${icon}`)
           .then(response => response.blob())
           .then(image => ({
             icon,
