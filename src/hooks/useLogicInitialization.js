@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-import { getGeneratorVersionCache, getSettingsStringCache, useItems } from "../context/trackerContext";
+import { getGeneratorVersionCache, getSettingsStringCache, getStartingItemsCache, useItems } from "../context/trackerContext";
 import { getActiveGame } from "../games";
 
 const useLogicInitialization = (options = {}) => {
@@ -19,9 +19,10 @@ const useLogicInitialization = (options = {}) => {
 
       const version = getGeneratorVersionCache();
       const settingsString = getSettingsStringCache();
+      const startingItemsString = getStartingItemsCache();
 
       // Load + initialize the active game's logic, resolving settings.
-      const settings = await getActiveGame().initializeLogic({ version, settingsString });
+      const settings = await getActiveGame().initializeLogic({ version, settingsString, startingItemsString });
 
       updateItemsFromLogic(settings); // Starting items.
       setIsInitialized(true);

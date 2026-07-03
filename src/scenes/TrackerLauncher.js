@@ -9,7 +9,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import LayoutSelector from "../components/LayoutSelector";
 import { useLayout } from "../context/layoutContext";
-import { loadSession, useSettingsString } from "../context/trackerContext";
+import { getStartingItemsCache, loadSession, setStartingItemsCache, useSettingsString } from "../context/trackerContext";
 import { gameKey, gameUrl, getActiveGame } from "../games";
 import { joinChecksStrings, splitChecksStrings } from "../games/checks-string";
 import useDebounce from "../hooks/useDebounce";
@@ -24,6 +24,9 @@ const GENERATOR_VERSIONS = getActiveGame().data.supportedVersions;
 // (MM) pack their values into that one slot (see games/checks-string.js).
 const CHECKS_STRING_FIELDS = getActiveGame().data.checksStringFields;
 const CHECKS_NOTES = getActiveGame().data.checksNotes || [];
+// Optional always-visible field (MM only): the seed's starting-items string,
+// decoded to pre-mark starting items whether or not check tracking is enabled.
+const STARTING_ITEMS_FIELD = getActiveGame().data.startingItemsField;
 
 const TrackerLauncher = () => {
   const [checks, setChecks] = useState(false);
@@ -68,6 +71,13 @@ const TrackerLauncher = () => {
     setSettingsStringCache(checks ? debouncedString : "");
   }, [checks, debouncedString, setSettingsStringCache]);
 
+  // Starting-items string persists regardless of the checks toggle.
+  const [startingItemsString, setStartingItemsString] = useState(getStartingItemsCache);
+  const debouncedStartingItems = useDebounce(startingItemsString, 300);
+  useEffect(() => {
+    setStartingItemsCache(debouncedStartingItems);
+  }, [debouncedStartingItems]);
+
   const [generatorVersion, setGeneratorVersion] = useState(
     () => cachedGeneratorVersion || CURRENT_ACTIVE_VERSION
   );
@@ -98,6 +108,7 @@ const TrackerLauncher = () => {
     // prior resumeSession overwrote the cached config in localStorage.
     localStorage.setItem(gameKey("layout"), JSON.stringify(layout));
     localStorage.setItem(gameKey("settings_string"), checks ? settingsString : "");
+    localStorage.setItem(gameKey("starting_items"), startingItemsString);
     localStorage.setItem(gameKey("generator_version"), generatorVersion);
 
     const { width, height } = layoutSize;
@@ -107,7 +118,7 @@ const TrackerLauncher = () => {
       "HashFrog Tracker",
       `toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=0,width=${width},height=${height}`
     );
-  }, [checks, layout, settingsString, generatorVersion, layoutSize]);
+  }, [checks, layout, settingsString, startingItemsString, generatorVersion, layoutSize]);
 
   // Track whether a saved session exists so the Resume button reacts when one
   // is created in a popup window; refresh on focus when returning to the launcher.
@@ -127,6 +138,7 @@ const TrackerLauncher = () => {
     // Force the resumed window to reproduce the saved session's config.
     localStorage.setItem(gameKey("layout"), session.layout);
     localStorage.setItem(gameKey("settings_string"), session.settings_string);
+    localStorage.setItem(gameKey("starting_items"), session.starting_items || "");
     localStorage.setItem(gameKey("generator_version"), session.generator_version);
 
     const resumeChecks = !!session.checksEnabled;
@@ -202,6 +214,24 @@ const TrackerLauncher = () => {
               ↻ Resume Session
             </Button>
           </div>
+
+          {STARTING_ITEMS_FIELD && (
+            <div className="mb-3">
+              <Form.Label htmlFor="starting_items" className="text-secondary">
+                {STARTING_ITEMS_FIELD.label}
+              </Form.Label>
+              <InputGroup size="sm">
+                <Form.Control
+                  type="text"
+                  id="starting_items"
+                  name="starting_items"
+                  placeholder={STARTING_ITEMS_FIELD.placeholder}
+                  value={startingItemsString}
+                  onChange={({ target: { value } }) => setStartingItemsString(value)}
+                />
+              </InputGroup>
+            </div>
+          )}
 
           <Form.Check
             type="switch"

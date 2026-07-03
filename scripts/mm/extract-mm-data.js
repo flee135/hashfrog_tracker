@@ -24,6 +24,11 @@
 //     evaluator possession-gates these: referenced as a requirement they count
 //     only when held, never via their vanilla location's reachability. Nodes
 //     absent here (Area* access, macros, settings) still propagate transitively.
+//   - src/games/mm/data/starting-item-ids.json : ordered [id] of ItemUtils
+//     .CustomStartingItems() -- every Item member (enum-declaration order) carrying
+//     a StartingItem / StartingTingleMap / StartingItemId attribute, minus items
+//     whose ItemName contains "Heart". This is the bit-index basis for decoding the
+//     generator's CustomStartingItemListString (see logic/checks.js decoder).
 //
 // A node with neither RequiredItems nor ConditionalItems is a leaf/input: the
 // evaluator holds it only if it is seeded (held item, casual starting item, or
@@ -41,6 +46,7 @@ const OUT_FILE = path.join(DATA_DIR, "logic-casual.json");
 const LOCATIONS_FILE = path.join(DATA_DIR, "locations.json");
 const ALL_LOCATIONS_FILE = path.join(DATA_DIR, "all-locations.json");
 const SHUFFLED_ITEMS_FILE = path.join(DATA_DIR, "shuffled-item-ids.json");
+const STARTING_ITEMS_FILE = path.join(DATA_DIR, "starting-item-ids.json");
 
 // LocationCategories that are not player-trackable checks.
 const EXCLUDED_CATEGORIES = new Set(["StartingItems", "Fake"]);
@@ -70,9 +76,13 @@ function loadItemMembers() {
       members.push({
         id: match[1],
         locationName: (blob.match(/LocationName\("([^"]*)"/) || [])[1] || null,
+        itemName: (blob.match(/ItemName\("([^"]*)"/) || [])[1] || null,
         regionRef: (blob.match(/Region\((?:Region\.)?(\w+)\)/) || [])[1] || null,
         category: (blob.match(/ItemPool\([^)]*LocationCategory\.(\w+)/) || [])[1] || null,
         itemCategory: (blob.match(/ItemPool\(ItemCategory\.(\w+)/) || [])[1] || null,
+        // ItemUtils.StartingItems(): any StartingItem / StartingTingleMap /
+        // StartingItemId attribute. "StartingItem" here also prefixes "StartingItemId".
+        startable: /\[Starting(Item|TingleMap)/.test(blob),
       });
       attrs = [];
     } else if (line && !line.startsWith("//")) {
@@ -139,6 +149,16 @@ function buildShuffledItemIds(members, logicIds) {
     .filter(member => member.itemCategory && logicIds.has(member.id))
     .map(member => member.id)
     .sort();
+}
+
+// ItemUtils.CustomStartingItems() = StartingItems() minus items whose name
+// contains "Heart", in enum-declaration order. Unlike shuffled-item-ids this is
+// NOT filtered by logic membership: the generator's CustomStartingItemListString
+// indexes bits into this exact ordered list (see logic/checks.js decoder).
+function buildStartingItemIds(members) {
+  return members
+    .filter(member => member.startable && !(member.itemName || "").includes("Heart"))
+    .map(member => member.id);
 }
 
 // Strips "fake requirements" — dependencies baked into the base logic that
@@ -218,6 +238,10 @@ function main() {
   const shuffledItemIds = buildShuffledItemIds(members, ids);
   fs.writeFileSync(SHUFFLED_ITEMS_FILE, JSON.stringify(shuffledItemIds, null, 2) + "\n");
   console.log(`Wrote ${shuffledItemIds.length} shuffled item ids to ${path.relative(process.cwd(), SHUFFLED_ITEMS_FILE)}`);
+
+  const startingItemIds = buildStartingItemIds(members);
+  fs.writeFileSync(STARTING_ITEMS_FILE, JSON.stringify(startingItemIds, null, 2) + "\n");
+  console.log(`Wrote ${startingItemIds.length} starting item ids to ${path.relative(process.cwd(), STARTING_ITEMS_FILE)}`);
 }
 
 main();

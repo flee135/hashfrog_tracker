@@ -49,6 +49,24 @@ function setSettingsStringCache(string) {
 }
 
 /**
+ * Retrieves the cached extra-starting-items string from localStorage. This slot
+ * is independent of check tracking: MM pre-marks these items whether or not
+ * checks are enabled.
+ * @returns {string} The cached starting-items string, or empty string.
+ */
+function getStartingItemsCache() {
+  return localStorage.getItem(gameKey("starting_items")) || "";
+}
+
+/**
+ * Persists the extra-starting-items string to localStorage.
+ * @param {string} string - The starting-items string to cache.
+ */
+function setStartingItemsCache(string) {
+  localStorage.setItem(gameKey("starting_items"), string);
+}
+
+/**
  * Retrieves the cached generator version from localStorage.
  * @returns {string} The cached version, or the default from env.
  */
@@ -94,6 +112,9 @@ function buildSnapshot(state) {
     // Game-specific settings that live in the logic singletons, not in reducer state.
     ...getActiveGame().serializeSettings(),
     settings_string: state.settings_string,
+    // Persisted independently of reducer state; resume writes it back to the cache
+    // so re-derivation of pre-owned starting items stays consistent.
+    starting_items: getStartingItemsCache(),
     generator_version: state.generator_version,
     items_list: state.items_list,
     counters: state.counters,
@@ -691,7 +712,7 @@ const useSessionRestore = isReady => {
 };
 
 export {
-  getGeneratorVersionCache, getSettingsStringCache, loadSession, TrackerProvider,
+  getGeneratorVersionCache, getSettingsStringCache, getStartingItemsCache, setStartingItemsCache, loadSession, TrackerProvider,
   useChecks, useDraggedIcon, useElement, useHintEntry, useIconCache, useItems, useLabelSelect, useLocation,
   useSelectedEFKDungeons, useSessionRestore, useSettingsString, useTracker
 };

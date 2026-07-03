@@ -40,6 +40,12 @@ const mmAdapter = {
     currentActiveVersion: SETTING_STRINGS.currentActiveVersion || "2.0.0",
     checksStringFields: CHECKS_STRING_FIELDS,
     checksNotes: CHECKS_NOTES,
+    // Always-visible launcher input (independent of check tracking): the seed's
+    // CustomStartingItemListString, decoded to pre-mark starting items as owned.
+    startingItemsField: {
+      label: "Starting Items String",
+      placeholder: "Paste starting items string here",
+    },
   },
 
   ChecksScene: Checks,
