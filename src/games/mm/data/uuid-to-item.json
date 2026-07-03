@@ -159,7 +159,14 @@
     "item": "UpgradeGiantWallet"
   },
   "92e48794a0a94b59a4235ff3820b2f63": {
-    "item": "ItemBottleWitch"
+    "items": [
+      "ItemBottleWitch",
+      "ItemBottleAliens",
+      "ItemBottleGoronRace",
+      "ItemBottleBeavers",
+      "ItemBottleDampe",
+      "ItemBottleMadameAroma"
+    ]
   },
   "69625b3f25fd4a3a83dd3532da067d8f": {
     "item": "TradeItemKafeiLetter"

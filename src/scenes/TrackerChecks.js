@@ -2,9 +2,11 @@ import _ from "lodash";
 
 import frog from "../assets/icons/hashfrogsping.gif";
 import { useSessionRestore, useTracker } from "../context/trackerContext";
-import Checks from "../games/oot/scenes/Checks";
+import { getActiveGame } from "../games";
 import useLogicInitialization from "../hooks/useLogicInitialization";
 import Layout from "./Layout";
+
+const Checks = getActiveGame().ChecksScene;
 
 const TrackerChecks = () => {
   const { isLoading } = useLogicInitialization();

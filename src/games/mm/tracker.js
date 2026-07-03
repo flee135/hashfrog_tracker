@@ -3,13 +3,11 @@ import _ from "lodash";
 import COUNTER_TO_ITEM from "./data/counter-to-item.json";
 import DEFAULT_ITEMS from "./data/default-items.json";
 import UUID_TO_ITEM from "./data/uuid-to-item.json";
+import MMEvaluator from "./logic/evaluator";
 
-// Phase A stub: item tracking only, no reachability logic yet. Phase B replaces
-// this with the REQ_CASUAL fixpoint evaluator (see mm-logic-format).
-export const evaluator = {
-  updateItems: () => {},
-  isLocationAvailable: () => false,
-};
+// The REQ_CASUAL fixpoint evaluator (see mm-logic-format). Implements the shared
+// engine's { updateItems, isLocationAvailable } contract over the casual graph.
+export const evaluator = MMEvaluator;
 
 /**
  * Converts UUID-based item lists and counters into a logic-compatible items object.
@@ -28,7 +26,12 @@ export function parseItems(items_list, counters, unchanged_starting_inventory) {
       return;
     }
     const value = mapping.value ?? 1;
-    items[mapping.item] = Math.max(items[mapping.item] || 0, value);
+    // A single element can grant several logic ids (e.g. one Bottle toggle maps
+    // to all six bottle container ids).
+    const itemIds = mapping.items ?? [mapping.item];
+    for (const itemId of itemIds) {
+      items[itemId] = Math.max(items[itemId] || 0, value);
+    }
   });
 
   _.forEach(counters, (value, counter) => {
@@ -44,9 +47,10 @@ export function parseItems(items_list, counters, unchanged_starting_inventory) {
 }
 
 /**
- * Derives the starting inventory (as item UUIDs) from resolved settings.
- * Phase A tracks no starting items; Phase B seeds the casual starting set and
- * eventually the extra-starting-items string.
+ * Derives the starting inventory as tracked-element UUIDs to pre-own. The casual
+ * starting set is seeded directly inside the evaluator (untracked ids with no
+ * element), so nothing is pre-owned here yet; the extra-starting-items string
+ * will pre-toggle tracked starting items in a later phase.
  * @returns {Array<string>} Starting inventory item UUIDs.
  */
 export function deriveStartingInventory() {
@@ -54,8 +58,9 @@ export function deriveStartingInventory() {
 }
 
 /**
- * Resolves settings for the tracker. MM has no backend or settings string in
- * Phase A, so this is a no-op returning empty settings.
+ * Resolves settings for the tracker. The casual graph is bundled statically, so
+ * no backend or fetch is needed; settings-string resolution arrives with check
+ * tracking.
  * @returns {Promise<object>} The resolved settings.
  */
 export async function initializeLogic() {

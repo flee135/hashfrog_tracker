@@ -11,6 +11,7 @@ import LayoutSelector from "../components/LayoutSelector";
 import { useLayout } from "../context/layoutContext";
 import { loadSession, useSettingsString } from "../context/trackerContext";
 import { gameKey, gameUrl, getActiveGame } from "../games";
+import { joinChecksStrings, splitChecksStrings } from "../games/checks-string";
 import useDebounce from "../hooks/useDebounce";
 
 const GENERATOR_VERSION = process.env.REACT_APP_GENERATOR_VERSION;
@@ -18,6 +19,11 @@ const GENERATOR_VERSION = process.env.REACT_APP_GENERATOR_VERSION;
 const PRESETS = getActiveGame().data.settingPresets;
 const CURRENT_ACTIVE_VERSION = getActiveGame().data.currentActiveVersion;
 const GENERATOR_VERSIONS = getActiveGame().data.supportedVersions;
+// Which generator string(s) drive check tracking, and the launcher notes. A
+// single-field game (OoT) packs to settings_string unchanged; multi-field games
+// (MM) pack their values into that one slot (see games/checks-string.js).
+const CHECKS_STRING_FIELDS = getActiveGame().data.checksStringFields;
+const CHECKS_NOTES = getActiveGame().data.checksNotes || [];
 
 const TrackerLauncher = () => {
   const [checks, setChecks] = useState(false);
@@ -49,10 +55,14 @@ const TrackerLauncher = () => {
     generator_version: cachedGeneratorVersion,
   } = useSettingsString();
 
-  const [settingsString, setSettingsString] = useState(
-    () => cachedSettingsString || ""
+  const [fieldValues, setFieldValues] = useState(
+    () => splitChecksStrings(cachedSettingsString || "", CHECKS_STRING_FIELDS.length)
   );
+  const settingsString = useMemo(() => joinChecksStrings(fieldValues), [fieldValues]);
   const debouncedString = useDebounce(settingsString, 300);
+
+  const setFieldValue = (index, value) =>
+    setFieldValues(prev => prev.map((current, i) => (i === index ? value : current)));
 
   useEffect(() => {
     setSettingsStringCache(checks ? debouncedString : "");
@@ -138,12 +148,8 @@ const TrackerLauncher = () => {
 
   const updateString = (preset) => {
 
-    if (preset.settingsString) {
-      setSettingsString(preset.settingsString);
-    } else {
-      // This should never happen. if it does, a preset has no settingString.
-      setSettingsString("UNKNOWN_SETTINGS_STRING");
-    }
+    // Presets exist only for single-field games; they populate the first field.
+    setFieldValue(0, preset.settingsString || "UNKNOWN_SETTINGS_STRING");
 
     // Use the mapped generator version. If not, use .env, if not, use the current active hardcoded version. (9.0.0 as of 1/25/2026)
     if (preset.generatorVersion) {
@@ -281,22 +287,24 @@ const TrackerLauncher = () => {
                     </Form.Select>
                   )}
                 </div>
-                <div className="col-8">
-                  <Form.Label htmlFor="setting_string" className="text-secondary">
-                    Settings String
-                  </Form.Label>
-                  <InputGroup size="sm">
-                    <Form.Control
-                      type="text"
-                      id="setting_string"
-                      name="setting_string"
-                      placeholder="Paste settings string here"
-                      value={settingsString}
-                      onChange={({ target: { value } }) =>
-                        setSettingsString(value)
-                      }
-                    />
-                  </InputGroup>
+                <div className="col-8 d-flex flex-column gap-2">
+                  {CHECKS_STRING_FIELDS.map((field, index) => (
+                    <div key={field.key}>
+                      <Form.Label htmlFor={`checks_string_${field.key}`} className="text-secondary">
+                        {field.label}
+                      </Form.Label>
+                      <InputGroup size="sm">
+                        <Form.Control
+                          type="text"
+                          id={`checks_string_${field.key}`}
+                          name={`checks_string_${field.key}`}
+                          placeholder={field.placeholder}
+                          value={fieldValues[index]}
+                          onChange={({ target: { value } }) => setFieldValue(index, value)}
+                        />
+                      </InputGroup>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -356,27 +364,11 @@ const TrackerLauncher = () => {
             * Check tracking requires a compatible layout configuration.
           </p>
           <ul className="small text-secondary mb-0 ps-3">
-            <li className="mb-1">
-              The logic assumes: access to both ages; no shuffled entrances, owl
-              drops, warp song destinations, or spawns; and vanilla (default)
-              ocarina melodies.
-            </li>
-            <li className="mb-1">
-              Closed Forest and Closed Door of Time do not work for the reasons
-              above.
-            </li>
-            <li>
-              The logic assumes that the initial value for a counter is zero.
-              Click the counter to update it if not.
-            </li>
-            <li>
-              Advanced logic is not yet supported.
-            </li>
-            <li>
-              Checks with the same name plus a number prefix are grouped together
-              if they have the same access requirements, with the total number of
-              checks shown in parentheses, e.g. Guard House Child Pot (44).
-            </li>
+            {CHECKS_NOTES.map((note, index) => (
+              <li key={index} className={index < CHECKS_NOTES.length - 1 ? "mb-1" : undefined}>
+                {note}
+              </li>
+            ))}
           </ul>
         </Card.Body>
       </Card>

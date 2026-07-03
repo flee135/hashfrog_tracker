@@ -1,0 +1,6026 @@
+{
+  "BeneathClocktown": [
+    {
+      "id": "ChestPreClocktownDekuNut",
+      "name": "Pre-Clocktown Chest",
+      "category": "GlitchesRequired"
+    }
+  ],
+  "BeneathTheWell": [
+    {
+      "id": "UpgradeMirrorShield",
+      "name": "Mirror Shield Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestWellRightPurpleRupee",
+      "name": "Well Right Path Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestWellLeftPurpleRupee",
+      "name": "Well Left Path Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemWellCowMilk",
+      "name": "Cow Beneath the Well",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableBeneathTheWellBugAndBombRoomPot1",
+      "name": "Well Left Path Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeneathTheWellBugAndBombRoomPot2",
+      "name": "Well Left Path Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeneathTheWellBugAndBombRoomPot3",
+      "name": "Well Left Path Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeneathTheWellBugAndBombRoomPot4",
+      "name": "Well Left Path Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeneathTheWellBugAndBombRoomPot5",
+      "name": "Well Left Path Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableWellFountainFairy1",
+      "name": "Well Fountain Fairy 1",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableWellFountainFairy2",
+      "name": "Well Fountain Fairy 2",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableWellFountainFairy3",
+      "name": "Well Fountain Fairy 3",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableWellFountainFairy4",
+      "name": "Well Fountain Fairy 4",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableWellFountainFairy5",
+      "name": "Well Fountain Fairy 5",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableWellFountainFairy6",
+      "name": "Well Fountain Fairy 6",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableWellFountainFairy7",
+      "name": "Well Fountain Fairy 7",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableWellFountainFairy8",
+      "name": "Well Fountain Fairy 8",
+      "category": "Fairies"
+    }
+  ],
+  "BottleCatch": [
+    {
+      "id": "BottleCatchFairy",
+      "name": "Bottle: Fairy",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchPrincess",
+      "name": "Bottle: Deku Princess",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchFish",
+      "name": "Bottle: Fish",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchBug",
+      "name": "Bottle: Bug",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchPoe",
+      "name": "Bottle: Poe",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchBigPoe",
+      "name": "Bottle: Big Poe",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchSpringWater",
+      "name": "Bottle: Spring Water",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchHotSpringWater",
+      "name": "Bottle: Hot Spring Water",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchEgg",
+      "name": "Bottle: Zora Egg",
+      "category": "Scoops"
+    },
+    {
+      "id": "BottleCatchMushroom",
+      "name": "Bottle: Mushroom",
+      "category": "Scoops"
+    }
+  ],
+  "ButlerRaceItems": [
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item1",
+      "name": "Butler Race Pillar Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item2",
+      "name": "Butler Race Pillar Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item3",
+      "name": "Butler Race Pillar Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item4",
+      "name": "Butler Race Pillar Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item5",
+      "name": "Butler Race Pillar Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item6",
+      "name": "Butler Race Pillar Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineWaterRoomWithPlatformsItem1",
+      "name": "Butler Race River Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineWaterRoomWithPlatformsItem2",
+      "name": "Butler Race River Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineWaterRoomWithPlatformsItem3",
+      "name": "Butler Race River Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineWaterRoomWithPlatformsItem4",
+      "name": "Butler Race River Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineWaterRoomWithPlatformsItem5",
+      "name": "Butler Race River Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineWaterRoomWithPlatformsItem6",
+      "name": "Butler Race River Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineRoomBeforeFlameWallsItem1",
+      "name": "Butler Race Right Path Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineRoomBeforeFlameWallsItem2",
+      "name": "Butler Race Right Path Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineRoomBeforeFlameWallsItem3",
+      "name": "Butler Race Right Path Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineRoomBeforeFlameWallsItem4",
+      "name": "Butler Race Right Path Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineRoomBeforeFlameWallsItem5",
+      "name": "Butler Race Right Path Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineRoomBeforeFlameWallsItem6",
+      "name": "Butler Race Right Path Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem1",
+      "name": "Butler Race Final Room Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem2",
+      "name": "Butler Race Final Room Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem3",
+      "name": "Butler Race Final Room Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem4",
+      "name": "Butler Race Final Room Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem5",
+      "name": "Butler Race Final Room Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem6",
+      "name": "Butler Race Final Room Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem7",
+      "name": "Butler Race Final Room Item 7",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem8",
+      "name": "Butler Race Final Room Item 8",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem9",
+      "name": "Butler Race Final Room Item 9",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineDekuButlerSRoomItem10",
+      "name": "Butler Race Final Room Item 10",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineGreyBoulderRoomPot1",
+      "name": "Butler Race Dual Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item7",
+      "name": "Butler Race Pillar Item 7",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuShrineGiantRoomFloor1Item8",
+      "name": "Butler Race Pillar Item 8",
+      "category": "Freestanding"
+    }
+  ],
+  "ClockTowerRoof": [
+    {
+      "id": "ItemOcarina",
+      "name": "Skull Kid",
+      "category": "BossFights"
+    },
+    {
+      "id": "SongTime",
+      "name": "Skull Kid Song",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectableClockTowerRooftopPot1",
+      "name": "Clock Tower Rooftop Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableClockTowerRooftopPot2",
+      "name": "Clock Tower Rooftop Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableClockTowerRooftopPot3",
+      "name": "Clock Tower Rooftop Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableClockTowerRooftopPot4",
+      "name": "Clock Tower Rooftop Pot 4",
+      "category": "Jars"
+    }
+  ],
+  "DekuPalace": [
+    {
+      "id": "ItemMagicBean",
+      "name": "Bean Man",
+      "category": "Purchases"
+    },
+    {
+      "id": "MaskScents",
+      "name": "Butler",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "SongSonata",
+      "name": "Imprisoned Monkey",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestBeanGrottoRedRupee",
+      "name": "Bean Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceDekuPalace",
+      "name": "Deku Palace West Garden",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem1",
+      "name": "Deku Palace Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem1",
+      "name": "Deku Palace Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem2",
+      "name": "Deku Palace Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem2",
+      "name": "Deku Palace Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem3",
+      "name": "Deku Palace Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem3",
+      "name": "Deku Palace Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem4",
+      "name": "Deku Palace Item 7",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem5",
+      "name": "Deku Palace Item 8",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem6",
+      "name": "Deku Palace Item 9",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem7",
+      "name": "Deku Palace Item 10",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenItem8",
+      "name": "Deku Palace Item 11",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem4",
+      "name": "Deku Palace Item 12",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem5",
+      "name": "Deku Palace Item 13",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem6",
+      "name": "Deku Palace Item 14",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem7",
+      "name": "Deku Palace Out of Bounds Item",
+      "category": "GlitchesRequired"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem8",
+      "name": "Deku Palace Item 15",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem9",
+      "name": "Deku Palace Item 16",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceWestInnerGardenItem10",
+      "name": "Deku Palace Item 17",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenPot1",
+      "name": "Deku Palace Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDekuPalaceEastInnerGardenPot2",
+      "name": "Deku Palace Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeanGrottoSoftSoil1",
+      "name": "Bean Grotto Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableDekuPalaceSoftSoil1",
+      "name": "Deku Palace Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableDekuPalaceRupeeCluster1",
+      "name": "Deku Palace Rupee Cluster",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceRupeeCluster2",
+      "name": "Deku Palace Rupee Cluster 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceRupeeCluster3",
+      "name": "Deku Palace Rupee Cluster 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceRupeeCluster4",
+      "name": "Deku Palace Rupee Cluster 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceRupeeCluster5",
+      "name": "Deku Palace Rupee Cluster 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceRupeeCluster6",
+      "name": "Deku Palace Rupee Cluster 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPalaceRupeeCluster7",
+      "name": "Deku Palace Rupee Cluster 7",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGrottosMagicBeanSellerSGrottoButterflyFairy1",
+      "name": "Bean Man Butterfly Fairy",
+      "category": "Butterflies"
+    }
+  ],
+  "DekuPlaygroundItems": [
+    {
+      "id": "CollectableDekuPlaygroundItem1",
+      "name": "Deku Playground Day 2 Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem2",
+      "name": "Deku Playground Day 2 Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem3",
+      "name": "Deku Playground Day 2 Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem4",
+      "name": "Deku Playground Day 2 Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem5",
+      "name": "Deku Playground Day 2 Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem6",
+      "name": "Deku Playground Day 2 Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem7",
+      "name": "Deku Playground Day 1 Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem8",
+      "name": "Deku Playground Day 1 Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem9",
+      "name": "Deku Playground Day 1 Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem10",
+      "name": "Deku Playground Day 1 Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem11",
+      "name": "Deku Playground Day 1 Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem12",
+      "name": "Deku Playground Day 1 Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem13",
+      "name": "Deku Playground Day 3 Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem14",
+      "name": "Deku Playground Day 3 Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem15",
+      "name": "Deku Playground Day 3 Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem16",
+      "name": "Deku Playground Day 3 Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem17",
+      "name": "Deku Playground Day 3 Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableDekuPlaygroundItem18",
+      "name": "Deku Playground Day 3 Item 6",
+      "category": "Freestanding"
+    }
+  ],
+  "EastClockTown": [
+    {
+      "id": "ItemBottleMadameAroma",
+      "name": "Madame Aroma in Bar",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "UpgradeBigQuiver",
+      "name": "Town Archery #1",
+      "category": "Minigames"
+    },
+    {
+      "id": "HeartPieceNotebookMayor",
+      "name": "Mayor",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceTownArchery",
+      "name": "Town Archery #2",
+      "category": "Minigames"
+    },
+    {
+      "id": "HeartPieceHoneyAndDarling",
+      "name": "Honey and Darling Three Days",
+      "category": "Minigames"
+    },
+    {
+      "id": "HeartPieceTreasureChestGame",
+      "name": "Treasure Chest Game Goron",
+      "category": "Minigames"
+    },
+    {
+      "id": "MaskPostmanHat",
+      "name": "Postman's Freedom Reward",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskCircusLeader",
+      "name": "Gorman",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskKafei",
+      "name": "Madame Aroma in Office",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestBomberHideoutSilverRupee",
+      "name": "Bombers' Hideout Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestEastClockTownSilverRupee",
+      "name": "East Clock Town Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ShopItemMilkBarChateau",
+      "name": "Milk Bar Chateau",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemMilkBarMilk",
+      "name": "Milk Bar Milk",
+      "category": "Purchases"
+    },
+    {
+      "id": "MundaneItemHoneyAndDarlingPurpleRupee",
+      "name": "Honey and Darling Any Day",
+      "category": "Minigames"
+    },
+    {
+      "id": "MundaneItemTreasureChestGamePurpleRupee",
+      "name": "Treasure Chest Game Human",
+      "category": "Minigames"
+    },
+    {
+      "id": "MundaneItemTreasureChestGameRedRupee",
+      "name": "Treasure Chest Game Zora",
+      "category": "Minigames"
+    },
+    {
+      "id": "MundaneItemTreasureChestGameDekuNuts",
+      "name": "Treasure Chest Game Deku",
+      "category": "Minigames"
+    },
+    {
+      "id": "CollectableAstralObservatoryObservatoryBombersHideoutPot1",
+      "name": "Observatory Scarecrow Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAstralObservatoryObservatoryBombersHideoutPot2",
+      "name": "Observatory Scarecrow Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableEastClockTownWoodenCrateSmall1",
+      "name": "East Clock Town Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableAstralObservatorySewerPot1",
+      "name": "Observatory Balloon Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAstralObservatorySewerPot2",
+      "name": "Observatory Balloon Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAstralObservatoryObservatoryBombersHideoutPot3",
+      "name": "Observatory Scarecrow Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag1",
+      "name": "East Clock Town Target",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag2",
+      "name": "East Clock Town Target 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag3",
+      "name": "East Clock Town Target 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag4",
+      "name": "East Clock Town Target 4",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag5",
+      "name": "East Clock Town Target 5",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag6",
+      "name": "East Clock Town Target 6",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag7",
+      "name": "East Clock Town Basket",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag8",
+      "name": "East Clock Town Basket 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableEastClockTownHitTag9",
+      "name": "East Clock Town Basket 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "NotebookMeetMayorDotour",
+      "name": "Notebook Meeting: Mayor Dotour",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetMadameAroma",
+      "name": "Notebook Meeting: Madame Aroma",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetToto",
+      "name": "Notebook Meeting: Toto",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookDeliverLetterToMama",
+      "name": "Madame Aroma in Bar",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookDotoursThanks",
+      "name": "Mayor",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPromiseMadameAroma",
+      "name": "Madame Aroma in Office",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMovingGorman",
+      "name": "Gorman",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPostmansFreedom",
+      "name": "Postman's Freedom Reward",
+      "category": "NotebookEntries"
+    }
+  ],
+  "GoronRaceItems": [
+    {
+      "id": "CollectableGoronRacetrackPot1",
+      "name": "Goron Racetrack Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot2",
+      "name": "Goron Racetrack Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot3",
+      "name": "Goron Racetrack Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot4",
+      "name": "Goron Racetrack Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot5",
+      "name": "Goron Racetrack Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot6",
+      "name": "Goron Racetrack Pot 6",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot7",
+      "name": "Goron Racetrack Pot 7",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot8",
+      "name": "Goron Racetrack Pot 8",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot9",
+      "name": "Goron Racetrack Pot 9",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot10",
+      "name": "Goron Racetrack Pot 10",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot11",
+      "name": "Goron Racetrack Pot 11",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot12",
+      "name": "Goron Racetrack Pot 12",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot13",
+      "name": "Goron Racetrack Pot 13",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot14",
+      "name": "Goron Racetrack Pot 14",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot15",
+      "name": "Goron Racetrack Pot 15",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot16",
+      "name": "Goron Racetrack Pot 16",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot17",
+      "name": "Goron Racetrack Pot 17",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot18",
+      "name": "Goron Racetrack Pot 18",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot19",
+      "name": "Goron Racetrack Pot 19",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot20",
+      "name": "Goron Racetrack Pot 20",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot21",
+      "name": "Goron Racetrack Pot 21",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot22",
+      "name": "Goron Racetrack Pot 22",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot23",
+      "name": "Goron Racetrack Pot 23",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot24",
+      "name": "Goron Racetrack Pot 24",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot25",
+      "name": "Goron Racetrack Pot 25",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot26",
+      "name": "Goron Racetrack Pot 26",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot27",
+      "name": "Goron Racetrack Pot 27",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot28",
+      "name": "Goron Racetrack Pot 28",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot29",
+      "name": "Goron Racetrack Pot 29",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronRacetrackPot30",
+      "name": "Goron Racetrack Pot 30",
+      "category": "Jars"
+    }
+  ],
+  "GoronVillage": [
+    {
+      "id": "ItemPowderKeg",
+      "name": "Powder Keg Challenge",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemLens",
+      "name": "Lens of Truth Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "TradeItemMountainDeed",
+      "name": "Mountain Scrub Trade",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "SongLullaby",
+      "name": "Baby Goron",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestLensCaveRedRupee",
+      "name": "Lens Cave Invisible Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestLensCavePurpleRupee",
+      "name": "Lens Cave Rock Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceGoronVillageScrub",
+      "name": "Goron Village Ledge",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball1",
+      "name": "Goron Village Small Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball2",
+      "name": "Goron Village Small Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterLargeSnowball1",
+      "name": "Goron Village Large Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterLargeSnowball2",
+      "name": "Goron Village Large Snowball 2",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterLargeSnowball3",
+      "name": "Goron Village Large Snowball 3",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball3",
+      "name": "Goron Village Small Snowball 3",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball4",
+      "name": "Goron Village Small Snowball 4",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball5",
+      "name": "Goron Village Small Snowball 5",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball6",
+      "name": "Goron Village Small Snowball 6",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronShrineGoronKidSRoomPot1",
+      "name": "Goron Shrine Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineGoronKidSRoomPot2",
+      "name": "Goron Shrine Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot1",
+      "name": "Goron Shrine Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot2",
+      "name": "Goron Shrine Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot3",
+      "name": "Goron Shrine Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball7",
+      "name": "Goron Village Small Snowball 7",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball8",
+      "name": "Goron Village Small Snowball 8",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronShrineGoronKidSRoomPot3",
+      "name": "Goron Shrine Pot 6",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot4",
+      "name": "Goron Shrine Pot 7",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot5",
+      "name": "Goron Shrine Pot 8",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot6",
+      "name": "Goron Shrine Pot 9",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot7",
+      "name": "Goron Shrine Pot 10",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronShrineMainRoomPot8",
+      "name": "Goron Shrine Pot 11",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGoronVillageWinterLargeSnowball4",
+      "name": "Goron Village Large Snowball 4",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterLargeSnowball5",
+      "name": "Goron Village Large Snowball 5",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterLargeSnowball6",
+      "name": "Goron Village Large Snowball 6",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball9",
+      "name": "Goron Village Small Snowball 9",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableGoronVillageWinterSmallSnowball10",
+      "name": "Goron Village Small Snowball 10",
+      "category": "SmallSnowballs"
+    }
+  ],
+  "GreatBayCoast": [
+    {
+      "id": "UpgradeGiantWallet",
+      "name": "Ocean Spider House Day 1 Reward",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceFishermanGame",
+      "name": "Fisherman Game",
+      "category": "Minigames"
+    },
+    {
+      "id": "HeartPieceOceanSpiderHouse",
+      "name": "Ocean Spider House Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "MaskZora",
+      "name": "Mikau",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "SongNewWaveBossaNova",
+      "name": "Baby Zoras",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestGreatBayCoastGrotto",
+      "name": "Great Bay Coast Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceLabFish",
+      "name": "Lab Fish",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceGreatBayCoast",
+      "name": "Great Bay Coast Ledge",
+      "category": "Freestanding"
+    },
+    {
+      "id": "ItemCoastGrottoCowMilk1",
+      "name": "Great Bay Coast Grotto Cow #1",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemCoastGrottoCowMilk2",
+      "name": "Great Bay Coast Grotto Cow #2",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemOceanSpiderHouseDay2PurpleRupee",
+      "name": "Ocean Spider House Day 2 Reward",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemOceanSpiderHouseDay3RedRupee",
+      "name": "Ocean Spider House Day 3 Reward",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemSeahorse",
+      "name": "Fisherman Pictograph",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot1",
+      "name": "Great Bay Coast Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot2",
+      "name": "Great Bay Coast Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot3",
+      "name": "Great Bay Coast Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot4",
+      "name": "Great Bay Coast Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot5",
+      "name": "Great Bay Coast Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot6",
+      "name": "Great Bay Coast Ledge Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot7",
+      "name": "Great Bay Coast Ledge Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot8",
+      "name": "Great Bay Coast Ledge Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot9",
+      "name": "Great Bay Coast Pot 6",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot10",
+      "name": "Great Bay Coast Pot 7",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastSoftSoil1",
+      "name": "Great Bay Coast Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableGreatBayCoastPot11",
+      "name": "Great Bay Coast Pot 8",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayCoastGossipFairy1",
+      "name": "Great Bay Coast Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableGreatBayCoastButterflyFairy1",
+      "name": "Great Bay Coast Butterfly Fairy",
+      "category": "Butterflies"
+    },
+    {
+      "id": "CollectableGrottosCowGrottoButterflyFairy2",
+      "name": "Great Bay Coast Cow Grotto Butterfly Fairy",
+      "category": "Butterflies"
+    }
+  ],
+  "GreatBayTemple": [
+    {
+      "id": "ItemIceArrow",
+      "name": "Ice Arrow Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ItemGreatBayMap",
+      "name": "Great Bay Map Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemGreatBayCompass",
+      "name": "Great Bay Compass Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemGreatBayBossKey",
+      "name": "Great Bay Boss Key Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ItemGreatBayKey1",
+      "name": "Great Bay Small Key Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartContainerGreatBay",
+      "name": "Great Bay Heart Container",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay1",
+      "name": "Great Bay Skulltula",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay2",
+      "name": "Great Bay Pre-Boss Room Underwater Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay3",
+      "name": "Great Bay Water Control Room Underwater Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay4",
+      "name": "Great Bay Pre-Boss Room Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay5",
+      "name": "Great Bay Waterwheel Room Upper",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay6",
+      "name": "Great Bay Green Valve",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay7",
+      "name": "Great Bay Seesaw Room",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay8",
+      "name": "Great Bay Waterwheel Room Lower",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay9",
+      "name": "Great Bay Entrance Torches",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay10",
+      "name": "Great Bay Bio Babas",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay11",
+      "name": "Great Bay Underwater Barrel",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay12",
+      "name": "Great Bay Whirlpool Jar",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay13",
+      "name": "Great Bay Whirlpool Barrel",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay14",
+      "name": "Great Bay Dexihands Jar",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectibleStrayFairyGreatBay15",
+      "name": "Great Bay Ledge Jar",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayTempleBlueChuchuValveRoomBarrel1",
+      "name": "Great Bay Temple Red Valve Barrel",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectableGreatBayTempleSeesawRoomPot1",
+      "name": "Great Bay Temple Seesaw Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGreatBayTempleTopmostRoomWithGreenValveBarrel1",
+      "name": "Great Bay Temple Green Pump Barrel",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectableGreatBayTempleWaterControlRoomItem1",
+      "name": "Great Bay Temple Water Control Room Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleWaterControlRoomItem2",
+      "name": "Great Bay Temple Water Control Room Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleBlueChuchuValveRoomBarrel2",
+      "name": "Great Bay Temple Red Valve Barrel 2",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectableGreatBayTempleTopmostRoomWithGreenValveBarrel2",
+      "name": "Great Bay Temple Green Pump Barrel 2",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectableGreatBayTempleWaterControlRoomItem3",
+      "name": "Great Bay Temple Water Control Room Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleWaterControlRoomItem4",
+      "name": "Great Bay Temple Water Control Room Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleBlueChuchuValveRoomWoodenCrateLarge1",
+      "name": "Great Bay Temple Red Valve Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableGreatBayTempleWaterControlRoomItem5",
+      "name": "Great Bay Temple Water Control Room Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleCompassBossKeyRoomItem1",
+      "name": "Great Bay Temple Dexihand Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleCompassBossKeyRoomItem2",
+      "name": "Great Bay Temple Dexihand Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleTopmostRoomWithGreenValveItem1",
+      "name": "Great Bay Temple Green Pump Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableGreatBayTempleTopmostRoomWithGreenValveItem2",
+      "name": "Great Bay Temple Green Pump Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "RemainsGyorg",
+      "name": "Great Bay Boss Warp",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectableGreatBayTempleEntranceRoomBarrel1",
+      "name": "Great Bay Temple Entrance Room Barrel",
+      "category": "Barrels"
+    },
+    {
+      "id": "FrogGreatBayTemple",
+      "name": "Frog in Great Bay Temple",
+      "category": "Frogs"
+    }
+  ],
+  "IkanaCanyon": [
+    {
+      "id": "ItemFairySword",
+      "name": "Ikana Great Fairy",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPiecePoeHut",
+      "name": "Poe Hut",
+      "category": "BossFights"
+    },
+    {
+      "id": "MaskGibdo",
+      "name": "Pamela's Father",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestIkanaSecretShrineGrotto",
+      "name": "Secret Shrine Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceIkana",
+      "name": "Ikana Canyon Ledge",
+      "category": "Freestanding"
+    },
+    {
+      "id": "IkanaScrubGoldRupee",
+      "name": "Canyon Scrub Trade",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass1",
+      "name": "Ikana Canyon Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass2",
+      "name": "Ikana Canyon Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass3",
+      "name": "Ikana Canyon Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass4",
+      "name": "Ikana Canyon Cleared Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass5",
+      "name": "Ikana Canyon Cleared Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass6",
+      "name": "Ikana Canyon Cleared Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "NotebookEscapeFromSakonSHideout",
+      "name": "Escaping from Sakon's Hideout",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass7",
+      "name": "Ikana Canyon Cleared Grass 4",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGrass8",
+      "name": "Ikana Canyon Grass 4",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGossipFairy1",
+      "name": "Ikana Canyon Dock Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableIkanaCanyonMainAreaGossipFairy2",
+      "name": "Ikana Canyon Spirit House Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableIkanaCanyonSakonSHideoutAreaGossipFairy1",
+      "name": "Ikana Canyon Ravine Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "IkanaCastle": [
+    {
+      "id": "SongElegy",
+      "name": "Ikana King",
+      "category": "BossFights"
+    },
+    {
+      "id": "HeartPieceCastle",
+      "name": "Ikana Castle Pillar",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaCastleExteriorGrass1",
+      "name": "Ikana Castle Courtyard Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaCastleExteriorGrass2",
+      "name": "Ikana Castle Courtyard Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableIgosDuIkanaSLairIgosDuIkanaSRoomPot1",
+      "name": "Ikana King Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIgosDuIkanaSLairIgosDuIkanaSRoomPot2",
+      "name": "Ikana King Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIgosDuIkanaSLairPreBossRoomPot1",
+      "name": "Ikana King Entry Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIgosDuIkanaSLairPreBossRoomPot2",
+      "name": "Ikana King Entry Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkana1FWestStaircasePot1",
+      "name": "Ikana Castle Left Staircase Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIgosDuIkanaSLairIgosDuIkanaSRoomPot3",
+      "name": "Ikana King Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaCastleExteriorGrass3",
+      "name": "Ikana Castle Courtyard Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaCastleExteriorGrass4",
+      "name": "Ikana Castle Courtyard Grass 4",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaFireCeilingRoomPot1",
+      "name": "Ikana Castle Fire Ceiling Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaHoleRoomPot1",
+      "name": "Ikana Castle Hole Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaHoleRoomPot2",
+      "name": "Ikana Castle Hole Room Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIgosDuIkanaSLairPreBossRoomPot3",
+      "name": "Ikana King Entry Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaCastleExteriorPot1",
+      "name": "Ikana Castle Courtyard Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaHoleRoomPot3",
+      "name": "Ikana Castle Hole Room Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableAncientCastleOfIkanaHoleRoomPot4",
+      "name": "Ikana Castle Hole Room Pot 4",
+      "category": "Jars"
+    }
+  ],
+  "IkanaGraveyard": [
+    {
+      "id": "ItemBottleDampe",
+      "name": "Dampe Digging",
+      "category": "BossFights"
+    },
+    {
+      "id": "HeartPieceKnuckle",
+      "name": "Iron Knuckle Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "MaskCaptainHat",
+      "name": "Captain Keeta's Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "SongStorms",
+      "name": "Day 1 Grave Tablet",
+      "category": "BossFights"
+    },
+    {
+      "id": "ChestBadBatsGrottoPurpleRupee",
+      "name": "Day 1 Grave Bats",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestGraveyardGrotto",
+      "name": "Ikana Graveyard Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardMainAreaPot1",
+      "name": "Night 1 Grave Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardInvisibleRoomPot1",
+      "name": "Night 2 Grave Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardBadBatRoomPot1",
+      "name": "Night 1 Grave Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot1",
+      "name": "Dampe's Basement Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot2",
+      "name": "Dampe's Basement Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot3",
+      "name": "Dampe's Basement Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot4",
+      "name": "Dampe's Basement Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardLowerGrass1",
+      "name": "Ikana Graveyard Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot5",
+      "name": "Dampe's Basement Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot6",
+      "name": "Dampe's Basement Pot 6",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot7",
+      "name": "Dampe's Basement Pot 7",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardLowerGrass2",
+      "name": "Ikana Graveyard Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableDampesHouseBasementPot8",
+      "name": "Dampe's Basement Pot 8",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardMainAreaPot2",
+      "name": "Night 2 Grave Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardLowerGrass3",
+      "name": "Ikana Graveyard Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardRupeeCluster1",
+      "name": "Ikana Graveyard Rupee Cluster",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardRupeeCluster2",
+      "name": "Ikana Graveyard Rupee Cluster 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardRupeeCluster3",
+      "name": "Ikana Graveyard Rupee Cluster 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardRupeeCluster4",
+      "name": "Ikana Graveyard Rupee Cluster 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardRupeeCluster5",
+      "name": "Ikana Graveyard Rupee Cluster 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardRupeeCluster6",
+      "name": "Ikana Graveyard Rupee Cluster 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableBeneathTheGraveyardRupeeCluster7",
+      "name": "Ikana Graveyard Rupee Cluster 7",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag1",
+      "name": "Ikana Graveyard Lantern",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag2",
+      "name": "Ikana Graveyard Lantern 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag3",
+      "name": "Ikana Graveyard Lantern 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag4",
+      "name": "Ikana Graveyard Lantern 4",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag5",
+      "name": "Ikana Graveyard Lantern 5",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag6",
+      "name": "Ikana Graveyard Lantern 6",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag7",
+      "name": "Ikana Graveyard Lantern 7",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag8",
+      "name": "Ikana Graveyard Lantern 8",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag9",
+      "name": "Ikana Graveyard Lantern 9",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag10",
+      "name": "Ikana Graveyard Lantern 10",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag11",
+      "name": "Ikana Graveyard Lantern 11",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardHitTag12",
+      "name": "Ikana Graveyard Lantern 12",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardUpperRock1",
+      "name": "Ikana Graveyard Highest Rock",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardUpperRock2",
+      "name": "Ikana Graveyard Lowest Rock",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardUpperRock3",
+      "name": "Ikana Graveyard 2nd Lowest Rock",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardUpperRock4",
+      "name": "Ikana Graveyard 2nd Highest Rock",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableIkanaGraveyardIkanaGraveyardUpperRock5",
+      "name": "Ikana Graveyard Middle Rock",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableIkanaGraveyardDay2Bats1",
+      "name": "Ikana Graveyard Day 2 Bats",
+      "category": "NpcRewards"
+    }
+  ],
+  "LaundryPool": [
+    {
+      "id": "TradeItemPendant",
+      "name": "Kafei",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "TradeItemMamaLetter",
+      "name": "Curiosity Shop Man #2",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskKeaton",
+      "name": "Curiosity Shop Man #1",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskBremen",
+      "name": "Guru Guru",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableLaundryPoolWoodenCrateSmall1",
+      "name": "Laundry Pool Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableLaundryPoolItem1",
+      "name": "Laundry Pool Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableLaundryPoolItem2",
+      "name": "Laundry Pool Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableLaundryPoolItem3",
+      "name": "Laundry Pool Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "NotebookPromiseKafei",
+      "name": "Kafei",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookCuriosityShopManSGift",
+      "name": "Curiosity Shop Man #1",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPromiseCuriosityShopMan",
+      "name": "Curiosity Shop Man #2",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookGuruGuru",
+      "name": "Guru-Guru",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "FrogLaundryPool",
+      "name": "Frog in the Laundry Pool",
+      "category": "Frogs"
+    }
+  ],
+  "MilkRoad": [
+    {
+      "id": "MaskGaro",
+      "name": "Gorman Bros Race",
+      "category": "Minigames"
+    },
+    {
+      "id": "ShopItemGormanBrosMilk",
+      "name": "Gorman Bros Milk Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "CollectableMilkRoadGrass1",
+      "name": "Milk Road Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadGrass2",
+      "name": "Milk Road Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass1",
+      "name": "Milk Road Keaton Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass2",
+      "name": "Milk Road Keaton Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass3",
+      "name": "Milk Road Keaton Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass4",
+      "name": "Milk Road Keaton Grass 4",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass5",
+      "name": "Milk Road Keaton Grass 5",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass6",
+      "name": "Milk Road Keaton Grass 6",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass7",
+      "name": "Milk Road Keaton Grass 7",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass8",
+      "name": "Milk Road Keaton Grass 8",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadKeatonGrass9",
+      "name": "Milk Road Keaton Grass 9",
+      "category": "Grass"
+    },
+    {
+      "id": "NotebookMeetGormanBrothers",
+      "name": "Notebook Meeting: The Gorman Brothers",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookDefeatGormanBrothers",
+      "name": "Gorman Bros Race",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "CollectableMilkRoadGrass3",
+      "name": "Milk Road Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMilkRoadGossipFairy1",
+      "name": "Milk Road Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "Misc": [
+    {
+      "id": "UpgradeBiggestBombBag",
+      "name": "Biggest Bomb Bag Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "HeartPieceKeatonQuiz",
+      "name": "Keaton Quiz",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPiecePostBox",
+      "name": "Postbox",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "SongOath",
+      "name": "Boss Blue Warp",
+      "category": "BossFights"
+    },
+    {
+      "id": "ShopItemGoronBomb10",
+      "name": "Goron Shop 10 Bombs",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemGoronArrow10",
+      "name": "Goron Shop 10 Arrows",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemGoronRedPotion",
+      "name": "Goron Shop Red Potion",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapTown",
+      "name": "Clock Town Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapWoodfall",
+      "name": "Woodfall Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapSnowhead",
+      "name": "Snowhead Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapRanch",
+      "name": "Romani Ranch Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapGreatBay",
+      "name": "Great Bay Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapStoneTower",
+      "name": "Stone Tower Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "CollectibleStrayFairyClockTown",
+      "name": "Clock Town Stray Fairy",
+      "category": "Freestanding"
+    },
+    {
+      "id": "ShopItemBusinessScrubMagicBean",
+      "name": "Swamp Scrub Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemBusinessScrubGreenPotion",
+      "name": "Ocean Scrub Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemBusinessScrubBluePotion",
+      "name": "Canyon Scrub Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "SongLullabyIntro",
+      "name": "Goron Elder",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "NotebookMeetBombers",
+      "name": "Notebook Meeting: The Bombers",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetAnju",
+      "name": "Notebook Meeting: Anju",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetKafei",
+      "name": "Notebook Meeting: Kafei",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetCuriosityShopMan",
+      "name": "Notebook Meeting: The Curiosity Shop Man",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetOldLady",
+      "name": "Notebook Meeting: The Old Lady",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetGorman",
+      "name": "Notebook Meeting: Gorman",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetPostman",
+      "name": "Notebook Meeting: The Postman",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetRosaSisters",
+      "name": "Notebook Meeting: The Rosa Sisters",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetAnjusGrandmother",
+      "name": "Notebook Meeting: Anju's Grandmother",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetGuruGuru",
+      "name": "Notebook Meeting: Guru-Guru",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookDepositLetterToKafei",
+      "name": "Depositing the Letter to Kafei",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookLearnBombersCode",
+      "name": "Bombers' Hide and Seek",
+      "category": "NotebookEntries"
+    }
+  ],
+  "MountainVillage": [
+    {
+      "id": "UpgradeRazorSword",
+      "name": "Mountain Smithy Day 1",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "UpgradeGildedSword",
+      "name": "Mountain Smithy Day 2",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceChoir",
+      "name": "Frog Choir",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskDonGero",
+      "name": "Hungry Goron",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskGoron",
+      "name": "Darmani",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestMountainVillage",
+      "name": "Mountain Waterfall Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestMountainVillageGrottoRedRupee",
+      "name": "Mountain Spring Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectableMountainVillageSpringSmallSnowball1",
+      "name": "Mountain Village Spring Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball1",
+      "name": "Mountain Village Winter Small Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterLargeSnowball1",
+      "name": "Mountain Village Day 3 Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterLargeSnowball2",
+      "name": "Mountain Village Day 2 Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageSpringSmallSnowball2",
+      "name": "Mountain Village Spring Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball2",
+      "name": "Mountain Village Winter Small Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageSpringSmallSnowball3",
+      "name": "Mountain Village Spring Snowball 3",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball3",
+      "name": "Goron Graveyard Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball4",
+      "name": "Goron Graveyard Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball5",
+      "name": "Mountain Village Winter Small Snowball 3",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterMountainVillageSpringItem1",
+      "name": "Mountain Village Spring Stair Item",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball6",
+      "name": "Mountain Village Winter Small Snowball 4",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball7",
+      "name": "Mountain Village Winter Small Snowball 5",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterLargeSnowball3",
+      "name": "Mountain Village Day 1 Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterLargeSnowball4",
+      "name": "Mountain Village Day 2 Snowball 2",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass1",
+      "name": "Mountain Village Spring Keaton Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass2",
+      "name": "Mountain Village Spring Keaton Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass3",
+      "name": "Mountain Village Spring Keaton Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass4",
+      "name": "Mountain Village Spring Keaton Grass 4",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass5",
+      "name": "Mountain Village Spring Keaton Grass 5",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass6",
+      "name": "Mountain Village Spring Keaton Grass 6",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass7",
+      "name": "Mountain Village Spring Keaton Grass 7",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass8",
+      "name": "Mountain Village Spring Keaton Grass 8",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringKeatonGrass9",
+      "name": "Mountain Village Spring Keaton Grass 9",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMountainVillageSpringPot1",
+      "name": "Mountain Village Spring Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableMountainVillageSpringSmallSnowball4",
+      "name": "Mountain Village Spring Snowball 4",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageWinterPot1",
+      "name": "Mountain Village Winter Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableMountainVillageWinterSmallSnowball8",
+      "name": "Mountain Village Winter Small Snowball 6",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableMountainVillageSpringPathToGoronGraveyardGossipFairy1",
+      "name": "Mountain Village Spring Path Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableMountainVillageSpringGossipFairy1",
+      "name": "Mountain Village Spring Frog Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableMountainVillageWinterMountainVillageSpringButterflyFairy1",
+      "name": "Mountain Village Spring Butterfly Fairy",
+      "category": "Butterflies"
+    },
+    {
+      "id": "CollectableMountainVillageWinterMountainVillageSpringButterflyFairy2",
+      "name": "Mountain Village Spring Butterfly Fairy 2",
+      "category": "Butterflies"
+    }
+  ],
+  "NorthClockTown": [
+    {
+      "id": "FairyMagic",
+      "name": "Town Great Fairy Non-Human",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemNotebook",
+      "name": "Bombers' Hide and Seek",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceDekuPlayground",
+      "name": "Deku Playground Three Days",
+      "category": "Minigames"
+    },
+    {
+      "id": "MaskBlast",
+      "name": "Old Lady",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskGreatFairy",
+      "name": "Town Great Fairy",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceNorthClockTown",
+      "name": "North Clock Town Tree",
+      "category": "Freestanding"
+    },
+    {
+      "id": "MundaneItemDekuPlaygroundPurpleRupee",
+      "name": "Deku Playground Any Day",
+      "category": "Minigames"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass1",
+      "name": "North Clock Town Keaton Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass2",
+      "name": "North Clock Town Keaton Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass3",
+      "name": "North Clock Town Keaton Grass 3",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass4",
+      "name": "North Clock Town Keaton Grass 4",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass5",
+      "name": "North Clock Town Keaton Grass 5",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass6",
+      "name": "North Clock Town Keaton Grass 6",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass7",
+      "name": "North Clock Town Keaton Grass 7",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass8",
+      "name": "North Clock Town Keaton Grass 8",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableNorthClockTownKeatonGrass9",
+      "name": "North Clock Town Keaton Grass 9",
+      "category": "Grass"
+    },
+    {
+      "id": "NotebookSaveOldLady",
+      "name": "Old Lady",
+      "category": "NotebookEntries"
+    }
+  ],
+  "OceanSpiderHouseItems": [
+    {
+      "id": "CollectibleOceanSpiderToken1",
+      "name": "Ocean Skulltula Storage Room Behind Boat",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken2",
+      "name": "Ocean Skulltula Library Hole Behind Picture",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken3",
+      "name": "Ocean Skulltula Library Hole Behind Cabinet",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken4",
+      "name": "Ocean Skulltula Library On Corner Bookshelf",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken5",
+      "name": "Ocean Skulltula 2nd Room Ceiling Edge",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken6",
+      "name": "Ocean Skulltula 2nd Room Ceiling Plank",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken7",
+      "name": "Ocean Skulltula Colored Skulls Ceiling Edge",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken8",
+      "name": "Ocean Skulltula Library Ceiling Edge",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken9",
+      "name": "Ocean Skulltula Storage Room Ceiling Web",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken10",
+      "name": "Ocean Skulltula Storage Room Behind Crate",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken11",
+      "name": "Ocean Skulltula 2nd Room Jar",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken12",
+      "name": "Ocean Skulltula Entrance Right Wall",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken13",
+      "name": "Ocean Skulltula Entrance Left Wall",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken14",
+      "name": "Ocean Skulltula 2nd Room Webbed Hole",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken15",
+      "name": "Ocean Skulltula Entrance Web",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken16",
+      "name": "Ocean Skulltula Colored Skulls Chandelier 1",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken17",
+      "name": "Ocean Skulltula Colored Skulls Chandelier 2",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken18",
+      "name": "Ocean Skulltula Colored Skulls Chandelier 3",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken19",
+      "name": "Ocean Skulltula Colored Skulls Behind Picture",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken20",
+      "name": "Ocean Skulltula Library Behind Picture",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken21",
+      "name": "Ocean Skulltula Library Behind Bookcase 1",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken22",
+      "name": "Ocean Skulltula Storage Room Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken23",
+      "name": "Ocean Skulltula 2nd Room Webbed Pot",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken24",
+      "name": "Ocean Skulltula 2nd Room Upper Pot",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken25",
+      "name": "Ocean Skulltula Colored Skulls Pot",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken26",
+      "name": "Ocean Skulltula Storage Room Jar",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken27",
+      "name": "Ocean Skulltula 2nd Room Lower Pot",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken28",
+      "name": "Ocean Skulltula Library Behind Bookcase 2",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken29",
+      "name": "Ocean Skulltula 2nd Room Behind Skull 1",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleOceanSpiderToken30",
+      "name": "Ocean Skulltula 2nd Room Behind Skull 2",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseEntrancePot1",
+      "name": "Oceanside Spider House Entrance Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseEntrancePot2",
+      "name": "Oceanside Spider House Entrance Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseMainRoomPot1",
+      "name": "Oceanside Spider House Main Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseEntrancePot3",
+      "name": "Oceanside Spider House Entrance Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseMainRoomPot2",
+      "name": "Oceanside Spider House Main Room Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseStorageRoomPot1",
+      "name": "Oceanside Spider House Storage Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag1",
+      "name": "Oceanside Spider House Mask",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag2",
+      "name": "Oceanside Spider House Mask 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag3",
+      "name": "Oceanside Spider House Mask 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag4",
+      "name": "Oceanside Spider House Mask 4",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag5",
+      "name": "Oceanside Spider House Mask 5",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag6",
+      "name": "Oceanside Spider House Mask 6",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag7",
+      "name": "Oceanside Spider House Mask 7",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag8",
+      "name": "Oceanside Spider House Mask 8",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseHitTag9",
+      "name": "Oceanside Spider House Mask 9",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseMaskRoomPot1",
+      "name": "Oceanside Spider House Mask Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableOceansideSpiderHouseMaskRoomPot2",
+      "name": "Oceanside Spider House Mask Room Pot 2",
+      "category": "Jars"
+    }
+  ],
+  "PathToMountainVillage": [
+    {
+      "id": "CollectablePathToMountainVillageSmallSnowball1",
+      "name": "Path to Mountain Village Small Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToMountainVillageSmallSnowball2",
+      "name": "Path to Mountain Village Spring Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToMountainVillageSmallSnowball3",
+      "name": "Path to Mountain Village Spring Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToMountainVillageSmallSnowball4",
+      "name": "Path to Mountain Village Spring Snowball 3",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToMountainVillageGossipFairy1",
+      "name": "Path to Mountain Village Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "PathToSnowhead": [
+    {
+      "id": "ChestToSnowheadGrotto",
+      "name": "Path to Snowhead Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceToSnowhead",
+      "name": "Path to Snowhead Pillar",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePathToSnowheadLargeSnowball1",
+      "name": "Path to Snowhead Large Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToSnowheadLargeSnowball2",
+      "name": "Path to Snowhead Large Snowball 2",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToSnowheadLargeSnowball3",
+      "name": "Path to Snowhead Large Snowball 3",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToSnowheadLargeSnowball4",
+      "name": "Path to Snowhead Large Snowball 4",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToSnowheadSmallSnowball1",
+      "name": "Path to Snowhead Spring Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToSnowheadSmallSnowball2",
+      "name": "Path to Snowhead Spring Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToSnowheadSmallSnowball3",
+      "name": "Path to Snowhead Spring Snowball 3",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToSnowheadSmallSnowball4",
+      "name": "Path to Snowhead Spring Snowball 4",
+      "category": "SmallSnowballs"
+    }
+  ],
+  "PinnacleRock": [
+    {
+      "id": "HeartPieceSeaHorse",
+      "name": "Seahorses",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestPinacleRockRedRupee1",
+      "name": "Pinnacle Rock Lower Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestPinacleRockRedRupee2",
+      "name": "Pinnacle Rock Upper Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectablePinnacleRockPot1",
+      "name": "Pinnacle Rock Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePinnacleRockPot2",
+      "name": "Pinnacle Rock Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePinnacleRockPot3",
+      "name": "Pinnacle Rock Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePinnacleRockPot4",
+      "name": "Pinnacle Rock Pot 4",
+      "category": "Jars"
+    }
+  ],
+  "PiratesFortressExterior": [
+    {
+      "id": "ChestPiratesFortressEntranceRedRupee1",
+      "name": "Pirates' Fortress Exterior Log Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestPiratesFortressEntranceRedRupee2",
+      "name": "Pirates' Fortress Exterior Sand Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestPiratesFortressEntranceRedRupee3",
+      "name": "Pirates' Fortress Exterior Corner Chest",
+      "category": "Chests"
+    }
+  ],
+  "PiratesFortressInterior": [
+    {
+      "id": "ItemHookshot",
+      "name": "Hookshot Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestPiratesFortressRedRupee1",
+      "name": "Pirates' Fortress Interior Lower Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestPiratesFortressRedRupee2",
+      "name": "Pirates' Fortress Interior Upper Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestInsidePiratesFortressTankRedRupee",
+      "name": "Pirates' Fortress Interior Tank Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestInsidePiratesFortressGuardSilverRupee",
+      "name": "Pirates' Fortress Interior Guard Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectablePiratesFortressInterior100RupeeEggRoomPot1",
+      "name": "Pirates' Fortress Guarded Egg Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorBarrelRoomEggPot1",
+      "name": "Pirates' Fortress Barrel Maze Egg Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorTwinBarrelEggRoomPot1",
+      "name": "Pirates' Fortress Lone Guard Egg Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorBarrelRoomEggPot2",
+      "name": "Pirates' Fortress Barrel Maze Egg Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressItem1",
+      "name": "Pirates' Fortress Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePiratesFortressItem2",
+      "name": "Pirates' Fortress Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePiratesFortressItem3",
+      "name": "Pirates' Fortress Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePiratesFortressHitTag1",
+      "name": "Pirates' Fortress Skull Flag Left Eye",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressHitTag2",
+      "name": "Pirates' Fortress Skull Flag Left Eye 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressHitTag3",
+      "name": "Pirates' Fortress Skull Flag Left Eye 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressHitTag4",
+      "name": "Pirates' Fortress Skull Flag Right Eye",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressHitTag5",
+      "name": "Pirates' Fortress Skull Flag Right Eye 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressHitTag6",
+      "name": "Pirates' Fortress Skull Flag Right Eye 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorHookshotRoomHitTag1",
+      "name": "Hookshot Room Skull Flag Forehead",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorHookshotRoomHitTag2",
+      "name": "Hookshot Room Skull Flag Forehead 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorHookshotRoomHitTag3",
+      "name": "Hookshot Room Skull Flag Forehead 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorHookshotRoomPot1",
+      "name": "Hookshot Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorHookshotRoomPot2",
+      "name": "Hookshot Room Pot 2",
+      "category": "Jars"
+    }
+  ],
+  "PiratesFortressSewer": [
+    {
+      "id": "ChestInsidePiratesFortressHeartPieceRoomRedRupee",
+      "name": "Pirates' Fortress Cage Room Shallow Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestInsidePiratesFortressHeartPieceRoomBlueRupee",
+      "name": "Pirates' Fortress Cage Room Deep Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestInsidePiratesFortressMazeRedRupee",
+      "name": "Pirates' Fortress Maze Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPiecePiratesFortress",
+      "name": "Pirates' Fortress Cage",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorWaterCurrentRoomPot1",
+      "name": "Pirates' Fortress Sewer Gate Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorTelescopeRoomPot1",
+      "name": "Pirates' Fortress Sewer Exit Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorCellRoomWithPieceOfHeartPot1",
+      "name": "Pirates' Fortress Cage Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorTelescopeRoomItem1",
+      "name": "Pirates' Fortress Sewer Exit Barrel",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorTelescopeRoomItem2",
+      "name": "Pirates' Fortress Sewer Exit Barrel 2",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorTelescopeRoomItem3",
+      "name": "Pirates' Fortress Sewer Exit Barrel 3",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorCellRoomWithPieceOfHeartItem1",
+      "name": "Pirates' Fortress Cage Room Barrel",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorTelescopeRoomPot2",
+      "name": "Pirates' Fortress Sewer Exit Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorCellRoomWithPieceOfHeartItem2",
+      "name": "Pirates' Fortress Cage Room Barrel 2",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorCellRoomWithPieceOfHeartItem3",
+      "name": "Pirates' Fortress Cage Room Barrel 3",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorCellRoomWithPieceOfHeartItem4",
+      "name": "Pirates' Fortress Cage Room Barrel 4",
+      "category": "Barrels"
+    },
+    {
+      "id": "CollectablePiratesFortressInteriorCellRoomWithPieceOfHeartItem5",
+      "name": "Pirates' Fortress Cage Room Barrel 5",
+      "category": "Barrels"
+    }
+  ],
+  "RoadToIkana": [
+    {
+      "id": "MaskStone",
+      "name": "Invisible Soldier",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestToIkanaRedRupee",
+      "name": "Path to Ikana Pillar Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestToIkanaGrotto",
+      "name": "Path to Ikana Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "NotebookMeetShiro",
+      "name": "Notebook Meeting: Shiro",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookSaveInvisibleSoldier",
+      "name": "Invisible Soldier",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "CollectableRoadToIkanaPot1",
+      "name": "Road to Ikana Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableRoadToIkanaGossipFairy1",
+      "name": "Road to Ikana Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "RoadToSouthernSwamp": [
+    {
+      "id": "UpgradeBiggestQuiver",
+      "name": "Swamp Archery #1",
+      "category": "Minigames"
+    },
+    {
+      "id": "HeartPieceSwampArchery",
+      "name": "Swamp Archery #2",
+      "category": "Minigames"
+    },
+    {
+      "id": "ChestToSwampGrotto",
+      "name": "Path to Swamp Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceToSwamp",
+      "name": "Path to Swamp Tree",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableRoadToSouthernSwampGossipFairy1",
+      "name": "Road to Southern Swamp Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "RomaniRanch": [
+    {
+      "id": "ItemBottleAliens",
+      "name": "Aliens Defense",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceDogRace",
+      "name": "Dog Race",
+      "category": "Minigames"
+    },
+    {
+      "id": "MaskBunnyHood",
+      "name": "Grog",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskRomani",
+      "name": "Cremia",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "SongEpona",
+      "name": "Romani's Game",
+      "category": "Minigames"
+    },
+    {
+      "id": "ChestDogRacePurpleRupee",
+      "name": "Doggy Racetrack Roof Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemRanchBarnMainCowMilk",
+      "name": "Ranch Cow #1",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemRanchBarnOtherCowMilk1",
+      "name": "Ranch Cow #2",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemRanchBarnOtherCowMilk2",
+      "name": "Ranch Cow #3",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableCuccoShackWoodenCrateLarge1",
+      "name": "Cucco Shack Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableRomaniRanchWoodenCrateLarge1",
+      "name": "Ranch Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableDoggyRacetrackPot1",
+      "name": "Doggy Racetrack Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDoggyRacetrackPot2",
+      "name": "Doggy Racetrack Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDoggyRacetrackPot3",
+      "name": "Doggy Racetrack Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableDoggyRacetrackPot4",
+      "name": "Doggy Racetrack Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableRanchHouseBarnBarnItem1",
+      "name": "Ranch Barn Hay Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableRanchHouseBarnBarnItem2",
+      "name": "Ranch Barn Hay Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableRomaniRanchInvisibleItem1",
+      "name": "Ranch Fence Item",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableRomaniRanchInvisibleItem2",
+      "name": "Ranch Fence Item 2",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableRomaniRanchInvisibleItem3",
+      "name": "Ranch Fence Item 3",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableRomaniRanchInvisibleItem4",
+      "name": "Ranch Fence Item 4",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableRomaniRanchInvisibleItem5",
+      "name": "Ranch Fence Item 5",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableRomaniRanchInvisibleItem6",
+      "name": "Ranch Fence Item 6",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableDoggyRacetrackSoftSoil1",
+      "name": "Doggy Racetrack Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableRomaniRanchSoftSoil1",
+      "name": "Ranch Day 1 Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableRomaniRanchSoftSoil2",
+      "name": "Ranch Day 2 or 3 Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableCuccoShackHitTag1",
+      "name": "Cucco Shack Diamond Hole",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableCuccoShackHitTag2",
+      "name": "Cucco Shack Diamond Hole 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableCuccoShackHitTag3",
+      "name": "Cucco Shack Diamond Hole 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableCuccoShackHitTag4",
+      "name": "Cucco Shack Diamond Hole 4",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableCuccoShackHitTag5",
+      "name": "Cucco Shack Diamond Hole 5",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableCuccoShackHitTag6",
+      "name": "Cucco Shack Diamond Hole 6",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableCuccoShackPottedPlant1",
+      "name": "Cucco Shack Potted Plant",
+      "category": "Jars"
+    },
+    {
+      "id": "NotebookMeetRomani",
+      "name": "Notebook Meeting: Romani",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetCremia",
+      "name": "Notebook Meeting: Cremia",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookMeetGrog",
+      "name": "Notebook Meeting: Grog",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPromiseRomani",
+      "name": "Romani's Game",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookSaveTheCows",
+      "name": "Aliens Defense",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookProtectMilkDelivery",
+      "name": "Cremia",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookGrogsThanks",
+      "name": "Grog",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "CollectableCuccoShackGossipFairy1",
+      "name": "Cucco Shack Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableDoggyRacetrackGossipFairy1",
+      "name": "Doggy Racetrack Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableRomaniRanchGossipFairy1",
+      "name": "Ranch Entrance Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableRomaniRanchGossipFairy2",
+      "name": "Ranch Tree Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableRomaniRanchGossipFairy3",
+      "name": "Ranch Barn Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "SecretShrine": [
+    {
+      "id": "ChestSecretShrineHeartPiece",
+      "name": "Secret Shrine Final Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ChestSecretShrineDinoGrotto",
+      "name": "Secret Shrine Dinolfos Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ChestSecretShrineWizzGrotto",
+      "name": "Secret Shrine Wizzrobe Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ChestSecretShrineWartGrotto",
+      "name": "Secret Shrine Wart Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ChestSecretShrineGaroGrotto",
+      "name": "Secret Shrine Garo Master Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectableSecretShrineMainRoomPot1",
+      "name": "Secret Shrine Underwater Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSecretShrineMainRoomPot2",
+      "name": "Secret Shrine Underwater Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem1",
+      "name": "Secret Shrine Floating Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem2",
+      "name": "Secret Shrine Floating Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem3",
+      "name": "Secret Shrine Floating Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem4",
+      "name": "Secret Shrine Floating Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem5",
+      "name": "Secret Shrine Floating Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem6",
+      "name": "Secret Shrine Floating Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem7",
+      "name": "Secret Shrine Floating Item 7",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem8",
+      "name": "Secret Shrine Floating Item 8",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem9",
+      "name": "Secret Shrine Floating Item 9",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem10",
+      "name": "Secret Shrine Floating Item 10",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem11",
+      "name": "Secret Shrine Floating Item 11",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem12",
+      "name": "Secret Shrine Floating Item 12",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem13",
+      "name": "Secret Shrine Floating Item 13",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem14",
+      "name": "Secret Shrine Floating Item 14",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem15",
+      "name": "Secret Shrine Floating Item 15",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem16",
+      "name": "Secret Shrine Floating Item 16",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineEntranceRoomItem17",
+      "name": "Secret Shrine Floating Item 17",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSecretShrineMainRoomPot3",
+      "name": "Secret Shrine Underwater Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSecretShrineMainRoomPot4",
+      "name": "Secret Shrine Underwater Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSecretShrineSoftSoil1",
+      "name": "Secret Shrine Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableSecretShrineMainRoomPot5",
+      "name": "Secret Shrine Underwater Pot 5",
+      "category": "Jars"
+    }
+  ],
+  "Snowhead": [
+    {
+      "id": "FairyDoubleMagic",
+      "name": "Snowhead Great Fairy",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableSnowheadSmallSnowball1",
+      "name": "Snowhead Small Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadSmallSnowball2",
+      "name": "Snowhead Small Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadSmallSnowball3",
+      "name": "Snowhead Small Snowball 3",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadLargeSnowball1",
+      "name": "Snowhead Large Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadLargeSnowball2",
+      "name": "Snowhead Large Snowball 2",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadLargeSnowball3",
+      "name": "Snowhead Large Snowball 3",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadLargeSnowball4",
+      "name": "Snowhead Large Snowball 4",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadLargeSnowball5",
+      "name": "Snowhead Large Snowball 5",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadLargeSnowball6",
+      "name": "Snowhead Large Snowball 6",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadSmallSnowball10",
+      "name": "Snowhead Small Snowball 4",
+      "category": "SmallSnowballs"
+    }
+  ],
+  "SnowheadTemple": [
+    {
+      "id": "ItemFireArrow",
+      "name": "Fire Arrow Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ItemSnowheadMap",
+      "name": "Snowhead Map Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemSnowheadCompass",
+      "name": "Snowhead Compass Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemSnowheadBossKey",
+      "name": "Snowhead Boss Key Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ItemSnowheadKey1",
+      "name": "Snowhead Block Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemSnowheadKey2",
+      "name": "Snowhead Icicle Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemSnowheadKey3",
+      "name": "Snowhead Bridge Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartContainerSnowhead",
+      "name": "Snowhead Heart Container",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead1",
+      "name": "Snowhead Snow Room Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead2",
+      "name": "Snowhead Ceiling Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead3",
+      "name": "Snowhead Dinolfos 1",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead4",
+      "name": "Snowhead Bridge Room Ledge Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead5",
+      "name": "Snowhead Bridge Room Pillar Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead6",
+      "name": "Snowhead Dinolfos 2",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead7",
+      "name": "Snowhead Map Room Fairy",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead8",
+      "name": "Snowhead Map Room Ledge",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead9",
+      "name": "Snowhead Basement",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead10",
+      "name": "Snowhead Twin Block",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead11",
+      "name": "Snowhead Icicle Room Wall",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead12",
+      "name": "Snowhead Main Room Wall",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead13",
+      "name": "Snowhead Pillar Freezards",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead14",
+      "name": "Snowhead Ice Puzzle",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairySnowhead15",
+      "name": "Snowhead Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomSmallSnowball1",
+      "name": "Snowhead Temple Icicle Room Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomSmallSnowball2",
+      "name": "Snowhead Temple Icicle Room Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomSmallSnowball3",
+      "name": "Snowhead Temple Icicle Room Snowball 3",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomSmallSnowball4",
+      "name": "Snowhead Temple Icicle Room Snowball 4",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomSmallSnowball5",
+      "name": "Snowhead Temple Icicle Room Snowball 5",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectableSnowheadTempleMapRoomWoodenCrateLarge1",
+      "name": "Snowhead Temple Elevator Room Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableSnowheadTempleMapRoomWoodenCrateLarge2",
+      "name": "Snowhead Temple Elevator Room Crate 2",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableSnowheadTempleMapRoomWoodenCrateLarge3",
+      "name": "Snowhead Temple Elevator Room Crate 3",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableSnowheadTempleMapRoomWoodenCrateLarge4",
+      "name": "Snowhead Temple Elevator Room Crate 4",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableSnowheadTempleMapRoomWoodenCrateLarge5",
+      "name": "Snowhead Temple Elevator Room Crate 5",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableSnowheadTempleMainRoomPot1",
+      "name": "Snowhead Temple Safety Bridge Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSnowheadTempleMainRoomPot2",
+      "name": "Snowhead Temple Safety Bridge Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomItem1",
+      "name": "Snowhead Temple Icicle Room Frozen Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomItem2",
+      "name": "Snowhead Temple Icicle Room Frozen Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSnowheadTempleIceBlockRoomItem3",
+      "name": "Snowhead Temple Icicle Room Frozen Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "RemainsGoht",
+      "name": "Snowhead Boss Warp",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectableSnowheadTempleMainRoomPot3",
+      "name": "Snowhead Main Room Pot",
+      "category": "Jars"
+    }
+  ],
+  "SouthClockTown": [
+    {
+      "id": "TradeItemLandDeed",
+      "name": "Clock Town Scrub Trade",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestSouthClockTownRedRupee",
+      "name": "South Clock Town Straw Roof Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestSouthClockTownPurpleRupee",
+      "name": "South Clock Town Final Day Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceSouthClockTown",
+      "name": "Clock Tower Entrance",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSouthClockTownHitTag1",
+      "name": "Clock Tower Clock",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSouthClockTownHitTag2",
+      "name": "Clock Tower Clock 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSouthClockTownHitTag3",
+      "name": "Clock Tower Clock 3",
+      "category": "HitSpots"
+    }
+  ],
+  "SouthernSwamp": [
+    {
+      "id": "ItemPictobox",
+      "name": "Koume",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemBottleWitch",
+      "name": "Kotake",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "TradeItemSwampDeed",
+      "name": "Swamp Scrub Trade",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPiecePictobox",
+      "name": "Pictograph Contest Winner",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceBoatArchery",
+      "name": "Boat Archery",
+      "category": "Minigames"
+    },
+    {
+      "id": "MaskTruth",
+      "name": "Swamp Spider House Reward",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "SongSoaring",
+      "name": "Swamp Music Statue",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ShopItemWitchBluePotion",
+      "name": "Witch Shop Blue Potion",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemWitchRedPotion",
+      "name": "Witch Shop Red Potion",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemWitchGreenPotion",
+      "name": "Witch Shop Green Potion",
+      "category": "Purchases"
+    },
+    {
+      "id": "ChestSwampGrotto",
+      "name": "Near Swamp Spider House Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestWoodsGrotto",
+      "name": "Mystery Woods Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceSwampScrub",
+      "name": "Swamp Tourist Center Roof",
+      "category": "Freestanding"
+    },
+    {
+      "id": "MundaneItemKotakeMushroomSaleRedRupee",
+      "name": "Kotake Mushroom Sale",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemPictographContestBlueRupee",
+      "name": "Pictograph Contest Standard Photo",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemPictographContestRedRupee",
+      "name": "Pictograph Contest Good Photo",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableSouthernSwampClearMagicHagsPotionShopExteriorPot1",
+      "name": "Cleared Swamp Potion Shop Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedCentralSwampItem1",
+      "name": "Swamp Near Frog Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedCentralSwampItem2",
+      "name": "Swamp Near Frog Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedMagicHagsPotionShopExteriorPot1",
+      "name": "Potion Shop Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSouthernSwampClearCentralSwampGrass1",
+      "name": "Cleared Swamp Owl Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedCentralSwampGrass1",
+      "name": "Southern Swamp Owl Grass",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableMagicHagsPotionShopItem1",
+      "name": "Potion Shop Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableSouthernSwampClearMagicHagsPotionShopExteriorPot2",
+      "name": "Cleared Swamp Potion Shop Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedMagicHagsPotionShopExteriorPot2",
+      "name": "Potion Shop Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedCentralSwampBeehive1",
+      "name": "Swamp Near Frog Hive",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectableSouthernSwampClearCentralSwampGrass2",
+      "name": "Cleared Swamp Owl Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedCentralSwampGrass2",
+      "name": "Southern Swamp Owl Grass 2",
+      "category": "Grass"
+    },
+    {
+      "id": "CollectableSouthernSwampPoisonedMagicHagsPotionShopExteriorGossipFairy1",
+      "name": "Southern Swamp Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "FrogSwamp",
+      "name": "Frog in the Swamp",
+      "category": "Frogs"
+    }
+  ],
+  "StockPotInn": [
+    {
+      "id": "TradeItemRoomKey",
+      "name": "Inn Reservation",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "TradeItemKafeiLetter",
+      "name": "Midnight Meeting",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceNotebookHand",
+      "name": "Toilet Hand",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceNotebookGran1",
+      "name": "Grandma Short Story",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceNotebookGran2",
+      "name": "Grandma Long Story",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MaskCouple",
+      "name": "Anju and Kafei",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestInnStaffRoom",
+      "name": "Inn Staff Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestInnGuestRoom",
+      "name": "Inn Guest Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectableStockPotInnHitTag1",
+      "name": "Stock Pot Inn Mask",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableStockPotInnHitTag2",
+      "name": "Stock Pot Inn Mask 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableStockPotInnHitTag3",
+      "name": "Stock Pot Inn Mask 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "NotebookMeetToiletHand",
+      "name": "Notebook Meeting: The Toilet Hand",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookInnReservation",
+      "name": "Inn Reservation",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPromiseAnjuMeeting",
+      "name": "Setting up Midnight Meeting",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPromiseAnjuDelivery",
+      "name": "Midnight Meeting",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookDeliverPendant",
+      "name": "Deliver the Pendant of Memories",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookToiletHandSThanks",
+      "name": "Toilet Hand",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookGrandmaShortStory",
+      "name": "Grandma Short Story",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookGrandmaLongStory",
+      "name": "Grandma Long Story",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookUniteAnjuAndKafei",
+      "name": "Anju and Kafei",
+      "category": "NotebookEntries"
+    }
+  ],
+  "StoneTower": [
+    {
+      "id": "ChestInvertedStoneTowerSilverRupee",
+      "name": "Inverted Stone Tower Right Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestInvertedStoneTowerBombchu10",
+      "name": "Inverted Stone Tower Middle Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestInvertedStoneTowerBean",
+      "name": "Inverted Stone Tower Left Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectableStoneTowerPot1",
+      "name": "Stone Tower Upper Scarecrow Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot2",
+      "name": "Stone Tower Upper Scarecrow Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot3",
+      "name": "Stone Tower Owl Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot4",
+      "name": "Stone Tower Owl Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerInvertedStoneTowerFlippedPot1",
+      "name": "Inverted Stone Tower Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot5",
+      "name": "Stone Tower Owl Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerInvertedStoneTowerFlippedPot2",
+      "name": "Inverted Stone Tower Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot6",
+      "name": "Stone Tower Lower Scarecrow Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot7",
+      "name": "Stone Tower Lower Scarecrow Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot8",
+      "name": "Stone Tower Upper Scarecrow Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot9",
+      "name": "Stone Tower Upper Scarecrow Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot10",
+      "name": "Stone Tower Lower Scarecrow Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerSoftSoil1",
+      "name": "Stone Tower Soft Soil Lower",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableStoneTowerSoftSoil2",
+      "name": "Stone Tower Soft Soil Upper",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableStoneTowerPot11",
+      "name": "Stone Tower Lower Scarecrow Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot12",
+      "name": "Stone Tower Lower Scarecrow Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot13",
+      "name": "Stone Tower Upper Scarecrow Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerPot14",
+      "name": "Stone Tower Owl Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableStoneTowerInvertedStoneTowerFlippedPot3",
+      "name": "Inverted Stone Tower Pot 3",
+      "category": "Jars"
+    }
+  ],
+  "StoneTowerTemple": [
+    {
+      "id": "ItemLightArrow",
+      "name": "Light Arrow Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "MaskGiant",
+      "name": "Giant's Mask Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemStoneTowerMap",
+      "name": "Stone Tower Map Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemStoneTowerCompass",
+      "name": "Stone Tower Compass Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemStoneTowerBossKey",
+      "name": "Stone Tower Boss Key Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ItemStoneTowerKey1",
+      "name": "Stone Tower Armos Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemStoneTowerKey2",
+      "name": "Stone Tower Eyegore Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemStoneTowerKey3",
+      "name": "Stone Tower Updraft Room Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemStoneTowerKey4",
+      "name": "Stone Tower Death Armos Maze Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartContainerStoneTower",
+      "name": "Stone Tower Heart Container",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower1",
+      "name": "Stone Tower Mirror Sun Block",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower2",
+      "name": "Stone Tower Eyegore",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower3",
+      "name": "Stone Tower Lava Room Fire Ring",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower4",
+      "name": "Stone Tower Updraft Fire Ring",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower5",
+      "name": "Stone Tower Mirror Sun Switch",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower6",
+      "name": "Stone Tower Entrance Sun Switch",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower7",
+      "name": "Stone Tower Wizzrobe",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower8",
+      "name": "Stone Tower Death Armos",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower9",
+      "name": "Stone Tower Updraft Frozen Eye",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower10",
+      "name": "Stone Tower Thin Bridge",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower11",
+      "name": "Stone Tower Basement Ledge",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower12",
+      "name": "Stone Tower Statue Eye",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower13",
+      "name": "Stone Tower Underwater",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower14",
+      "name": "Stone Tower Bridge Crystal",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyStoneTower15",
+      "name": "Stone Tower Lava Room Ledge",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectableStoneTowerTempleLavaRoomItem1",
+      "name": "Stone Tower Temple Lava Room Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleLavaRoomItem2",
+      "name": "Stone Tower Temple Lava Room Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem1",
+      "name": "Stone Tower Temple Thin Bridge Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem2",
+      "name": "Stone Tower Temple Thin Bridge Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem3",
+      "name": "Stone Tower Temple Thin Bridge Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem4",
+      "name": "Stone Tower Temple Thin Bridge Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem5",
+      "name": "Stone Tower Temple Thin Bridge Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem6",
+      "name": "Stone Tower Temple Thin Bridge Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem7",
+      "name": "Stone Tower Temple Thin Bridge Item 7",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleRoomAfterLightArrowsItem8",
+      "name": "Stone Tower Temple Thin Bridge Item 8",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedEyegoreRoomItem1",
+      "name": "Inverted Stone Tower Temple Dexihand Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem1",
+      "name": "Inverted Stone Tower Temple Pre-Boss Closest Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem2",
+      "name": "Inverted Stone Tower Temple Pre-Boss 2nd Closest Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem3",
+      "name": "Inverted Stone Tower Temple Pre-Boss Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem4",
+      "name": "Inverted Stone Tower Temple Pre-Boss Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem5",
+      "name": "Inverted Stone Tower Temple Pre-Boss Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem6",
+      "name": "Inverted Stone Tower Temple Pre-Boss Furthest Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem7",
+      "name": "Inverted Stone Tower Temple Pre-Boss Furthest Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem8",
+      "name": "Inverted Stone Tower Temple Pre-Boss 2nd Furthest Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem9",
+      "name": "Inverted Stone Tower Temple Pre-Boss 2nd Furthest Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem10",
+      "name": "Inverted Stone Tower Temple Pre-Boss Closest Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedPreBossRoomItem11",
+      "name": "Inverted Stone Tower Temple Pre-Boss 2nd Closest Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleLavaRoomItem3",
+      "name": "Stone Tower Temple Lava Room Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleLavaRoomItem4",
+      "name": "Stone Tower Temple Lava Room Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleLavaRoomItem5",
+      "name": "Stone Tower Temple Lava Room Item 5",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedEyegoreRoomItem2",
+      "name": "Inverted Stone Tower Temple Dexihand Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleLavaRoomItem6",
+      "name": "Stone Tower Temple Lava Room Item 6",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleEyegoreRoomItem1",
+      "name": "Stone Tower Temple Eyegore Room Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleMirrorRoomWoodenCrateLarge1",
+      "name": "Stone Tower Temple Mirror Room Crate",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableStoneTowerTempleMirrorRoomWoodenCrateLarge2",
+      "name": "Stone Tower Temple Mirror Room Crate 2",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectableStoneTowerTempleEyegoreRoomItem2",
+      "name": "Stone Tower Temple Eyegore Room Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedEyegoreRoomItem3",
+      "name": "Inverted Stone Tower Temple Dexihand Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedAirRoomItem1",
+      "name": "Inverted Stone Tower Temple Updraft Room Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedAirRoomItem2",
+      "name": "Inverted Stone Tower Temple Updraft Room Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "RemainsTwinmold",
+      "name": "Stone Tower Boss Warp",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectableStoneTowerTempleInvertedWizzrobeRoomPot1",
+      "name": "Stone Tower Temple Wizzrobe Pot",
+      "category": "Jars"
+    }
+  ],
+  "SwampSpiderHouseItems": [
+    {
+      "id": "CollectibleSwampSpiderToken1",
+      "name": "Swamp Skulltula Main Room Near Ceiling",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken2",
+      "name": "Swamp Skulltula Gold Room Near Ceiling",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken3",
+      "name": "Swamp Skulltula Monument Room Torch",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken4",
+      "name": "Swamp Skulltula Gold Room Pillar",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken5",
+      "name": "Swamp Skulltula Pot Room Jar",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken6",
+      "name": "Swamp Skulltula Tree Room Grass 1",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken7",
+      "name": "Swamp Skulltula Tree Room Grass 2",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken8",
+      "name": "Swamp Skulltula Main Room Water",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken9",
+      "name": "Swamp Skulltula Main Room Lower Left Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken10",
+      "name": "Swamp Skulltula Monument Room Crate 1",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken11",
+      "name": "Swamp Skulltula Main Room Upper Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken12",
+      "name": "Swamp Skulltula Main Room Lower Right Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken13",
+      "name": "Swamp Skulltula Monument Room Lower Wall",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken14",
+      "name": "Swamp Skulltula Monument Room On Monument",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken15",
+      "name": "Swamp Skulltula Main Room Pillar",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken16",
+      "name": "Swamp Skulltula Pot Room Pot 1",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken17",
+      "name": "Swamp Skulltula Pot Room Pot 2",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken18",
+      "name": "Swamp Skulltula Gold Room Hive",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken19",
+      "name": "Swamp Skulltula Main Room Upper Pillar",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken20",
+      "name": "Swamp Skulltula Pot Room Behind Vines",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken21",
+      "name": "Swamp Skulltula Tree Room Tree 1",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken22",
+      "name": "Swamp Skulltula Pot Room Wall",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken23",
+      "name": "Swamp Skulltula Pot Room Hive 1",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken24",
+      "name": "Swamp Skulltula Tree Room Tree 2",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken25",
+      "name": "Swamp Skulltula Gold Room Wall",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken26",
+      "name": "Swamp Skulltula Tree Room Hive",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken27",
+      "name": "Swamp Skulltula Monument Room Crate 2",
+      "category": "Crates"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken28",
+      "name": "Swamp Skulltula Pot Room Hive 2",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken29",
+      "name": "Swamp Skulltula Tree Room Tree 3",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleSwampSpiderToken30",
+      "name": "Swamp Skulltula Main Room Jar",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseInvisibleItem1",
+      "name": "Swamp Spider House Invisible Item",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseInvisibleItem2",
+      "name": "Swamp Spider House Invisible Item 2",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseInvisibleItem3",
+      "name": "Swamp Spider House Invisible Item 3",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseInvisibleItem4",
+      "name": "Swamp Spider House Invisible Item 4",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseInvisibleItem5",
+      "name": "Swamp Spider House Invisible Item 5",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseSoftSoil1",
+      "name": "Swamp Spider House Rock Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseSoftSoil2",
+      "name": "Swamp Spider House Gold Room Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag1",
+      "name": "Swamp Spider House Blue Gem",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag2",
+      "name": "Swamp Spider House Blue Gem 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag3",
+      "name": "Swamp Spider House Blue Gem 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag4",
+      "name": "Swamp Spider House Blue Gem 4",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag5",
+      "name": "Swamp Spider House Blue Gem 5",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag6",
+      "name": "Swamp Spider House Blue Gem 6",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag7",
+      "name": "Swamp Spider House Blue Gem 7",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag8",
+      "name": "Swamp Spider House Blue Gem 8",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag9",
+      "name": "Swamp Spider House Blue Gem 9",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag10",
+      "name": "Swamp Spider House Blue Gem 10",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag11",
+      "name": "Swamp Spider House Blue Gem 11",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseHitTag12",
+      "name": "Swamp Spider House Blue Gem 12",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableSwampSpiderHouseTreeRoomGossipFairy1",
+      "name": "Swamp Spider House Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "TerminaField": [
+    {
+      "id": "TradeItemMoonTear",
+      "name": "Astronomy Telescope",
+      "category": "Events"
+    },
+    {
+      "id": "HeartPieceTerminaGossipStones",
+      "name": "Gossip Stones",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceTerminaBusinessScrub",
+      "name": "Business Scrub Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "HeartPiecePeahat",
+      "name": "Peahat Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceDodong",
+      "name": "Dodongo Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "MaskKamaro",
+      "name": "Kamaro",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ChestTerminaGrottoBombchu",
+      "name": "Termina Field Pillar Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestTerminaGrottoRedRupee",
+      "name": "Termina Field Grass Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestTerminaUnderwaterRedRupee",
+      "name": "Termina Field Underwater Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestTerminaGrassRedRupee",
+      "name": "Termina Field Grass Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestTerminaStumpRedRupee",
+      "name": "Termina Field Stump Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceZoraGrotto",
+      "name": "Bio Baba Grotto",
+      "category": "Beehives"
+    },
+    {
+      "id": "ItemTerminaGrottoCowMilk1",
+      "name": "Termina Grotto Cow #1",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemTerminaGrottoCowMilk2",
+      "name": "Termina Grotto Cow #2",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableGrottosOceanHeartPieceGrottoBeehive1",
+      "name": "Bio Baba Grotto Hive",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectableTerminaFieldItem1",
+      "name": "Termina Field Pillar Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem1",
+      "name": "Termina Field Above Cow Grotto Invisible Item",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem2",
+      "name": "Termina Field Invisible Item 2",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem3",
+      "name": "Termina Field Invisible Item 3",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem4",
+      "name": "Termina Field Invisible Item 4",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem5",
+      "name": "Termina Field Invisible Item 5",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem6",
+      "name": "Termina Field Invisible Item 6",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem7",
+      "name": "Termina Field Invisible Item 7",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem8",
+      "name": "Termina Field Invisible Item 8",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem9",
+      "name": "Termina Field Northern Ramp Invisible Item",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem10",
+      "name": "Termina Field Invisible Item 10",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldInvisibleItem11",
+      "name": "Termina Field Invisible Item 11",
+      "category": "InvisibleItems"
+    },
+    {
+      "id": "CollectableTerminaFieldTreeItem1",
+      "name": "Termina Field Tree Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableTerminaFieldPillarItem1",
+      "name": "Termina Field Pillar Spawned Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableTerminaFieldTelescopeGuay1",
+      "name": "Termina Field Telescope Guay",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSoftSoil1",
+      "name": "Termina Field Stump Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableTerminaFieldSoftSoil2",
+      "name": "Termina Field Observatory Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableTerminaFieldSoftSoil3",
+      "name": "Termina Field South Wall Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableTerminaFieldSoftSoil4",
+      "name": "Termina Field Pillar Soft Soil",
+      "category": "SoftSoil"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay1",
+      "name": "Termina Field Guay #1",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay2",
+      "name": "Termina Field Guay #2",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay3",
+      "name": "Termina Field Guay #3",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay4",
+      "name": "Termina Field Guay #4",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay5",
+      "name": "Termina Field Guay #5",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay6",
+      "name": "Termina Field Guay #6",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay7",
+      "name": "Termina Field Guay #7",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay8",
+      "name": "Termina Field Guay #8",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay9",
+      "name": "Termina Field Guay #9",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay10",
+      "name": "Termina Field Guay #10",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay11",
+      "name": "Termina Field Guay #11",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay12",
+      "name": "Termina Field Guay #12",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay13",
+      "name": "Termina Field Guay #13",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay14",
+      "name": "Termina Field Guay #14",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay15",
+      "name": "Termina Field Guay #15",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay16",
+      "name": "Termina Field Guay #16",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay17",
+      "name": "Termina Field Guay #17",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay18",
+      "name": "Termina Field Guay #18",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay19",
+      "name": "Termina Field Guay #19",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay20",
+      "name": "Termina Field Guay #20",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay21",
+      "name": "Termina Field Guay #5a",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay22",
+      "name": "Termina Field Guay #10a",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldGuay23",
+      "name": "Termina Field Guay #15a",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall1",
+      "name": "Termina Field Song Wall Dawn",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall2",
+      "name": "Termina Field Song Wall Dawn 2",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall3",
+      "name": "Termina Field Song Wall Dawn 3",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall4",
+      "name": "Termina Field Song Wall 0 / 8 / 12 / 16",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall5",
+      "name": "Termina Field Song Wall 0 / 8 / 12 / 16 2",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall6",
+      "name": "Termina Field Song Wall 0 / 8 / 12 / 16 3",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall7",
+      "name": "Termina Field Song Wall 2 / 10 / 14 / 18 / 22",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall8",
+      "name": "Termina Field Song Wall 2 / 10 / 14 / 18 / 22 2",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall9",
+      "name": "Termina Field Song Wall 2 / 10 / 14 / 18 / 22 3",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall10",
+      "name": "Termina Field Song Wall 4 / 20",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall11",
+      "name": "Termina Field Song Wall 4 / 20 2",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall12",
+      "name": "Termina Field Song Wall 4 / 20 3",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall13",
+      "name": "Termina Field Song Wall Odd Hours",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall14",
+      "name": "Termina Field Song Wall Odd Hours 2",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldSongWall15",
+      "name": "Termina Field Song Wall Odd Hours 3",
+      "category": "Events"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag1",
+      "name": "Termina Field Clam",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag2",
+      "name": "Termina Field Clam 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag3",
+      "name": "Termina Field Clam 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag4",
+      "name": "Termina Field Wall",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag5",
+      "name": "Termina Field Wall 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag6",
+      "name": "Termina Field Wall 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag7",
+      "name": "Termina Field Skull Kid Drawing",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag8",
+      "name": "Termina Field Skull Kid Drawing 2",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldHitTag9",
+      "name": "Termina Field Skull Kid Drawing 3",
+      "category": "HitSpots"
+    },
+    {
+      "id": "CollectableTerminaFieldEnemy1",
+      "name": "Takkuri",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectableTerminaFieldRock1",
+      "name": "Termina Field Rock",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock2",
+      "name": "Termina Field Rock 2",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock3",
+      "name": "Termina Field Rock 3",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock4",
+      "name": "Termina Field Rock 4",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock5",
+      "name": "Termina Field Rock 5",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock6",
+      "name": "Termina Field Rock 6",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock7",
+      "name": "Termina Field Rock 7",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock8",
+      "name": "Termina Field Rock 8",
+      "category": "Rocks"
+    },
+    {
+      "id": "CollectableTerminaFieldRock9",
+      "name": "Termina Field Rock 9",
+      "category": "Rocks"
+    },
+    {
+      "id": "NotebookMeetKamaro",
+      "name": "Notebook Meeting: Kamaro",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPromiseKamaro",
+      "name": "Kamaro",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "CollectableTerminaFieldPot1",
+      "name": "Termina Field Pillar Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableGrottosOceanGossipStonesGossipFairy1",
+      "name": "Gossip Grotto Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTerminaFieldGossipFairy1",
+      "name": "Termina Field Observatory Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTerminaFieldGossipFairy2",
+      "name": "Termina Field East Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTerminaFieldGossipFairy3",
+      "name": "Termina Field South Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTerminaFieldGossipFairy4",
+      "name": "Termina Field North Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTerminaFieldGossipFairy5",
+      "name": "Termina Field West Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTerminaFieldGossipFairy6",
+      "name": "Termina Field Milk Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableGrottosOceanGossipStonesButterflyFairy1",
+      "name": "Termina Field West Gossip Grotto Butterfly Fairy",
+      "category": "Butterflies"
+    },
+    {
+      "id": "CollectableGrottosCowGrottoButterflyFairy1",
+      "name": "Termina Field Cow Grotto Butterfly Fairy",
+      "category": "Butterflies"
+    },
+    {
+      "id": "CollectableTerminaFieldButterflyFairy1",
+      "name": "Near Peahat Grotto Butterfly Fairy",
+      "category": "Butterflies"
+    }
+  ],
+  "TheMoon": [
+    {
+      "id": "HeartPieceDekuTrial",
+      "name": "Deku Trial Bonus",
+      "category": "MoonItems"
+    },
+    {
+      "id": "HeartPieceGoronTrial",
+      "name": "Goron Trial Bonus",
+      "category": "MoonItems"
+    },
+    {
+      "id": "HeartPieceZoraTrial",
+      "name": "Zora Trial Bonus",
+      "category": "MoonItems"
+    },
+    {
+      "id": "HeartPieceLinkTrial",
+      "name": "Link Trial Bonus",
+      "category": "MoonItems"
+    },
+    {
+      "id": "MaskFierceDeity",
+      "name": "Majora Child",
+      "category": "MoonItems"
+    },
+    {
+      "id": "ChestLinkTrialArrow30",
+      "name": "Link Trial Garo Master Chest",
+      "category": "MoonItems"
+    },
+    {
+      "id": "ChestLinkTrialBombchu10",
+      "name": "Link Trial Iron Knuckle Chest",
+      "category": "MoonItems"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialEntrancePot1",
+      "name": "Link Trial Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialEntrancePot2",
+      "name": "Link Trial Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialEntrancePot3",
+      "name": "Link Trial Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialEntrancePot4",
+      "name": "Link Trial Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableTheMoonDekuTrialDekuTrialGossipFairy1",
+      "name": "Deku Trial Left Closer Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonDekuTrialDekuTrialGossipFairy2",
+      "name": "Deku Trial Right Closer Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonDekuTrialDekuTrialGossipFairy3",
+      "name": "Deku Trial Left Middle Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonDekuTrialDekuTrialGossipFairy4",
+      "name": "Deku Trial Right Middle Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonDekuTrialDekuTrialGossipFairy5",
+      "name": "Deku Trial Right Further Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonGoronTrialGoronTrialGossipFairy1",
+      "name": "Goron Trial End Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonGoronTrialGoronTrialGossipFairy2",
+      "name": "Goron Trial Second Set Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonGoronTrialGoronTrialGossipFairy3",
+      "name": "Goron Trial Second Set Gossip Fairy 2",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonGoronTrialGoronTrialGossipFairy4",
+      "name": "Goron Trial First Set Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonGoronTrialGoronTrialGossipFairy5",
+      "name": "Goron Trial First Set Gossip Fairy 2",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialGossipStoneRoom1GossipFairy1",
+      "name": "Link Trial First Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialGossipStoneRoom2GossipFairy1",
+      "name": "Link Trial Second Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialIronKnuckleBattleGossipFairy1",
+      "name": "Link Trial Iron Knuckle Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialIronKnuckleBattleGossipFairy2",
+      "name": "Link Trial Iron Knuckle Fairy 2",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonLinkTrialPieceOfHeartRoomGossipFairy1",
+      "name": "Link Trial Last Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonZoraTrialZoraTrialGossipFairy1",
+      "name": "Zora Trial Gossip Fairy",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonZoraTrialZoraTrialGossipFairy2",
+      "name": "Zora Trial Gossip Fairy 2",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonZoraTrialZoraTrialGossipFairy3",
+      "name": "Zora Trial Gossip Fairy 3",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonZoraTrialZoraTrialGossipFairy4",
+      "name": "Zora Trial Gossip Fairy 4",
+      "category": "Fairies"
+    },
+    {
+      "id": "CollectableTheMoonZoraTrialZoraTrialGossipFairy5",
+      "name": "Zora Trial Gossip Fairy 5",
+      "category": "Fairies"
+    }
+  ],
+  "TwinIslands": [
+    {
+      "id": "ItemBottleGoronRace",
+      "name": "Goron Race",
+      "category": "Minigames"
+    },
+    {
+      "id": "HeartPieceTwinIslandsChest",
+      "name": "Twin Islands Underwater Ramp Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestHotSpringGrottoRedRupee",
+      "name": "Hot Spring Water Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestToGoronVillageRedRupee",
+      "name": "Twin Islands Cave Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestToGoronRaceGrotto",
+      "name": "Goron Racetrack Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterItem1",
+      "name": "Twin Islands Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterItem2",
+      "name": "Twin Islands Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterItem3",
+      "name": "Twin Islands Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterItem4",
+      "name": "Twin Islands Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball1",
+      "name": "Twin Islands Day 3 Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball2",
+      "name": "Twin Islands Day 3 Snowball 2",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball3",
+      "name": "Twin Islands Day 3 Snowball 3",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball4",
+      "name": "Twin Islands Day 3 Snowball 4",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball5",
+      "name": "Twin Islands Day 3 Snowball 5",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball6",
+      "name": "Twin Islands Day 2 Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball7",
+      "name": "Twin Islands Day 2 Snowball 2",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball8",
+      "name": "Twin Islands Day 2 Snowball 3",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball9",
+      "name": "Twin Islands Day 2 Snowball 4",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball10",
+      "name": "Twin Islands Day 1 Snowball",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball11",
+      "name": "Twin Islands Day 1 Snowball 2",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball12",
+      "name": "Twin Islands Day 1 Snowball 3",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball13",
+      "name": "Twin Islands Day 1 Snowball 4",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterLargeSnowball14",
+      "name": "Twin Islands Day 1 Snowball 5",
+      "category": "LargeSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterSmallSnowball1",
+      "name": "Twin Islands Small Snowball",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterSmallSnowball2",
+      "name": "Twin Islands Small Snowball 2",
+      "category": "SmallSnowballs"
+    },
+    {
+      "id": "CollectablePathToGoronVillageWinterSmallSnowball3",
+      "name": "Twin Islands Ramp Snowball",
+      "category": "SmallSnowballs"
+    }
+  ],
+  "WestClockTown": [
+    {
+      "id": "ItemBombBag",
+      "name": "Bomb Bag Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "UpgradeBigBombBag",
+      "name": "Big Bomb Bag Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "UpgradeAdultWallet",
+      "name": "Bank Reward #1",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceNotebookPostman",
+      "name": "Postman's Game",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceNotebookRosa",
+      "name": "Rosa Sisters",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceSwordsmanSchool",
+      "name": "Swordsman's School",
+      "category": "Minigames"
+    },
+    {
+      "id": "MaskAllNight",
+      "name": "All-Night Mask Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostRedPotion",
+      "name": "Trading Post Red Potion",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostGreenPotion",
+      "name": "Trading Post Green Potion",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostShield",
+      "name": "Trading Post Hero's Shield",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostFairy",
+      "name": "Trading Post Fairy",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostStick",
+      "name": "Trading Post Deku Stick",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostArrow30",
+      "name": "Trading Post 30 Arrows",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostNut10",
+      "name": "Trading Post 10 Deku Nuts",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemTradingPostArrow50",
+      "name": "Trading Post 50 Arrows",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemBombsBomb10",
+      "name": "Bomb Shop 10 Bombs",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemBombsBombchu10",
+      "name": "Bomb Shop 10 Bombchu",
+      "category": "Purchases"
+    },
+    {
+      "id": "HeartPieceBank",
+      "name": "Bank Reward #3",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemLotteryPurpleRupee",
+      "name": "Lottery",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemBankBlueRupee",
+      "name": "Bank Reward #2",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemCuriosityShopBlueRupee",
+      "name": "Curiosity Shop Blue Rupee",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemCuriosityShopRedRupee",
+      "name": "Curiosity Shop Red Rupee",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemCuriosityShopPurpleRupee",
+      "name": "Curiosity Shop Purple Rupee",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemCuriosityShopGoldRupee",
+      "name": "Curiosity Shop Gold Rupee",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableSwordsmanSSchoolPot1",
+      "name": "Swordsman's School Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSwordsmanSSchoolPot2",
+      "name": "Swordsman's School Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSwordsmanSSchoolPot3",
+      "name": "Swordsman's School Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSwordsmanSSchoolPot4",
+      "name": "Swordsman's School Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSwordsmanSSchoolPot5",
+      "name": "Swordsman's School Pot 5",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableSwordsmanSchoolGong1",
+      "name": "Swordsman School Gong",
+      "category": "Events"
+    },
+    {
+      "id": "NotebookRosaSistersThanks",
+      "name": "Rosa Sisters",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPostmansGame",
+      "name": "Postman's Game",
+      "category": "NotebookEntries"
+    },
+    {
+      "id": "NotebookPurchaseCuriosityShopItem",
+      "name": "All-Night Mask Purchase",
+      "category": "NotebookEntries"
+    }
+  ],
+  "Woodfall": [
+    {
+      "id": "FairySpinAttack",
+      "name": "Woodfall Great Fairy",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceWoodFallChest",
+      "name": "Woodfall Bridge Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestWoodfallBlueRupee",
+      "name": "Behind Woodfall Owl Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestWoodfallRedRupee",
+      "name": "Entrance to Woodfall Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectableWoodfallItem1",
+      "name": "Woodfall Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableWoodfallPot1",
+      "name": "Woodfall Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableWoodfallPot2",
+      "name": "Woodfall Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableWoodfallPot3",
+      "name": "Woodfall Pot 3",
+      "category": "Jars"
+    }
+  ],
+  "WoodfallTemple": [
+    {
+      "id": "ItemBow",
+      "name": "Hero's Bow Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ItemWoodfallMap",
+      "name": "Woodfall Map Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemWoodfallCompass",
+      "name": "Woodfall Compass Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ItemWoodfallBossKey",
+      "name": "Woodfall Boss Key Chest",
+      "category": "BossFights"
+    },
+    {
+      "id": "ItemWoodfallKey1",
+      "name": "Woodfall Small Key Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartContainerWoodfall",
+      "name": "Woodfall Heart Container",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall1",
+      "name": "Woodfall Pre-Boss Lower Right Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall2",
+      "name": "Woodfall Entrance Fairy",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall3",
+      "name": "Woodfall Pre-Boss Upper Left Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall4",
+      "name": "Woodfall Pre-Boss Pillar Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall5",
+      "name": "Woodfall Deku Baba",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall6",
+      "name": "Woodfall Poison Water Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall7",
+      "name": "Woodfall Main Room Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall8",
+      "name": "Woodfall Skulltula",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall9",
+      "name": "Woodfall Pre-Boss Upper Right Bubble",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall10",
+      "name": "Woodfall Main Room Switch",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall11",
+      "name": "Woodfall Entrance Platform",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall12",
+      "name": "Woodfall Dark Room",
+      "category": "Chests"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall13",
+      "name": "Woodfall Jar Fairy",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall14",
+      "name": "Woodfall Bridge Room Hive",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectibleStrayFairyWoodfall15",
+      "name": "Woodfall Platform Room Hive",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectableWoodfallTempleEntranceRoomBeehive1",
+      "name": "Woodfall Temple Entrance Hive",
+      "category": "Beehives"
+    },
+    {
+      "id": "CollectableWoodfallTempleGekkoRoomPot1",
+      "name": "Woodfall Temple Gekko Room Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableWoodfallTempleGekkoRoomPot2",
+      "name": "Woodfall Temple Gekko Room Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableWoodfallTempleGekkoRoomPot3",
+      "name": "Woodfall Temple Gekko Room Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableWoodfallTempleGekkoRoomPot4",
+      "name": "Woodfall Temple Gekko Room Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableWoodfallTemplePreBossRoomItem1",
+      "name": "Woodfall Temple Pre-Boss Platform Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableWoodfallTemplePreBossRoomItem2",
+      "name": "Woodfall Temple Pre-Boss Platform Item 2",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableWoodfallTemplePreBossRoomItem3",
+      "name": "Woodfall Temple Pre-Boss Platform Item 3",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableWoodfallTemplePreBossRoomItem4",
+      "name": "Woodfall Temple Pre-Boss Platform Item 4",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableWoodfallTemplePreBossRoomItem5",
+      "name": "Woodfall Temple Pre-Boss Left Pillar Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "CollectableWoodfallTemplePreBossRoomItem6",
+      "name": "Woodfall Temple Pre-Boss Right Pillar Item",
+      "category": "Freestanding"
+    },
+    {
+      "id": "RemainsOdolwa",
+      "name": "Woodfall Boss Warp",
+      "category": "BossFights"
+    },
+    {
+      "id": "CollectableWoodfallTempleEntranceRoomPot1",
+      "name": "Woodfall Temple Entrance Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "FrogWoodfallTemple",
+      "name": "Frog in Woodfall Temple",
+      "category": "Frogs"
+    }
+  ],
+  "ZoraCape": [
+    {
+      "id": "FairyDoubleDefense",
+      "name": "Ocean Great Fairy",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ItemBottleBeavers",
+      "name": "Beaver Race #1",
+      "category": "Minigames"
+    },
+    {
+      "id": "HeartPieceBeaverRace",
+      "name": "Beaver Race #2",
+      "category": "Minigames"
+    },
+    {
+      "id": "ChestGreatBayCapeLedge1",
+      "name": "Zora Cape Ledge Without Tree Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestGreatBayCapeLedge2",
+      "name": "Zora Cape Ledge With Tree Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestGreatBayCapeGrotto",
+      "name": "Zora Cape Grotto",
+      "category": "Chests"
+    },
+    {
+      "id": "ChestGreatBayCapeUnderwater",
+      "name": "Zora Cape Underwater Chest",
+      "category": "Chests"
+    },
+    {
+      "id": "HeartPieceGreatBayCapeLikeLike",
+      "name": "Zora Cape Like-Like",
+      "category": "EnemySpawn"
+    },
+    {
+      "id": "CollectableZoraCapePot1",
+      "name": "Zora Cape Owl Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableZoraCapePot2",
+      "name": "Zora Cape Owl Pot 2",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableZoraCapePot3",
+      "name": "Zora Cape Owl Pot 3",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableZoraCapePot4",
+      "name": "Zora Cape Waterfall Pot",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableZoraCapeJarGame1",
+      "name": "Zora Cape Jar Game",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "CollectableZoraCapePot5",
+      "name": "Zora Cape Owl Pot 4",
+      "category": "Jars"
+    },
+    {
+      "id": "CollectableZoraCapeGossipFairy1",
+      "name": "Zora Cape Gossip Fairy",
+      "category": "Fairies"
+    }
+  ],
+  "ZoraHall": [
+    {
+      "id": "TradeItemOceanDeed",
+      "name": "Ocean Scrub Trade",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPieceEvan",
+      "name": "Evan",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "ShopItemZoraShield",
+      "name": "Zora Shop Hero's Shield",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemZoraArrow10",
+      "name": "Zora Shop 10 Arrows",
+      "category": "Purchases"
+    },
+    {
+      "id": "ShopItemZoraRedPotion",
+      "name": "Zora Shop Red Potion",
+      "category": "Purchases"
+    },
+    {
+      "id": "HeartPieceZoraHallScrub",
+      "name": "Lulu's Room Ledge",
+      "category": "Freestanding"
+    },
+    {
+      "id": "MundaneItemZoraStageLightsBlueRupee",
+      "name": "Zora Hall Stage Lights",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemLuluBadPictographBlueRupee",
+      "name": "Bad Pictograph of Lulu",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "MundaneItemLuluGoodPictographRedRupee",
+      "name": "Good Pictograph of Lulu",
+      "category": "NpcRewards"
+    }
+  ]
+}
