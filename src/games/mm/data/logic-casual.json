@@ -508,10 +508,6 @@
   },
   {
     "Id": "UpgradeBigBombBag",
-    "RequiredItems": [
-      "TradeItemKafeiLetter",
-      "TradeItemPendant"
-    ],
     "ConditionalItems": [
       [
         "MaskGoron"
@@ -1083,10 +1079,6 @@
   },
   {
     "Id": "MaskBlast",
-    "RequiredItems": [
-      "TradeItemKafeiLetter",
-      "TradeItemPendant"
-    ],
     "ConditionalItems": [
       [
         "MaskGoron"
@@ -14475,10 +14467,6 @@
   },
   {
     "Id": "NotebookSaveOldLady",
-    "RequiredItems": [
-      "TradeItemKafeiLetter",
-      "TradeItemPendant"
-    ],
     "ConditionalItems": [
       [
         "MaskGoron"

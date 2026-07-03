@@ -74,6 +74,22 @@ describe("computeReachability (synthetic)", () => {
     // Without the shuffled flag the reference propagates transitively (old behavior).
     expect(computeReachability(graph, new Set(["A"])).get("Consumer")).toBe(TIME_FULL);
   });
+
+  it("marks a rule-less shuffled leaf reachable while other leaves stay gated", () => {
+    const graph = buildNodes([
+      { Id: "FreeChest", RequiredItems: [], ConditionalItems: [] }, // shuffled check, no rule
+      { Id: "NightChest", RequiredItems: [], ConditionalItems: [], TimeAvailable: "Night1" },
+      { Id: "Trick", RequiredItems: [], ConditionalItems: [] }, // non-item gating leaf
+    ]);
+    const shuffled = new Set(["FreeChest", "NightChest"]);
+    const mask = computeReachability(graph, new Set(), shuffled);
+
+    // A shuffled item's rule-less vanilla location is always reachable.
+    expect(mask.get("FreeChest")).toBe(TIME_FULL);
+    expect(mask.get("NightChest")).toBe(TIME_BITS.Night1); // honors its available time
+    // A non-item leaf only counts when seeded, so it stays unreachable.
+    expect(mask.get("Trick")).toBe(0);
+  });
 });
 
 describe("MMEvaluator (casual graph)", () => {

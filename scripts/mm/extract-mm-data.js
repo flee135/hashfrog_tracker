@@ -141,6 +141,34 @@ function buildShuffledItemIds(members, logicIds) {
     .sort();
 }
 
+// Strips "fake requirements" — dependencies baked into the base logic that
+// shouldn't gate these checks. Mirrors mm-rando's ItemLogic.cs constructor
+// (MMR.Randomizer/Models/ItemLogic.cs), which does the same removal when it
+// loads each item's logic. Kept in sync by Id.
+function removeFakeRequirements(entry) {
+  const remove = (list, ids) => list && ids.forEach(id => {
+    const i = list.indexOf(id);
+    if (i !== -1) list.splice(i, 1);
+  });
+  switch (entry.Id) {
+    case "UpgradeBigBombBag":
+    case "MaskBlast":
+    case "NotebookSaveOldLady":
+      remove(entry.RequiredItems, ["TradeItemKafeiLetter", "TradeItemPendant"]);
+      break;
+    case "UpgradeMirrorShield":
+      entry.ConditionalItems?.forEach(branch => remove(branch, ["TradeItemKafeiLetter", "TradeItemPendant"]));
+      break;
+    case "BottleCatchPrincess":
+    case "BottleCatchBigPoe":
+      remove(entry.RequiredItems, ["BottleCatchEgg", "BottleCatchBug", "BottleCatchFish"]);
+      break;
+    case "BottleCatchEgg":
+      remove(entry.RequiredItems, ["BottleCatchFish"]);
+      break;
+  }
+}
+
 function trimEntry(entry) {
   const trimmed = { Id: entry.Id };
   if (entry.RequiredItems && entry.RequiredItems.length) {
@@ -168,6 +196,7 @@ function main() {
     throw new Error(`Graph references undefined ids: ${[...dangling].slice(0, 10).join(", ")}`);
   }
 
+  logic.forEach(removeFakeRequirements);
   const trimmed = logic.map(trimEntry);
   fs.writeFileSync(OUT_FILE, JSON.stringify(trimmed, null, 2) + "\n");
 

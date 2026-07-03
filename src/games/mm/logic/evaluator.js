@@ -62,8 +62,10 @@ export function buildNodes(entries) {
  * satisfies references to it in other nodes' rules (full mask), but never
  * short-circuits its own node -- that stays gated on its own location rule. An
  * un-held shuffled item resolves to 0 (possession-gated); any other un-held node
- * resolves to its own computed reachability (transitive). Un-held leaf inputs
- * stay unreachable.
+ * resolves to its own computed reachability (transitive). A leaf node is freely
+ * reachable when it is a shuffled item (its rule-less vanilla location), but
+ * unreachable otherwise -- non-item leaves (tricks, off-settings) only count when
+ * seeded.
  * @param {Array<object>} nodes - Nodes from buildNodes.
  * @param {Set<string>} seeded - Ids held as inputs (items, settings, starting items).
  * @param {Set<string>} [shuffledItems] - Ids that are possession-gated (default: none).
@@ -90,7 +92,12 @@ export function computeReachability(nodes, seeded, shuffledItems = new Set()) {
     for (const node of nodes) {
       let next;
       if (node.isLeaf) {
-        next = 0;
+        // A shuffled item's leaf node is its vanilla location, which -- having no
+        // rule -- is freely reachable at its available times; possession is
+        // resolved separately in lookup. Every other leaf (tricks, off-settings,
+        // OtherInaccessible) is a gating input that only counts when seeded, so it
+        // stays unreachable here.
+        next = shuffledItems.has(node.id) ? node.time : 0;
       } else {
         next = node.time;
         for (const reqId of node.required) {
