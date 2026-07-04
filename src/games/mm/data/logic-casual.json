@@ -17435,7 +17435,8 @@
     ]
   },
   {
-    "Id": "Lensless Chests"
+    "Id": "Lensless Chests",
+    "IsTrick": true
   },
   {
     "Id": "Skull Kid With Bombs",
@@ -17447,10 +17448,12 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Straw Roof With Jump Slash"
+    "Id": "Straw Roof With Jump Slash",
+    "IsTrick": true
   },
   {
     "Id": "Jump Slash Tingle Balloon",
@@ -17461,25 +17464,31 @@
       [
         "SettingAllowFierceDeityAnywhere"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Bomber Guard Skip"
+    "Id": "Bomber Guard Skip",
+    "IsTrick": true
   },
   {
     "Id": "Inn Balcony Jump",
     "RequiredItems": [
       "Tall Character"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Postman without Bunny Hood"
+    "Id": "Postman without Bunny Hood",
+    "IsTrick": true
   },
   {
-    "Id": "Bio Baba Hive Luck"
+    "Id": "Bio Baba Hive Luck",
+    "IsTrick": true
   },
   {
-    "Id": "Avoid Swamp Tree Bat"
+    "Id": "Avoid Swamp Tree Bat",
+    "IsTrick": true
   },
   {
     "Id": "Run Through Poisoned Water",
@@ -17493,17 +17502,20 @@
       [
         "SettingGiantMaskAnywhere"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SSH With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Deku Guard Skip"
+    "Id": "Deku Guard Skip",
+    "IsTrick": true
   },
   {
     "Id": "Woodfall as FD",
@@ -17522,23 +17534,27 @@
         "FD Jump to Soaring Tablet",
         "Lilypad Parkour as FD"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT 2nd Floor With Hookshot",
     "RequiredItems": [
       "ItemHookshot",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Lensless Climbing"
+    "Id": "Lensless Climbing",
+    "IsTrick": true
   },
   {
     "Id": "Twin Islands Items in Winter",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Powder Keg Challenge Access as FD",
@@ -17554,26 +17570,30 @@
         "BottleCatchHotSpringWater",
         "Play Song of Soaring"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Path to Snowhead without Magic",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Tall Jumps",
     "RequiredItems": [
       "Tall Character"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Bowless Aliens",
     "RequiredItems": [
       "ItemOcarina",
       "SettingEnableSunsSong"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Coast Ledge Long Jump",
@@ -17597,56 +17617,67 @@
         "ItemPowderKeg",
         "Coast Ledge Zora Jump"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Coast Ledge Zora Jump",
     "RequiredItems": [
       "Tall Character"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Coast Ledge as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Coast Ledge as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Exit OSH Without Goron"
+    "Id": "Exit OSH Without Goron",
+    "IsTrick": true
   },
   {
-    "Id": "Swim to Zora Hall as Human"
+    "Id": "Swim to Zora Hall as Human",
+    "IsTrick": true
   },
   {
     "Id": "Zora Cape as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere",
       "Any B Sword"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Lulu's Ledge as Goron",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "PF Guard Room Rear Entry"
+    "Id": "PF Guard Room Rear Entry",
+    "IsTrick": true
   },
   {
-    "Id": "Pinnacle Rock without Seahorse"
+    "Id": "Pinnacle Rock without Seahorse",
+    "IsTrick": true
   },
   {
     "Id": "GBT Goron Waterwheel",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Road to Ikana Fences With Goron Bomb Jumps",
@@ -17654,22 +17685,27 @@
       "SettingDamageModeDefault",
       "MaskGoron",
       "Any Bomb Bag"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Day 2 Grave Without Lens of Truth"
+    "Id": "Day 2 Grave Without Lens of Truth",
+    "IsTrick": true
   },
   {
-    "Id": "Ikana Canyon Iceless"
+    "Id": "Ikana Canyon Iceless",
+    "IsTrick": true
   },
   {
     "Id": "Defeat Well Big Poe With Bombs",
     "RequiredItems": [
       "Any Bomb Bag"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Ikana Castle Invisible Platform Without Lens of Truth"
+    "Id": "Ikana Castle Invisible Platform Without Lens of Truth",
+    "IsTrick": true
   },
   {
     "Id": "Climb Stone Tower with One Transformation",
@@ -17683,44 +17719,52 @@
       [
         "SettingGiantMaskAnywhere"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Elegy Maze With Bombchu",
     "RequiredItems": [
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Shoot Twinmold",
     "RequiredItems": [
       "OtherArrow"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Trial as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Trial With Hookshot Most Surfaces",
     "RequiredItems": [
       "SettingHookshotAnySurface"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Goron Trial as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Zora Trial as Human"
+    "Id": "Zora Trial as Human",
+    "IsTrick": true
   },
   {
-    "Id": "Link Trial With Sticks"
+    "Id": "Link Trial With Sticks",
+    "IsTrick": true
   },
   {
     "Id": "Link Trial With Songs",
@@ -17734,19 +17778,23 @@
       [
         "Play Epona's Song"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Link Trial as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Termina Stump with No Items"
+    "Id": "Termina Stump with No Items",
+    "IsTrick": true
   },
   {
-    "Id": "Super Bowless Aliens"
+    "Id": "Super Bowless Aliens",
+    "IsTrick": true
   },
   {
     "Id": "Scarecrow's Song",
@@ -17760,10 +17808,12 @@
     "RequiredItems": [
       "MaskGoron",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "OSH Brute Force Code"
+    "Id": "OSH Brute Force Code",
+    "IsTrick": true
   },
   {
     "Id": "Climb Stone Tower",
@@ -17799,10 +17849,12 @@
     ]
   },
   {
-    "Id": "Kill Deku Shrine Big Octo"
+    "Id": "Kill Deku Shrine Big Octo",
+    "IsTrick": true
   },
   {
-    "Id": "Deku Palace Bean Skip"
+    "Id": "Deku Palace Bean Skip",
+    "IsTrick": true
   },
   {
     "Id": "AreaIkanaGraveyardAccess",
@@ -17918,38 +17970,46 @@
     ]
   },
   {
-    "Id": "Lulu's Ledge as Zora"
+    "Id": "Lulu's Ledge as Zora",
+    "IsTrick": true
   },
   {
-    "Id": "SHT Lensless Walls/Ceilings"
+    "Id": "SHT Lensless Walls/Ceilings",
+    "IsTrick": true
   },
   {
     "Id": "Ranch Tingle as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Hookshot to Eyegore",
     "RequiredItems": [
       "ItemHookshot",
       "Use Light Arrow"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Stun Keeta with Bombs",
     "RequiredItems": [
       "Any Bomb Bag"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "SHT Pillar Skip"
+    "Id": "SHT Pillar Skip",
+    "IsTrick": true
   },
   {
-    "Id": "ISTT Early Boss Key"
+    "Id": "ISTT Early Boss Key",
+    "IsTrick": true
   },
   {
-    "Id": "Guess Bomber Code"
+    "Id": "Guess Bomber Code",
+    "IsTrick": true
   },
   {
     "Id": "Exit Ocean Spider House",
@@ -18010,10 +18070,12 @@
     ]
   },
   {
-    "Id": "Milk Multiple Cows"
+    "Id": "Milk Multiple Cows",
+    "IsTrick": true
   },
   {
-    "Id": "OSH Fireless"
+    "Id": "OSH Fireless",
+    "IsTrick": true
   },
   {
     "Id": "SHT False Walls/Ceilings",
@@ -18027,7 +18089,8 @@
     ]
   },
   {
-    "Id": "SHT Jump to Stray Fairies"
+    "Id": "SHT Jump to Stray Fairies",
+    "IsTrick": true
   },
   {
     "Id": "Enter Snowhead Temple",
@@ -18071,7 +18134,8 @@
     ]
   },
   {
-    "Id": "OSH Storage Room Clip"
+    "Id": "OSH Storage Room Clip",
+    "IsTrick": true
   },
   {
     "Id": "Use Fire Arrow",
@@ -18115,14 +18179,16 @@
     "Id": "Zora Jar Game with Explosives",
     "RequiredItems": [
       "Any Bomb Bag"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Keaton Grass Small Spin",
     "RequiredItems": [
       "Any Sword",
       "Magic Meter"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Access Odolwa",
@@ -18451,7 +18517,8 @@
     "Id": "Powder Kegs as Explosives",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Icicle Room Access",
@@ -18504,10 +18571,12 @@
     ]
   },
   {
-    "Id": "ISTT Lightless Boss Key"
+    "Id": "ISTT Lightless Boss Key",
+    "IsTrick": true
   },
   {
-    "Id": "STT Water Tunnel as Human"
+    "Id": "STT Water Tunnel as Human",
+    "IsTrick": true
   },
   {
     "Id": "STT Garo Master Access",
@@ -18885,10 +18954,12 @@
     "Id": "Snowball Skip With Tall Character",
     "RequiredItems": [
       "Tall Character"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "SHT Fireless"
+    "Id": "SHT Fireless",
+    "IsTrick": true
   },
   {
     "Id": "Inn Balcony With Cucco",
@@ -18902,7 +18973,8 @@
       [
         "MaskZora"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Lava Room Ledge",
@@ -19156,7 +19228,8 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Courtyard",
@@ -19410,7 +19483,8 @@
     "Id": "Deku Playground Rupee Displacement",
     "RequiredItems": [
       "Deku Playground Cheating"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Keg Trial Access",
@@ -19815,7 +19889,8 @@
     "RequiredItems": [
       "Use Fire Arrow",
       "Use Ice Arrow"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Red Turnkey",
@@ -20237,7 +20312,8 @@
     "Id": "WFT Bow Skip",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Dungeon Entrance Return",
@@ -20322,7 +20398,8 @@
     ]
   },
   {
-    "Id": "Dog Race Luck"
+    "Id": "Dog Race Luck",
+    "IsTrick": true
   },
   {
     "Id": "Butler Race",
@@ -20442,7 +20519,8 @@
     "Id": "Low% Ocean Great Fairy",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Hot Spring Water in Mountains",
@@ -20502,7 +20580,8 @@
     "Id": "Jump Slash WFT Gekko",
     "RequiredItems": [
       "Any Bomb Bag"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Kill Gekko",
@@ -20643,22 +20722,26 @@
         "Play Song of Soaring",
         "SettingCharacterAdultLink"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Goron Village Invisible Platforming Backwards"
+    "Id": "Goron Village Invisible Platforming Backwards",
+    "IsTrick": true
   },
   {
     "Id": "FD Jump Into PFI",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Lilypad Parkour as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Palace Poison Water Without Deku Mask",
@@ -20681,28 +20764,32 @@
       [
         "SettingGiantMaskAnywhere"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Big Octo Skip as Deku",
     "RequiredItems": [
       "MaskDeku",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Big Octo Skip as Goron",
     "RequiredItems": [
       "MaskGoron",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Big Octo Skip as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Big Octo Skip as Adult Link",
@@ -20722,14 +20809,16 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Swamp Poison Water by Climbing",
     "RequiredItems": [
       "SettingClimbMostSurfaces",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Recoil Flip to Swamp Spiderhouse with Fairy",
@@ -20746,7 +20835,8 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Poison Swamp Grotto as Goron",
@@ -20761,7 +20851,8 @@
       [
         "SettingNotRandomizeEnemies"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Long Jump to Soaring Tablet",
@@ -20784,25 +20875,29 @@
       [
         "Blast Mask Long Jumps As Zora/FD"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "FD Jump to Soaring Tablet",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Blast Mask Long Jumps As Zora/FD",
     "RequiredItems": [
       "MaskBlast"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Woodfall Climbing and Swimming",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Woodfall Blue Rupee Without Deku Mask",
@@ -20820,7 +20915,8 @@
         "Any Shield",
         "SettingNotRandomizeEnemies"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Path to Snowhead Jumping and Climbing",
@@ -20835,16 +20931,19 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Path to Snowhead as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Path to Snowhead with Nothing"
+    "Id": "Path to Snowhead with Nothing",
+    "IsTrick": true
   },
   {
     "Id": "AreaSnowheadAccess",
@@ -20877,7 +20976,8 @@
     ]
   },
   {
-    "Id": "Path to Snowhead Pillar Without Lens of Truth"
+    "Id": "Path to Snowhead Pillar Without Lens of Truth",
+    "IsTrick": true
   },
   {
     "Id": "Use Lens of Truth",
@@ -20890,13 +20990,15 @@
     "Id": "Path to Snowhead Pillar as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Path to Snowhead Pillar as Giant Link",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Path to Snowhead Pillar Long Jump Climb",
@@ -20911,7 +21013,8 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "PTSH Invisible Platforms",
@@ -20945,23 +21048,28 @@
         "MaskBlast",
         "SettingDamageModeDefault"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ocean Great Fairy as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere",
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Goron Race Without Magic"
+    "Id": "Goron Race Without Magic",
+    "IsTrick": true
   },
   {
-    "Id": "Defeat Dampe Big Poe With Nothing"
+    "Id": "Defeat Dampe Big Poe With Nothing",
+    "IsTrick": true
   },
   {
-    "Id": "Pacifist Well Hot Spring Water"
+    "Id": "Pacifist Well Hot Spring Water",
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Early With Goron Bomb Jump",
@@ -20977,7 +21085,8 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Early With Goron Chu Chu Jump",
@@ -20986,7 +21095,8 @@
       "Play Song of Soaring",
       "SettingNotRandomizeEnemies",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Early as FD",
@@ -21002,7 +21112,8 @@
       [
         "Blast Mask Long Jumps As Zora/FD"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Early With Only Bombs",
@@ -21010,7 +21121,8 @@
       "SettingDamageModeDefault",
       "Any Bomb Bag",
       "SongSoaring"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Road to Ikana Fences With Goron Bubble Boosts",
@@ -21018,7 +21130,8 @@
       "SettingNotRandomizeEnemies",
       "SettingDamageModeDefault",
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Road to Ikana Fences as Zora",
@@ -21026,32 +21139,37 @@
       "SettingDamageModeDefault",
       "MaskZora",
       "Any Bomb Bag"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Turtle Jump",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Climb Into Romani Ranch",
     "RequiredItems": [
       "SettingClimbMostSurfaces"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "FD Jump into Ranch",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere",
       "Play Song of Soaring"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Hookshot into Ranch",
     "RequiredItems": [
       "SettingHookshotAnySurface"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Canyon Access as FD",
@@ -21072,13 +21190,15 @@
       [
         "Ikana Canyon Access as FD With Real Bombchu"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Canyon Access as FD With Real Bombchu",
     "RequiredItems": [
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Observatory Goron Bomb Jump",
@@ -21094,7 +21214,8 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "AreaAstralObservatoryAccess",
@@ -21139,7 +21260,8 @@
     "Id": "Fish Push",
     "RequiredItems": [
       "BottleCatchFish"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Zoey Grotto Recoil Flip",
@@ -21153,49 +21275,59 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Peahat With Sticks"
+    "Id": "Peahat With Sticks",
+    "IsTrick": true
   },
   {
-    "Id": "Dodongos With Sticks"
+    "Id": "Dodongos With Sticks",
+    "IsTrick": true
   },
   {
-    "Id": "Dinolfos With Sticks"
+    "Id": "Dinolfos With Sticks",
+    "IsTrick": true
   },
   {
-    "Id": "Doggy Racetrack Chest With Jump Slash"
+    "Id": "Doggy Racetrack Chest With Jump Slash",
+    "IsTrick": true
   },
   {
     "Id": "Straw Roof as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "South Clock Town Final Day Chest as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Straw Roof as Goron",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Tourist Center Roof as Goron",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Tourist Center Roof as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Igos Fight",
@@ -21219,7 +21351,8 @@
     ]
   },
   {
-    "Id": "Igos Fight Swordless"
+    "Id": "Igos Fight Swordless",
+    "IsTrick": true
   },
   {
     "Id": "Poe Hut With Bombs and Sticks",
@@ -21235,7 +21368,8 @@
         "MaskBlast",
         "SettingDamageModeDefault"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Keeta Fight",
@@ -21306,22 +21440,27 @@
     ]
   },
   {
-    "Id": "Defeat Keeta With Sticks"
+    "Id": "Defeat Keeta With Sticks",
+    "IsTrick": true
   },
   {
-    "Id": "Keeta as Goron"
+    "Id": "Keeta as Goron",
+    "IsTrick": true
   },
   {
     "Id": "Ikana Graveyard Rocks Without Sonata",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Ikana Graveyard Bats With Sticks and Bombs"
+    "Id": "Ikana Graveyard Bats With Sticks and Bombs",
+    "IsTrick": true
   },
   {
-    "Id": "Road to Swamp Bats With Sticks"
+    "Id": "Road to Swamp Bats With Sticks",
+    "IsTrick": true
   },
   {
     "Id": "Kill Bad Bats",
@@ -21353,10 +21492,12 @@
     ]
   },
   {
-    "Id": "WFT Skulltula With Stick"
+    "Id": "WFT Skulltula With Stick",
+    "IsTrick": true
   },
   {
-    "Id": "Takkuri With Nothing"
+    "Id": "Takkuri With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "Kill Takkuri",
@@ -21425,7 +21566,8 @@
     "RequiredItems": [
       "SettingClimbMostSurfaces",
       "MaskDeku"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Inn Balcony With Bombs",
@@ -21439,13 +21581,15 @@
       [
         "Any Shield"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Inn Balcony as Goron",
     "RequiredItems": [
       "Goron Spikes"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Goron Spikes",
@@ -21455,7 +21599,8 @@
     ]
   },
   {
-    "Id": "Inn Balcony With Nothing"
+    "Id": "Inn Balcony With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "Skull Kid With Blast Mask",
@@ -21469,16 +21614,19 @@
       [
         "Any Shield"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Skull Kid With FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Snowball Skip as Human"
+    "Id": "Snowball Skip as Human",
+    "IsTrick": true
   },
   {
     "Id": "Garo Mask Skip",
@@ -21500,23 +21648,27 @@
         "Any Shield",
         "SettingNotRandomizeEnemies"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Climb Stone Tower as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Climb Stone Tower as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere",
       "Any B Sword"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Flip Stone Tower Without Elegy"
+    "Id": "Flip Stone Tower Without Elegy",
+    "IsTrick": true
   },
   {
     "Id": "SSH Main Room Ceiling Skull as FD",
@@ -21530,7 +21682,8 @@
       [
         "SSH With Explosives"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SSH With Explosives",
@@ -21542,28 +21695,33 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SSH Gold Room as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SSH Monument Room Lower Wall Skull as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "SSH Monument Room Lower Wall Skull With Nothing"
+    "Id": "SSH Monument Room Lower Wall Skull With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "SSH Vine Skull as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SSH With Blast Mask and Climbing",
@@ -21578,10 +21736,12 @@
       [
         "SettingDamageModeDefault"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "SSH Boulderless-less"
+    "Id": "SSH Boulderless-less",
+    "IsTrick": true
   },
   {
     "Id": "Enter Ocean Spider House as Goron",
@@ -21597,7 +21757,8 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Enter Ocean Spider House as Giant",
@@ -21611,33 +21772,38 @@
       [
         "OtherExplosive"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "OSH as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "OSH as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "OSH Storage Room Behind Crate Skull as Adult With Hookshot",
     "RequiredItems": [
       "SettingCharacterAdultLink",
       "ItemHookshot"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "OSH Storage Room Behind Crate Skull as Adult With Fish",
     "RequiredItems": [
       "SettingCharacterAdultLink",
       "BottleCatchFish"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "OSH Entrance Skulls With Nothing",
@@ -21649,7 +21815,8 @@
         "Enter Ocean Spider House as Giant",
         "Any B Sword"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "OSH Entrance Web Skull as Goron",
@@ -21665,32 +21832,37 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Pirates' Fortress Upper Chest as Goron",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Pirates' Fortress Upper Chest as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Hookshot Room Skull Flag Rupees With Zora Boomerangs",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Cows With Nothing",
     "RequiredItems": [
       "SettingNotRandomizeEnemies",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Bio Baba Grotto With Bombs",
@@ -21712,13 +21884,15 @@
         "MaskBlast",
         "SettingDamageModeDefault"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Twin Islands FD Diving",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Swamp Frog Item Long Jump",
@@ -21732,7 +21906,8 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Swamp Frog Items as Goron",
@@ -21740,7 +21915,8 @@
       "MaskGoron",
       "SettingDamageModeDefault",
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Stone Tower Bean Chests as Giant",
@@ -21748,7 +21924,8 @@
       "SettingGiantMaskAnywhere",
       "SettingNotCharacterAdultLink",
       "Any B Sword"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Castle Gainer",
@@ -21759,7 +21936,8 @@
       [
         "MaskZora"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Castle Access as Goron",
@@ -21776,7 +21954,8 @@
         "ItemPowderKeg",
         "Play Song of Soaring"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Castle Skulltula Room",
@@ -21799,7 +21978,8 @@
     "Id": "Ikana Castle as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Castle Falling Ceiling Room",
@@ -21833,13 +22013,15 @@
       [
         "SettingCharacterAdultLink"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Castle Falling Ceiling Room as Human",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ikana Castle Pillar as Goron",
@@ -21871,19 +22053,23 @@
         "ItemPowderKeg",
         "SettingAllowFierceDeityAnywhere"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Ikana Castle Hole Room Jumps"
+    "Id": "Ikana Castle Hole Room Jumps",
+    "IsTrick": true
   },
   {
-    "Id": "SHT Lensless Map Room Ledge"
+    "Id": "SHT Lensless Map Room Ledge",
+    "IsTrick": true
   },
   {
     "Id": "Collect Out of Bounds Item",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Secret Shrine Floating Items",
@@ -21907,7 +22093,8 @@
     "Id": "Goron Racetrack Access as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Goron Racetrack Access as FD",
@@ -21922,7 +22109,8 @@
       [
         "Blast Mask Long Jumps As Zora/FD"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Goron Racetrack Access With Hookshot/Climb Anywhere",
@@ -21933,17 +22121,20 @@
       [
         "SettingClimbMostSurfaces"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Near Frog Hive Flower as Human"
+    "Id": "Near Frog Hive Flower as Human",
+    "IsTrick": true
   },
   {
     "Id": "Near Frog Hive With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Palace Pots as Goron",
@@ -21951,7 +22142,8 @@
       "MaskGoron",
       "Any Bomb Bag",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Palace Pots as Goron With Nothing",
@@ -21959,13 +22151,15 @@
       "MaskGoron",
       "SettingDamageModeDefault",
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Termina Field Log Climb",
     "RequiredItems": [
       "SettingClimbMostSurfaces"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "North Ramp Jump",
@@ -21977,25 +22171,29 @@
       [
         "Tall Character"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Playground as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Playground as Goron",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Deku Playground with Goron Spikes",
     "RequiredItems": [
       "Goron Spikes"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Termina Field Clam With Explosives",
@@ -22026,7 +22224,8 @@
         "MaskBlast",
         "SettingDamageModeDefault"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Termina Field Clam With Sword Beams",
@@ -22034,35 +22233,40 @@
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter",
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Clock Tower Clock With Sword Beams",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Clock Tower Clock With Powder Keg",
     "RequiredItems": [
       "MaskGoron",
       "ItemPowderKeg"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Clock Tower Clock With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Zora Jar Game With Powder Keg",
     "RequiredItems": [
       "MaskGoron",
       "ItemPowderKeg"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Smithy Fairy as FD",
@@ -22070,14 +22274,16 @@
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter",
       "ItemOcarina"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Smithy Fairy With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Smithy Fairy With Powder Keg",
@@ -22091,7 +22297,8 @@
       [
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Road to Ikana Pot as FD",
@@ -22099,27 +22306,31 @@
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter",
       "ItemOcarina"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Road to Ikana Pot With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Pillar Pot as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Pillar Pot With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Pillar Pot With Explosives",
@@ -22136,19 +22347,22 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Pillar Pot With Nothing",
     "RequiredItems": [
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Canyon Ledge as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Tingle as FD",
@@ -22157,7 +22371,8 @@
       "Magic Meter",
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Canyon Tingle as FD",
@@ -22173,20 +22388,23 @@
       [
         "SettingNotRandomizeEnemies"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Swamp Tingle as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Mountain Tingle as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Swamp Tingle With Climbing",
@@ -22200,7 +22418,8 @@
       [
         "SettingAllowFierceDeityAnywhere"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Zora Cape Recoil Flip",
@@ -22217,25 +22436,29 @@
         "MaskBlast",
         "Any Shield"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Entrance as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT 2nd Floor as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Elevator Room as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Elevator Jump",
@@ -22254,14 +22477,16 @@
       [
         "WFT Elevator Room as FD"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT as Giant Link",
     "RequiredItems": [
       "SettingGiantMaskAnywhere",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Twisted Recoil Flip",
@@ -22288,10 +22513,12 @@
         "Any Shield",
         "Any Sword"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "WFT Jump Slash to 2nd Floor"
+    "Id": "WFT Jump Slash to 2nd Floor",
+    "IsTrick": true
   },
   {
     "Id": "WFT Carnivorous Flower Jump",
@@ -22305,7 +22532,8 @@
       [
         "MaskGoron"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Elevator Room Long Jumps",
@@ -22319,28 +22547,33 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Long Jump to Odolwa as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "WFT Odolwa With Nothing"
+    "Id": "WFT Odolwa With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "WFT Pre-Boss Jumps to Upper Left",
     "RequiredItems": [
       "Tall Character"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Stray Fairy Bubbles With Explosives",
     "RequiredItems": [
       "MaskGreatFairy"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Odolwa Long Jump",
@@ -22365,10 +22598,12 @@
     "Id": "WFT Poison Water Bubble With Nothing",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "WFT Main Room Switch Jump"
+    "Id": "WFT Main Room Switch Jump",
+    "IsTrick": true
   },
   {
     "Id": "WFT Entrance Platform With Explosives",
@@ -22386,10 +22621,12 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "WFT Hives With Explosives"
+    "Id": "WFT Hives With Explosives",
+    "IsTrick": true
   },
   {
     "Id": "WFT Elevator Room Hive Fairy Collection",
@@ -22431,10 +22668,12 @@
       [
         "SettingAllowFierceDeityAnywhere"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "WFT Entrance Hive Jumps"
+    "Id": "WFT Entrance Hive Jumps",
+    "IsTrick": true
   },
   {
     "Id": "Woodfall Temple Boss Door",
@@ -22476,14 +22715,16 @@
       [
         "WFT as Giant Link"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Red Rupees as Goron",
     "RequiredItems": [
       "Woodfall Temple Boss Door",
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "WFT Crystal Long Jump",
@@ -22498,19 +22739,22 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Whirlpool Access as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Red Pump Long Jump",
@@ -22535,28 +22779,33 @@
         "SettingCharacterAdultLink",
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Red Pump as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Red Valve Early",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "GBT Map Chest Room Jumps"
+    "Id": "GBT Map Chest Room Jumps",
+    "IsTrick": true
   },
   {
     "Id": "GBT Red Control Turnkey as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Red Control Turnkey With Bombs",
@@ -22608,13 +22857,15 @@
         "MaskBlast",
         "Any Shield"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Exit as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Exit as Goron",
@@ -22622,10 +22873,12 @@
       "MaskGoron",
       "Any Bomb Bag",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "GBT Exit With Nothing"
+    "Id": "GBT Exit With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "GBT Green Pipes",
@@ -22666,7 +22919,8 @@
     "Id": "GBT Green Pump Room Early as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Green Valve",
@@ -22693,7 +22947,8 @@
     ]
   },
   {
-    "Id": "GBT Iceless"
+    "Id": "GBT Iceless",
+    "IsTrick": true
   },
   {
     "Id": "GBT Fireless",
@@ -22709,19 +22964,22 @@
         "MaskBlast",
         "SettingDamageModeDefault"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Boss Door as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Iron Goron Sneaks Past Dexihands",
     "RequiredItems": [
       "SettingIronGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Boss Key Chest",
@@ -22760,7 +23018,8 @@
     "Id": "GBT Boss Key With Ice Arrows",
     "RequiredItems": [
       "Use Ice Arrow"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Boss Key With Explosives",
@@ -22779,13 +23038,15 @@
       [
         "Blast Mask Long Jumps As Zora/FD"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Boss Key as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Boss Key as Zora/Adult",
@@ -22796,14 +23057,16 @@
       [
         "SettingCharacterAdultLink"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Boss Key as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere",
       "Any B Sword"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Compass Chest Room Access",
@@ -22842,13 +23105,15 @@
     "Id": "GBT Underwater Hookshot",
     "RequiredItems": [
       "SettingHookshotAnySurface"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Boss Key Climb",
     "RequiredItems": [
       "SettingClimbMostSurfaces"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Map Chest Room Access",
@@ -22880,23 +23145,27 @@
     ]
   },
   {
-    "Id": "GBT Skulltula With Stick"
+    "Id": "GBT Skulltula With Stick",
+    "IsTrick": true
   },
   {
     "Id": "GBT Stray Fairy Collection With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "GBT Water Control Room Underwater Fairy With Nothing"
+    "Id": "GBT Water Control Room Underwater Fairy With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "GBT Pre-Boss Bubble Fairy as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Temple Pre-Boss Room Access",
@@ -22926,19 +23195,23 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Waterwheel Room as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "GBT Waterwheel Fairy Chests With Explosives"
+    "Id": "GBT Waterwheel Fairy Chests With Explosives",
+    "IsTrick": true
   },
   {
-    "Id": "GBT Waterwheel Room Lower Chest With Nothing"
+    "Id": "GBT Waterwheel Room Lower Chest With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Temple Waterwheel Room Access",
@@ -22990,7 +23263,8 @@
     "Id": "GBT Green Pump Room Climb",
     "RequiredItems": [
       "SettingClimbMostSurfaces"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Great Bay Temple Seesaw Room Access",
@@ -23028,14 +23302,16 @@
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter",
       "MaskGreatFairy"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Bio Babas With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Dexihands Jar With Explosives",
@@ -23048,35 +23324,41 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Green Pump Room Giant Upwarp",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "SHT Gainers"
+    "Id": "SHT Gainers",
+    "IsTrick": true
   },
   {
     "Id": "SHT Goron Bomb Jumps",
     "RequiredItems": [
       "MaskGoron",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Long Jumps",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Cracked Wall",
@@ -23094,25 +23376,29 @@
     "Id": "SHT Twin Block Goron Pound",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Bridge Room With Bunny Hood",
     "RequiredItems": [
       "MaskBunnyHood"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Elevator Skip as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Ramps as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Scarecrow",
@@ -23129,13 +23415,16 @@
     "Id": "SHT Pixelshot",
     "RequiredItems": [
       "ItemHookshot"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "SHT Frozen Switch Clip"
+    "Id": "SHT Frozen Switch Clip",
+    "IsTrick": true
   },
   {
-    "Id": "SHT 3F Jumps"
+    "Id": "SHT 3F Jumps",
+    "IsTrick": true
   },
   {
     "Id": "SHT Elevator",
@@ -23165,16 +23454,19 @@
       [
         "SHT Ramps as FD"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SHT Icicle Room Rupees as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "SHT Fairy Bubbles With Explosives"
+    "Id": "SHT Fairy Bubbles With Explosives",
+    "IsTrick": true
   },
   {
     "Id": "Stump Chest With Goron Bomb Jump",
@@ -23190,13 +23482,15 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Stump Chest With Goron Spikes",
     "RequiredItems": [
       "Goron Spikes"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Stump Chest With Bats",
@@ -23204,19 +23498,22 @@
       "MaskGoron",
       "SettingDamageModeDefault",
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Elegy Maze Climb",
     "RequiredItems": [
       "SettingClimbMostSurfaces"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Kill Eyegore",
@@ -23249,7 +23546,8 @@
     "Id": "STT Eyegore Bridge as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Eyegore Bridge With Explosives",
@@ -23299,16 +23597,19 @@
         "SettingCharacterAdultLink",
         "Any Shield"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "STT Gainers"
+    "Id": "STT Gainers",
+    "IsTrick": true
   },
   {
     "Id": "STT Eyegore Bridge as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Compass Chest Sun Block Skip",
@@ -23400,13 +23701,15 @@
         "MaskBlast",
         "Any Shield"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Updraft Room as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Updraft Room With Powder Keg",
@@ -23421,27 +23724,31 @@
       [
         "MaskZora"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Updraft Room as Goron/Zora",
     "RequiredItems": [
       "MaskGoron",
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Lava Room Ledge as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Lava Room Ledge as Goron",
     "RequiredItems": [
       "MaskGoron",
       "ItemHookshot"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Compass Chest Sun Block",
@@ -23474,10 +23781,12 @@
         "MaskBlast",
         "Any Shield"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "STT Garo Master With Sticks"
+    "Id": "STT Garo Master With Sticks",
+    "IsTrick": true
   },
   {
     "Id": "STT Map Chest Recoil Flip",
@@ -23536,7 +23845,8 @@
         "ItemPowderKeg",
         "MaskZora"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Map Chest Exit",
@@ -23569,7 +23879,8 @@
     "RequiredItems": [
       "STT Basement Ceiling",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Basement Ceiling With Real Bombchu",
@@ -23577,7 +23888,8 @@
       "Play Elegy of Emptiness",
       "MaskGoron",
       "STT Elegy Maze With Bombchu"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Map Chest as Zora",
@@ -23585,7 +23897,8 @@
       "STT Basement Ceiling",
       "MaskZora",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Basement Ceiling",
@@ -23614,7 +23927,8 @@
       [
         "STT Basement Ledge Jump Slash Recoil"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Kill Armos",
@@ -23645,14 +23959,16 @@
       [
         "OtherExplosive"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Armos With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Garo Master Fight",
@@ -23720,25 +24036,30 @@
     "Id": "STT Thin Bridge Crystal as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Thin Bridge Crystal as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "STT Thin Bridge Crystal With Nothing"
+    "Id": "STT Thin Bridge Crystal With Nothing",
+    "IsTrick": true
   },
   {
-    "Id": "STT Underwater Sun Switch Snipe"
+    "Id": "STT Underwater Sun Switch Snipe",
+    "IsTrick": true
   },
   {
     "Id": "STT Underwater Sun Switch With Ice Arrows",
     "RequiredItems": [
       "Use Ice Arrow"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Underwater Stuff",
@@ -23756,56 +24077,66 @@
     "RequiredItems": [
       "MaskGoron",
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Bridge Crystal With Explosives",
     "RequiredItems": [
       "OtherExplosive"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Bridge Crystal as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "STT Bridge Crystal With Nothing"
+    "Id": "STT Bridge Crystal With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "STT Bridge Crystal With Spin Attack",
     "RequiredItems": [
       "Big Spin Attack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "STT Bridge Crystal With Ice Arrows",
     "RequiredItems": [
       "Use Ice Arrow",
       "Use Light Arrow"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Lobby Long Jump",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Lobby as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "ISTT Updrafts Without Deku Mask"
+    "Id": "ISTT Updrafts Without Deku Mask",
+    "IsTrick": true
   },
   {
     "Id": "ISTT Lava Room",
@@ -23838,7 +24169,8 @@
     "Id": "ISTT Lava Room Gainer",
     "RequiredItems": [
       "Tall Character"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Lava Room With Explosives",
@@ -23860,7 +24192,8 @@
         "Any Bomb Bag",
         "SettingDamageModeDefault"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Eyegore Bridge Recoil Flips",
@@ -23887,7 +24220,8 @@
         "ItemPowderKeg",
         "MaskZora"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Wizzrobe Room",
@@ -23912,25 +24246,29 @@
       "MaskGoron",
       "SettingDamageModeDefault",
       "Any Bomb Bag"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Hanging Explosive Dodging",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Poe Gap as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Eyegore Bridge to Dexihand as FD",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Gomess Fight",
@@ -23984,7 +24322,8 @@
         "ItemPowderKeg",
         "MaskZora"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Death Armos Maze Chest Recoil Flip",
@@ -24053,7 +24392,8 @@
         "MaskDeku",
         "ISTT Early Boss Key"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Pinnacle Rock Eggs",
@@ -24108,14 +24448,16 @@
       [
         "MaskBlast"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Sewers With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Guarded Egg",
@@ -24162,16 +24504,19 @@
     "Id": "ISTT Thin Bridge Rupees as Goron",
     "RequiredItems": [
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "ISTT Frozen Eye Chest Ledge With Nothing"
+    "Id": "ISTT Frozen Eye Chest Ledge With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "ISTT Thin Bridge Three Blue Rupees as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Gyorg Quick Kill",
@@ -24188,19 +24533,22 @@
       [
         "MaskZora"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Gyorg Without Magic",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Gyorg With Arrows",
     "RequiredItems": [
       "OtherArrow"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "GBT Gyorg as Goron",
@@ -24214,20 +24562,23 @@
       [
         "ItemHookshot"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Wallmaster Void Out",
     "RequiredItems": [
       "SettingDamageModeDefault",
       "SettingNotRandomizeEnemies"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Updraft Rupee Gainer",
     "RequiredItems": [
       "Tall Character"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Updraft Rupee Goron Bomb Jump",
@@ -24243,13 +24594,15 @@
         "Powder Kegs as Explosives",
         "ItemPowderKeg"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "ISTT Updraft Rupees as Zora",
     "RequiredItems": [
       "MaskZora"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SettingCloseCows"
@@ -24310,13 +24663,15 @@
     "Id": "Bean Grotto as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Underwater Chest as Giant",
     "RequiredItems": [
       "SettingGiantMaskAnywhere"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "SettingNotRandomizedBottleCatchSpringWater"
@@ -24339,20 +24694,24 @@
       [
         "OtherExplosive"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Bank #2 Without Wallets"
+    "Id": "Bank #2 Without Wallets",
+    "IsTrick": true
   },
   {
-    "Id": "Bank #3 Without Wallets"
+    "Id": "Bank #3 Without Wallets",
+    "IsTrick": true
   },
   {
     "Id": "Like Like With Bombchu",
     "RequiredItems": [
       "Any Bomb Bag",
       "Any Bombchu Pack"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "The Giant Dive",
@@ -24366,10 +24725,12 @@
       [
         "Like Like With Bombchu"
       ]
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Rock Sirloin Fireless"
+    "Id": "Rock Sirloin Fireless",
+    "IsTrick": true
   },
   {
     "Id": "SSH Tree Room Beehive as FD",
@@ -24377,30 +24738,35 @@
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter",
       "OtherExplosive"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Lens Cave With Powder Keg Challenge",
     "RequiredItems": [
       "Keg Trial Access",
       "MaskGoron"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Sewers With Explosives",
     "RequiredItems": [
       "SettingDamageModeDefault"
-    ]
+    ],
+    "IsTrick": true
   },
   {
     "Id": "Ranch Tingle With Sword Beams",
     "RequiredItems": [
       "SettingAllowFierceDeityAnywhere",
       "Magic Meter"
-    ]
+    ],
+    "IsTrick": true
   },
   {
-    "Id": "Doggy Racetrack Chest With Nothing"
+    "Id": "Doggy Racetrack Chest With Nothing",
+    "IsTrick": true
   },
   {
     "Id": "Setting Can Shield"

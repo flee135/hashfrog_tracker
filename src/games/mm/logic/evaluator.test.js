@@ -14,9 +14,10 @@ describe("parseTime", () => {
 });
 
 describe("computeReachability (synthetic)", () => {
+  // A, B and Unreachable are external input ids (not nodes in the graph), the way a
+  // dropped gating input is referenced: they resolve to 0 until seeded. Every node
+  // below carries a rule, so none is a free spot on its own.
   const nodes = buildNodes([
-    { Id: "A", RequiredItems: [], ConditionalItems: [] },
-    { Id: "B", RequiredItems: [], ConditionalItems: [] },
     { Id: "L1", RequiredItems: ["A"], ConditionalItems: [] }, // A
     { Id: "L2", RequiredItems: [], ConditionalItems: [["A"], ["B"]] }, // A OR B
     { Id: "L3", RequiredItems: ["A", "B"], ConditionalItems: [] }, // A AND B
@@ -75,64 +76,60 @@ describe("computeReachability (synthetic)", () => {
     expect(computeReachability(graph, new Set(["A"])).get("Consumer")).toBe(TIME_FULL);
   });
 
-  it("propagates a shuffleable check left unshuffled this seed transitively", () => {
-    // StrayFairy is a shuffleable check (its vanilla location is freely reachable),
-    // and FairyMagic requires it. When it is NOT shuffled this seed it stays at its
-    // location, so reaching that location should unlock FairyMagic without holding
-    // anything -- mirrors an unshuffled Clock Town stray fairy freeing Fairy Magic.
+  it("propagates an unshuffled check transitively but gates a shuffled one", () => {
+    // FairyMagic requires the Clock Town stray fairy. Unshuffled, the fairy sits at
+    // its rule-less location, so reaching it frees FairyMagic with nothing held;
+    // shuffled, a random item sits there, so possession is required instead.
     const graph = buildNodes([
       { Id: "StrayFairy", RequiredItems: [], ConditionalItems: [] },
       { Id: "FairyMagic", RequiredItems: ["StrayFairy"], ConditionalItems: [] },
     ]);
-    const shuffleable = new Set(["StrayFairy"]);
 
-    // Shuffled (possession-gated): reaching the location does not grant the fairy.
-    const shuffled = computeReachability(graph, new Set(), shuffleable, shuffleable);
-    expect(shuffled.get("StrayFairy")).toBe(TIME_FULL); // location reachable
-    expect(shuffled.get("FairyMagic")).toBe(0); // but not possessed
-
-    // Unshuffled (empty possession-gated subset): the reference resolves to the
-    // location's own reachability, so FairyMagic is free from the start.
-    const unshuffled = computeReachability(graph, new Set(), shuffleable, new Set());
+    // Unshuffled (not possession-gated): the reference resolves to the location's
+    // own reachability, so FairyMagic is free from the start.
+    const unshuffled = computeReachability(graph, new Set());
     expect(unshuffled.get("StrayFairy")).toBe(TIME_FULL);
     expect(unshuffled.get("FairyMagic")).toBe(TIME_FULL);
+
+    // Shuffled (possession-gated): reaching the location does not grant the fairy.
+    const shuffled = computeReachability(graph, new Set(), new Set(["StrayFairy"]));
+    expect(shuffled.get("StrayFairy")).toBe(TIME_FULL); // location reachable
+    expect(shuffled.get("FairyMagic")).toBe(0); // but not possessed
   });
 
-  it("propagates an unshuffled check with a rule through its dependents", () => {
+  it("chains an unshuffled ruled check through its dependents, gating blocks it", () => {
     // SeaHorse needs the pictobox to reach; HeartPieceSeaHorse needs SeaHorse. When
-    // SeaHorse is not shuffled, holding the pictobox should chain through to the
-    // heart piece without ever holding a SeaHorse item.
+    // SeaHorse is not shuffled, holding the pictobox chains through to the heart
+    // piece without ever holding a SeaHorse item.
     const graph = buildNodes([
       { Id: "Pictobox", RequiredItems: [], ConditionalItems: [] },
       { Id: "SeaHorse", RequiredItems: ["Pictobox"], ConditionalItems: [] },
       { Id: "HeartPieceSeaHorse", RequiredItems: ["SeaHorse"], ConditionalItems: [] },
     ]);
-    const shuffleable = new Set(["SeaHorse", "HeartPieceSeaHorse"]);
 
-    const unshuffled = computeReachability(graph, new Set(["Pictobox"]), shuffleable, new Set());
+    const unshuffled = computeReachability(graph, new Set(["Pictobox"]));
     expect(unshuffled.get("HeartPieceSeaHorse")).toBe(TIME_FULL);
 
     // Shuffled: SeaHorse is possession-gated, so the heart piece stays locked until
     // a SeaHorse item is actually held.
-    const seahorseGated = new Set(["SeaHorse"]);
-    const shuffled = computeReachability(graph, new Set(["Pictobox"]), shuffleable, seahorseGated);
+    const shuffled = computeReachability(graph, new Set(["Pictobox"]), new Set(["SeaHorse"]));
     expect(shuffled.get("HeartPieceSeaHorse")).toBe(0);
   });
 
-  it("marks a rule-less shuffled leaf reachable while other leaves stay gated", () => {
+  it("treats every rule-less node as a reachable spot and a dropped id as 0", () => {
+    // Gating inputs are excluded from the graph upstream, so here every leaf is a
+    // real spot: reachable at its available time. A rule referencing an id that was
+    // dropped (absent from the graph) reads it as 0.
     const graph = buildNodes([
-      { Id: "FreeChest", RequiredItems: [], ConditionalItems: [] }, // shuffled check, no rule
+      { Id: "FreeChest", RequiredItems: [], ConditionalItems: [] },
       { Id: "NightChest", RequiredItems: [], ConditionalItems: [], TimeAvailable: "Night1" },
-      { Id: "Trick", RequiredItems: [], ConditionalItems: [] }, // non-item gating leaf
+      { Id: "NeedsTrick", RequiredItems: ["DroppedTrick"], ConditionalItems: [] },
     ]);
-    const shuffled = new Set(["FreeChest", "NightChest"]);
-    const mask = computeReachability(graph, new Set(), shuffled);
+    const mask = computeReachability(graph, new Set());
 
-    // A shuffled item's rule-less vanilla location is always reachable.
     expect(mask.get("FreeChest")).toBe(TIME_FULL);
     expect(mask.get("NightChest")).toBe(TIME_BITS.Night1); // honors its available time
-    // A non-item leaf only counts when seeded, so it stays unreachable.
-    expect(mask.get("Trick")).toBe(0);
+    expect(mask.get("NeedsTrick")).toBe(0); // DroppedTrick has no node -> reads as 0
   });
 });
 
@@ -177,5 +174,24 @@ describe("MMEvaluator (casual graph)", () => {
 
     MMEvaluator.updateItems({ TradeItemKafeiLetter: 1 });
     expect(MMEvaluator.isLocationAvailable("HeartPieceNotebookHand")).toBe(true);
+  });
+
+  it("unlocks Town Great Fairy from an unshuffled Clock Town stray fairy, no mask needed", () => {
+    // MaskGreatFairy needs CollectibleStrayFairyClockTown, which resolves through a
+    // rule-less laundry-pool access macro (kept in the graph as a real spot). Left
+    // unshuffled, that spot is freely reachable, so the reward unlocks from the
+    // casual seed alone -- previously it required a Deku/Goron/Great Fairy mask.
+    const allIds = new Set(LOGIC.map(entry => entry.Id));
+    const unshuffledFairy = new Set(allIds);
+    unshuffledFairy.delete("CollectibleStrayFairyClockTown");
+
+    MMEvaluator.setEnabledChecks(unshuffledFairy);
+    MMEvaluator.updateItems({}); // casual seed only, no masks
+    expect(MMEvaluator.isLocationAvailable("MaskGreatFairy")).toBe(true);
+
+    // Shuffled instead, the reward stays possession-gated on holding the fairy.
+    MMEvaluator.setEnabledChecks(allIds);
+    MMEvaluator.updateItems({});
+    expect(MMEvaluator.isLocationAvailable("MaskGreatFairy")).toBe(false);
   });
 });

@@ -8,9 +8,11 @@
 //
 // Outputs:
 //   - src/games/mm/data/logic-casual.json : trimmed graph, one entry per node:
-//       { Id, RequiredItems?, ConditionalItems?, TimeAvailable? }
+//       { Id, RequiredItems?, ConditionalItems?, TimeAvailable?, IsTrick? }
 //     Empty RequiredItems / ConditionalItems and a "None" TimeAvailable are
-//     omitted to keep the bundle lean; the evaluator defaults them.
+//     omitted to keep the bundle lean; the evaluator defaults them. IsTrick is
+//     kept only on trick nodes (truthy) -- the evaluator needs it to tell a trick
+//     leaf apart from a real world spot when it excludes gating inputs.
 //   - src/games/mm/data/locations.json : { Region: [ { id, name, category } ] }
 //     the full check universe grouped by Item.cs Region attribute. The enabled
 //     subset for a given seed is derived at runtime from the generator's
@@ -30,10 +32,11 @@
 //     whose ItemName contains "Heart". This is the bit-index basis for decoding the
 //     generator's CustomStartingItemListString (see logic/checks.js decoder).
 //
-// A node with neither RequiredItems nor ConditionalItems is a leaf/input: the
-// evaluator holds it only if it is seeded (held item, casual starting item, or
-// on-setting). Tricks are leaves that are never seeded, so IsTrick is not
-// needed at runtime and is dropped here.
+// A node with neither RequiredItems nor ConditionalItems is a leaf: either a real
+// world spot (freely reachable) or a gating INPUT the evaluator excludes from the
+// graph -- a trick (IsTrick), a Setting* leaf, or an Other* goal/count sentinel.
+// IsTrick is the one distinction that cannot be read off the id, so it is the only
+// raw REQ_CASUAL field kept per-node here (see trimEntry).
 //
 // Run: node scripts/mm/extract-mm-data.js
 
@@ -199,6 +202,11 @@ function trimEntry(entry) {
   }
   if (entry.TimeAvailable && entry.TimeAvailable !== "None") {
     trimmed.TimeAvailable = entry.TimeAvailable;
+  }
+  // Kept only on tricks (truthy). The evaluator excludes trick leaves from the
+  // graph, and a trick is otherwise indistinguishable from a real rule-less spot.
+  if (entry.IsTrick) {
+    trimmed.IsTrick = true;
   }
   return trimmed;
 }

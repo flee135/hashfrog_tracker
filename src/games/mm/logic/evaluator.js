@@ -1,6 +1,6 @@
 import LOGIC from "../data/logic-casual.json";
 import SHUFFLED_ITEM_IDS from "../data/shuffled-item-ids.json";
-import { CASUAL_SETTINGS, CASUAL_STARTING_ITEMS } from "./settings";
+import { CASUAL_SETTINGS, CASUAL_STARTING_ITEMS, ENABLED_TRICKS } from "./settings";
 
 // MM reachability evaluator. REQ_CASUAL is a flat graph where availability is
 // AND(RequiredItems) AND (ConditionalItems empty OR OR-of-AND(branches)),
@@ -20,11 +20,13 @@ import { CASUAL_SETTINGS, CASUAL_STARTING_ITEMS } from "./settings";
 //     its location): transitive. It resolves to its own computed reachability, so
 //     region access, macros, and unshuffled checks propagate through the fixpoint.
 //
-// The possession-gated set is the seed's shuffled subset (setEnabledChecks). The
-// broader *shuffleable* set (shuffled-item-ids.json -- Item.cs members with an
-// ItemPool ItemCategory) is separate: it marks which rule-less nodes are real
-// vanilla locations (freely reachable) rather than gating inputs, regardless of
-// whether the item there is shuffled.
+// The possession-gated set is the seed's shuffled subset (setEnabledChecks, drawn
+// from shuffled-item-ids.json). Reachability otherwise assumes every graph node is
+// a real spot: a rule-less node is freely reachable at its available times. The
+// only nodes that must NOT be are gating inputs -- tricks (all off in casual),
+// off-settings, and the Other* goal/count sentinels -- so those are dropped from
+// the graph up front (see isGatingInput). A reference to a dropped id then
+// resolves to 0, while an on-setting resolves through the seeded set instead.
 // Possession never short-circuits the held node's own value -- otherwise holding
 // an item would falsely mark the vanilla location it lives at as reachable. See
 // mm-logic-format memory for the format details.
@@ -48,7 +50,7 @@ export function parseTime(str) {
 /**
  * Precomputes evaluator nodes from raw logic entries.
  * @param {Array<object>} entries - Raw {Id, RequiredItems?, ConditionalItems?, TimeAvailable?} entries.
- * @returns {Array<object>} Nodes with parsed time masks and a leaf flag.
+ * @returns {Array<object>} Nodes with parsed time masks.
  */
 export function buildNodes(entries) {
   return entries.map(entry => {
@@ -59,7 +61,6 @@ export function buildNodes(entries) {
       required,
       conditional,
       time: parseTime(entry.TimeAvailable),
-      isLeaf: required.length === 0 && conditional.length === 0,
     };
   });
 }
@@ -69,21 +70,20 @@ export function buildNodes(entries) {
  * satisfies references to it in other nodes' rules (full mask), but never
  * short-circuits its own node -- that stays gated on its own location rule. An
  * un-held possession-gated id resolves to 0; any other un-held node resolves to
- * its own computed reachability (transitive). A leaf node is freely reachable when
- * it is a shuffleable check (its rule-less vanilla location), but unreachable
- * otherwise -- non-item leaves (tricks, off-settings) only count when seeded.
- * @param {Array<object>} nodes - Nodes from buildNodes.
+ * its own computed reachability (transitive). A rule-less node is freely reachable
+ * at its available times, so the graph passed in must already exclude gating inputs
+ * (tricks, off-settings, Other* sentinels) -- every leaf left in it is a real spot.
+ * @param {Array<object>} nodes - Nodes from buildNodes, gating inputs already excluded.
  * @param {Set<string>} seeded - Ids held as inputs (items, settings, starting items).
- * @param {Set<string>} [shuffleable] - Ids whose rule-less node is a reachable vanilla location (default: none).
- * @param {Set<string>} [possessionGated] - Ids that resolve by possession only (default: all shuffleable).
+ * @param {Set<string>} [possessionGated] - Ids that resolve by possession only (default: none).
  * @returns {Map<string, number>} Map of node id to reachable time mask (0 = unreachable).
  */
-export function computeReachability(nodes, seeded, shuffleable = new Set(), possessionGated = shuffleable) {
+export function computeReachability(nodes, seeded, possessionGated = new Set()) {
   const mask = new Map(nodes.map(node => [node.id, 0]));
   // A held id resolves full when referenced as a requirement. An un-held
   // possession-gated id is not possessed, so it resolves to 0 -- reaching its
-  // vanilla location never grants it. Other un-held nodes contribute their own
-  // reachability (transitive), including shuffleable checks left vanilla this seed.
+  // vanilla location never grants it. Any other id contributes its own computed
+  // reachability (transitive); a dropped gating id has no entry and reads as 0.
   const lookup = id => {
     if (seeded.has(id)) {
       return TIME_FULL;
@@ -98,39 +98,33 @@ export function computeReachability(nodes, seeded, shuffleable = new Set(), poss
   while (changed) {
     changed = false;
     for (const node of nodes) {
-      let next;
-      if (node.isLeaf) {
-        // A shuffleable check's leaf node is its vanilla location, which -- having
-        // no rule -- is freely reachable at its available times; possession (when
-        // shuffled) is resolved separately in lookup. Every other leaf (tricks,
-        // off-settings, OtherInaccessible) is a gating input that only counts when
-        // seeded, so it stays unreachable here.
-        next = shuffleable.has(node.id) ? node.time : 0;
-      } else {
-        next = node.time;
-        for (const reqId of node.required) {
-          next &= lookup(reqId);
-          if (next === 0) {
-            break;
-          }
+      // A rule-less node is a real world spot, freely reachable at its available
+      // times; possession of a shuffled item placed there is resolved separately
+      // in lookup. Gating inputs (tricks, off-settings, Other* sentinels) were
+      // dropped from the graph, so a node with no requirements is never held back.
+      let next = node.time;
+      for (const reqId of node.required) {
+        next &= lookup(reqId);
+        if (next === 0) {
+          break;
         }
-        if (next !== 0 && node.conditional.length > 0) {
-          let condMask = 0;
-          for (const branch of node.conditional) {
-            let branchMask = TIME_FULL;
-            for (const memberId of branch) {
-              branchMask &= lookup(memberId);
-              if (branchMask === 0) {
-                break;
-              }
-            }
-            condMask |= branchMask;
-            if (condMask === TIME_FULL) {
+      }
+      if (next !== 0 && node.conditional.length > 0) {
+        let condMask = 0;
+        for (const branch of node.conditional) {
+          let branchMask = TIME_FULL;
+          for (const memberId of branch) {
+            branchMask &= lookup(memberId);
+            if (branchMask === 0) {
               break;
             }
           }
-          next &= condMask;
+          condMask |= branchMask;
+          if (condMask === TIME_FULL) {
+            break;
+          }
         }
+        next &= condMask;
       }
       if (next !== mask.get(node.id)) {
         mask.set(node.id, next);
@@ -142,7 +136,24 @@ export function computeReachability(nodes, seeded, shuffleable = new Set(), poss
   return mask;
 }
 
-const NODES = buildNodes(LOGIC);
+// A gating input is a node that is OFF in casual, so it is dropped from the graph
+// (a reference to a dropped id then falls through lookup to 0). Two kinds:
+//   - Any trick (IsTrick), unless enabled by this preset. Glitchless casual runs
+//     none. A dropped trick contributes nothing, so checks fall back to their
+//     legit paths; an enabled trick is kept and evaluated against its own rule
+//     (its cost still applies), which is why we keep it rather than seed it.
+//   - Rule-less Setting*/Other* inputs -- off-settings and the Other* goal/count
+//     sentinels. On-settings are not dropped here; they resolve via the seeded set.
+// Their non-leaf forms (SettingIronGoron, OtherCredits, ...) are real computed
+// macros with rules and are left in. IsTrick is the one signal not readable from
+// the id, so the extract keeps it on trick nodes for this.
+const ENABLED_TRICK_IDS = new Set(ENABLED_TRICKS);
+const isGatingInput = entry =>
+  (entry.IsTrick && !ENABLED_TRICK_IDS.has(entry.Id)) ||
+  (!(entry.RequiredItems?.length) &&
+    !(entry.ConditionalItems?.length) &&
+    (entry.Id.startsWith("Setting") || entry.Id.startsWith("Other")));
+const NODES = buildNodes(LOGIC.filter(entry => !isGatingInput(entry)));
 const SHUFFLED_ITEMS = new Set(SHUFFLED_ITEM_IDS);
 
 // Singleton implementing the shared engine's evaluator contract
@@ -172,7 +183,7 @@ class MMEvaluator {
         seeded.add(id);
       }
     }
-    MMEvaluator.mask = computeReachability(NODES, seeded, SHUFFLED_ITEMS, MMEvaluator.possessionGated);
+    MMEvaluator.mask = computeReachability(NODES, seeded, MMEvaluator.possessionGated);
   }
 
   static isLocationAvailable(id) {
