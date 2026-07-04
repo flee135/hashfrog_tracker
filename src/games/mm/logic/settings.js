@@ -6,6 +6,7 @@
 // setting as a boolean node, so seeding these true resolves the setting-gated
 // branches (the complementary "Not*"/"Is*" nodes are left off).
 export const ENABLED_SETTINGS = [
+  "SettingNotCharacterAdultLink",
   "SettingNotRandomizeEnemies",
   "SettingNotRandomizedBottleCatchHotSpringWater",
   "SettingNotRandomizedBottleCatchSpringWater",
