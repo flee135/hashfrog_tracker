@@ -9,7 +9,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import LayoutSelector from "../components/LayoutSelector";
 import { useLayout } from "../context/layoutContext";
-import { getStartingItemsCache, loadSession, setStartingItemsCache, useSettingsString } from "../context/trackerContext";
+import { getSmallKeysOpenCache, getStartingItemsCache, loadSession, setSmallKeysOpenCache, setStartingItemsCache, useSettingsString } from "../context/trackerContext";
 import { gameKey, gameUrl, getActiveGame } from "../games";
 import { joinChecksStrings, splitChecksStrings } from "../games/checks-string";
 import useDebounce from "../hooks/useDebounce";
@@ -27,6 +27,9 @@ const CHECKS_NOTES = getActiveGame().data.checksNotes || [];
 // Optional always-visible field (MM only): the seed's starting-items string,
 // decoded to pre-mark starting items whether or not check tracking is enabled.
 const STARTING_ITEMS_FIELD = getActiveGame().data.startingItemsField;
+// Optional always-visible toggle (MM only): mm-rando SmallKeyMode.DoorsOpen. When
+// on, the logic seeds all dungeon small keys as held (see tracker.initializeLogic).
+const SMALL_KEYS_TOGGLE = getActiveGame().data.smallKeysToggle;
 
 const TrackerLauncher = () => {
   const [checks, setChecks] = useState(false);
@@ -78,6 +81,12 @@ const TrackerLauncher = () => {
     setStartingItemsCache(debouncedStartingItems);
   }, [debouncedStartingItems]);
 
+  // Small Key Doors Open toggle (MM only), persisted so it survives launcher reloads.
+  const [smallKeysOpen, setSmallKeysOpen] = useState(() => !SMALL_KEYS_TOGGLE || getSmallKeysOpenCache());
+  useEffect(() => {
+    if (SMALL_KEYS_TOGGLE) { setSmallKeysOpenCache(smallKeysOpen); }
+  }, [smallKeysOpen]);
+
   const [generatorVersion, setGeneratorVersion] = useState(
     () => cachedGeneratorVersion || CURRENT_ACTIVE_VERSION
   );
@@ -109,6 +118,7 @@ const TrackerLauncher = () => {
     localStorage.setItem(gameKey("layout"), JSON.stringify(layout));
     localStorage.setItem(gameKey("settings_string"), checks ? settingsString : "");
     localStorage.setItem(gameKey("starting_items"), startingItemsString);
+    if (SMALL_KEYS_TOGGLE) { setSmallKeysOpenCache(smallKeysOpen); }
     localStorage.setItem(gameKey("generator_version"), generatorVersion);
 
     const { width, height } = layoutSize;
@@ -118,7 +128,7 @@ const TrackerLauncher = () => {
       "HashFrog Tracker",
       `toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=0,width=${width},height=${height}`
     );
-  }, [checks, layout, settingsString, startingItemsString, generatorVersion, layoutSize]);
+  }, [checks, layout, settingsString, startingItemsString, smallKeysOpen, generatorVersion, layoutSize]);
 
   // Track whether a saved session exists so the Resume button reacts when one
   // is created in a popup window; refresh on focus when returning to the launcher.
@@ -139,6 +149,8 @@ const TrackerLauncher = () => {
     localStorage.setItem(gameKey("layout"), session.layout);
     localStorage.setItem(gameKey("settings_string"), session.settings_string);
     localStorage.setItem(gameKey("starting_items"), session.starting_items || "");
+    // Default-on when the snapshot predates this field, matching getSmallKeysOpenCache.
+    if (SMALL_KEYS_TOGGLE) { setSmallKeysOpenCache(session.small_keys_open !== false); }
     localStorage.setItem(gameKey("generator_version"), session.generator_version);
 
     const resumeChecks = !!session.checksEnabled;
@@ -247,6 +259,16 @@ const TrackerLauncher = () => {
               <p className="small text-secondary mb-2">
                 Configure logic settings for check tracking
               </p>
+              {SMALL_KEYS_TOGGLE && (
+                <Form.Check
+                  type="switch"
+                  id="small_keys_open"
+                  label={SMALL_KEYS_TOGGLE.label}
+                  checked={smallKeysOpen}
+                  onChange={() => setSmallKeysOpen((prev) => !prev)}
+                  className="mb-3 text-light"
+                />
+              )}
               {activePreset ? (
                 <p className="mb-3">
                   <span className="badge bg-success d-inline-flex align-items-center gap-1">

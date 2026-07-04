@@ -46,6 +46,12 @@ const mmAdapter = {
       label: "Starting Items String",
       placeholder: "Paste starting items string here",
     },
+    // MM-only launcher toggle (mm-rando SmallKeyMode.DoorsOpen, the casual default):
+    // seeds all dungeon small keys as held so small-key doors never gate a check.
+    // Default-on lives in getSmallKeysOpenCache; presence here gates the UI.
+    smallKeysToggle: {
+      label: "Small Key Doors Open",
+    },
   },
 
   ChecksScene: Checks,

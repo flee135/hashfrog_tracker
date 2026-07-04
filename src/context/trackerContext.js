@@ -67,6 +67,23 @@ function setStartingItemsCache(string) {
 }
 
 /**
+ * Retrieves the Small Key Doors Open toggle from localStorage (MM only). Defaults
+ * to true when unset, matching mm-rando's casual SmallKeyMode.DoorsOpen default.
+ * @returns {boolean} Whether small-key doors are treated as open.
+ */
+function getSmallKeysOpenCache() {
+  return localStorage.getItem(gameKey("small_keys_open")) !== "0";
+}
+
+/**
+ * Persists the Small Key Doors Open toggle to localStorage.
+ * @param {boolean} open - Whether small-key doors are treated as open.
+ */
+function setSmallKeysOpenCache(open) {
+  localStorage.setItem(gameKey("small_keys_open"), open ? "1" : "0");
+}
+
+/**
  * Retrieves the cached generator version from localStorage.
  * @returns {string} The cached version, or the default from env.
  */
@@ -115,6 +132,8 @@ function buildSnapshot(state) {
     // Persisted independently of reducer state; resume writes it back to the cache
     // so re-derivation of pre-owned starting items stays consistent.
     starting_items: getStartingItemsCache(),
+    // MM Small Key Doors Open toggle; resume writes it back so the logic seed matches.
+    small_keys_open: getSmallKeysOpenCache(),
     generator_version: state.generator_version,
     items_list: state.items_list,
     counters: state.counters,
@@ -712,7 +731,8 @@ const useSessionRestore = isReady => {
 };
 
 export {
-  getGeneratorVersionCache, getSettingsStringCache, getStartingItemsCache, setStartingItemsCache, loadSession, TrackerProvider,
+  getGeneratorVersionCache, getSettingsStringCache, getStartingItemsCache, setStartingItemsCache,
+  getSmallKeysOpenCache, setSmallKeysOpenCache, loadSession, TrackerProvider,
   useChecks, useDraggedIcon, useElement, useHintEntry, useIconCache, useItems, useLabelSelect, useLocation,
   useSelectedEFKDungeons, useSessionRestore, useSettingsString, useTracker
 };

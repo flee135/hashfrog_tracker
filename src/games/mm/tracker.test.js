@@ -95,6 +95,38 @@ describe("parseItems starting-item seeding", () => {
   });
 });
 
+describe("Small Key Doors Open toggle", () => {
+  afterEach(async () => {
+    await initializeLogic({ startingItemsString: "", smallKeysOpen: true });
+  });
+
+  it("seeds the dungeon small keys as held when on (the default)", async () => {
+    await initializeLogic({ startingItemsString: "" }); // smallKeysOpen defaults on
+    const items = parseItems({}, {}, []);
+    expect(items.ItemWoodfallKey1).toBe(1);
+    expect(items.ItemStoneTowerKey4).toBe(1);
+  });
+
+  it("does not seed small keys when off", async () => {
+    await initializeLogic({ startingItemsString: "", smallKeysOpen: false });
+    const items = parseItems({}, {}, []);
+    expect(items.ItemWoodfallKey1).toBeUndefined();
+    expect(items.ItemStoneTowerKey4).toBeUndefined();
+  });
+
+  it("satisfies a small-key requirement in the evaluator when on, not when off", async () => {
+    // "3 Snowhead Keys" is a pure key-count macro: RequiredItems are the three
+    // Snowhead small keys and nothing else, so it flips solely on the toggle.
+    await initializeLogic({ startingItemsString: "", smallKeysOpen: false });
+    MMEvaluator.updateItems(parseItems({}, {}, []));
+    expect(MMEvaluator.isLocationAvailable("3 Snowhead Keys")).toBe(false);
+
+    await initializeLogic({ startingItemsString: "", smallKeysOpen: true });
+    MMEvaluator.updateItems(parseItems({}, {}, []));
+    expect(MMEvaluator.isLocationAvailable("3 Snowhead Keys")).toBe(true);
+  });
+});
+
 describe("initializeLogic possession-gating", () => {
   // A settings string is "itemList|junk". "2---" sets bit 97 (word 3, bit 1) =
   // SongHealing: its "Starting Song" vanilla slot. When songs are shuffled that

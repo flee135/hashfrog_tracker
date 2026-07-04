@@ -2,6 +2,7 @@ import _ from "lodash";
 
 import COUNTER_TO_ITEM from "./data/counter-to-item.json";
 import DEFAULT_ITEMS from "./data/default-items.json";
+import SHUFFLED_ITEM_IDS from "./data/shuffled-item-ids.json";
 import STARTING_ITEM_IDS from "./data/starting-item-ids.json";
 import UUID_TO_ITEM from "./data/uuid-to-item.json";
 import { splitChecksStrings } from "../checks-string";
@@ -21,6 +22,13 @@ for (const [uuid, mapping] of Object.entries(UUID_TO_ITEM)) {
 // The REQ_CASUAL fixpoint evaluator (see mm-logic-format). Implements the shared
 // engine's { updateItems, isLocationAvailable } contract over the casual graph.
 export const evaluator = MMEvaluator;
+
+// Small Key Doors Open (mm-rando SmallKeyMode.DoorsOpen, the casual default): the
+// dungeon small keys, seeded as held so every small-key requirement is satisfied.
+// Small keys are the shuffled DungeonKeys ending in a number (ItemWoodfallKey1,
+// ItemStoneTowerKey4, ...); boss keys are "...BossKey" with no trailing digit and
+// are excluded.
+const SMALL_KEY_IDS = SHUFFLED_ITEM_IDS.filter(id => /Key\d+$/.test(id));
 
 // Logic ids the seed starts with, decoded from the CustomStartingItemListString.
 // Unlike deriveStartingInventory (which returns only tracked-element UUIDs for
@@ -106,11 +114,16 @@ export function deriveStartingInventory(settings) {
  * no backend or fetch is needed; decoding the starting-items string here fixes the
  * logic seed (STARTING_ITEM_SEED) before any parseItems runs, and passes the
  * string through for deriveStartingInventory to map to tracked elements.
- * @param {{settingsString?: string, startingItemsString?: string}} [options] - Launcher-provided strings.
+ * @param {{settingsString?: string, startingItemsString?: string, smallKeysOpen?: boolean}} [options] - Launcher-provided strings and the Small Key Doors Open toggle (default on).
  * @returns {Promise<object>} The resolved settings.
  */
-export async function initializeLogic({ settingsString, startingItemsString } = {}) {
+export async function initializeLogic({ settingsString, startingItemsString, smallKeysOpen = true } = {}) {
   STARTING_ITEM_SEED = decodeStartingItems(startingItemsString);
+  // Small Key Doors Open: seed the dungeon small keys as held. They have no tracked
+  // element, so like Ocarina they only ever enter the logic through this seed.
+  if (smallKeysOpen) {
+    STARTING_ITEM_SEED = [...STARTING_ITEM_SEED, ...SMALL_KEY_IDS];
+  }
   // Restrict the evaluator's possession-gating to the seed's shuffled locations so
   // unshuffled ones (a vanilla stray fairy, seahorse) propagate transitively. This
   // is the item-list set alone -- NOT minus enforce-junk: a force-junked location
