@@ -1,4 +1,5 @@
 import LOGIC from "../data/logic-casual.json";
+import SHUFFLED_ITEM_IDS from "../data/shuffled-item-ids.json";
 import MMEvaluator, { buildNodes, computeReachability, parseTime, TIME_BITS, TIME_FULL } from "./evaluator";
 
 describe("parseTime", () => {
@@ -209,5 +210,24 @@ describe("MMEvaluator (casual graph)", () => {
 
     MMEvaluator.updateItems({ ItemOcarina: 1, SongHealing: 1 });
     expect(MMEvaluator.isLocationAvailable("MaskKamaro")).toBe(true);
+  });
+
+  it("does not let a held item enable an off setting that gates a glitch path", () => {
+    // Great Bay's only casual boss-access path runs through GBT Green Pipes, which
+    // legitimately needs ice arrows. Off-settings like SettingHookshotAnySurface open
+    // that puzzle glitchlessly, but they are OFF in casual and must stay false even
+    // though REQ_CASUAL attaches them an item rule ([ItemHookshot]) -- holding the
+    // hookshot must NOT enable hookshot-any-surface and unlock Gyorg without ice.
+    // Boss remains are excluded from the kit: holding Gyorg's own remains activates
+    // its warp pad (a separate, legitimate access path), which would mask this leak.
+    const bossRemains = new Set(["RemainsOdolwa", "RemainsGoht", "RemainsGyorg", "RemainsTwinmold"]);
+    const everyItemButIce = Object.fromEntries(
+      SHUFFLED_ITEM_IDS.filter(id => id !== "ItemIceArrow" && !bossRemains.has(id)).map(id => [id, 1]),
+    );
+    MMEvaluator.updateItems(everyItemButIce);
+    expect(MMEvaluator.isLocationAvailable("HeartContainerGreatBay")).toBe(false);
+
+    MMEvaluator.updateItems({ ...everyItemButIce, ItemIceArrow: 1 });
+    expect(MMEvaluator.isLocationAvailable("HeartContainerGreatBay")).toBe(true);
   });
 });

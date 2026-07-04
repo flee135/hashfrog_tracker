@@ -1,6 +1,6 @@
 import LOGIC from "../data/logic-casual.json";
 import SHUFFLED_ITEM_IDS from "../data/shuffled-item-ids.json";
-import { CASUAL_SETTINGS, CASUAL_STARTING_ITEMS, ENABLED_TRICKS } from "./settings";
+import { ENABLED_SETTINGS, ENABLED_TRICKS } from "./settings";
 
 // MM reachability evaluator. REQ_CASUAL is a flat graph where availability is
 // AND(RequiredItems) AND (ConditionalItems empty OR OR-of-AND(branches)),
@@ -11,10 +11,12 @@ import { CASUAL_SETTINGS, CASUAL_STARTING_ITEMS, ENABLED_TRICKS } from "./settin
 //
 // How a reference resolves depends on whether the Id is *possession-gated* -- a
 // shuffled item whose vanilla location holds some other random item this seed:
-//   - Possession-gated: possession only. It counts when held (toggled item, casual
-//     starting item) and NEVER via its own location's reachability -- reaching that
-//     location grants the random item placed there, not this one. Un-held ones
-//     resolve to 0.
+//   - Possession-gated: possession only. It counts when held (toggled item, or the
+//     seed's starting inventory) and NEVER via its own location's reachability --
+//     reaching that location grants the random item placed there, not this one.
+//     Un-held ones resolve to 0. An item NOT shuffled this seed is not gated: it
+//     stays at its vanilla location and resolves transitively (below), so an
+//     unrandomized shop item or start sword is reachable without being seeded.
 //   - Everything else -- Area* access, macros like "Any Sword", Setting* nodes, and
 //     shuffleable checks NOT shuffled this seed (a vanilla stray fairy still sits at
 //     its location): transitive. It resolves to its own computed reachability, so
@@ -137,22 +139,27 @@ export function computeReachability(nodes, seeded, possessionGated = new Set()) 
 }
 
 // A gating input is a node that is OFF in casual, so it is dropped from the graph
-// (a reference to a dropped id then falls through lookup to 0). Two kinds:
+// (a reference to a dropped id then falls through lookup to 0). Three kinds:
 //   - Any trick (IsTrick), unless enabled by this preset. Glitchless casual runs
 //     none. A dropped trick contributes nothing, so checks fall back to their
 //     legit paths; an enabled trick is kept and evaluated against its own rule
 //     (its cost still applies), which is why we keep it rather than seed it.
-//   - Rule-less Setting*/Other* inputs -- off-settings and the Other* goal/count
-//     sentinels. On-settings are not dropped here; they resolve via the seeded set.
-// Their non-leaf forms (SettingIronGoron, OtherCredits, ...) are real computed
-// macros with rules and are left in. IsTrick is the one signal not readable from
-// the id, so the extract keeps it on trick nodes for this.
+//   - Any Setting* not enabled by this preset. A setting is a pure preset toggle:
+//     ON iff seeded via ENABLED_SETTINGS, OFF otherwise. REQ_CASUAL still attaches
+//     an item rule to some off-settings (SettingHookshotAnySurface -> ItemHookshot,
+//     SettingIronGoron -> MaskGoron, ...), but that rule must NOT make the setting
+//     item-derived -- holding the hookshot does not enable hookshot-any-surface. So
+//     these are dropped by name, rule or not; enabled ones resolve via the seeded set.
+//   - Rule-less Other* inputs -- the Other* goal/count sentinels. Ruled Other* nodes
+//     (OtherArrow, OtherKillGyorg, ...) are real computed macros and are left in.
+// IsTrick is the one signal not readable from the id, so the extract keeps it on
+// trick nodes for this.
 const ENABLED_TRICK_IDS = new Set(ENABLED_TRICKS);
+const ENABLED_SETTING_IDS = new Set(ENABLED_SETTINGS);
 const isGatingInput = entry =>
   (entry.IsTrick && !ENABLED_TRICK_IDS.has(entry.Id)) ||
-  (!(entry.RequiredItems?.length) &&
-    !(entry.ConditionalItems?.length) &&
-    (entry.Id.startsWith("Setting") || entry.Id.startsWith("Other")));
+  (entry.Id.startsWith("Setting") && !ENABLED_SETTING_IDS.has(entry.Id)) ||
+  (entry.Id.startsWith("Other") && !entry.RequiredItems?.length && !entry.ConditionalItems?.length);
 const NODES = buildNodes(LOGIC.filter(entry => !isGatingInput(entry)));
 const SHUFFLED_ITEMS = new Set(SHUFFLED_ITEM_IDS);
 
@@ -176,8 +183,8 @@ class MMEvaluator {
   }
 
   static updateItems(parsedItems, _skipRegions) {
-    const seeded = new Set(CASUAL_STARTING_ITEMS);
-    for (const settingId of CASUAL_SETTINGS) {
+    const seeded = new Set();
+    for (const settingId of ENABLED_SETTINGS) {
       seeded.add(settingId);
     }
     for (const [id, count] of Object.entries(parsedItems || {})) {
