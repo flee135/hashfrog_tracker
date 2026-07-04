@@ -9,15 +9,22 @@ import { CASUAL_SETTINGS, CASUAL_STARTING_ITEMS } from "./settings";
 // referenced by other nodes it asks "does the player possess this", but its own
 // node asks "can the player reach this location" and is solved from its own rule.
 //
-// How a reference resolves depends on whether the Id is a *shuffled item*
-// (shuffled-item-ids.json -- an Item.cs member with an ItemPool ItemCategory):
-//   - Shuffled item: possession only. It counts when held (toggled item, casual
-//     starting item) and NEVER via its own location's reachability -- in a
-//     randomizer that location holds some other random item, so reaching it does
-//     not grant this one. Un-held shuffled items resolve to 0.
-//   - Everything else (Area* access, macros like "Any Sword", Setting* nodes):
-//     transitive. It resolves to its own computed reachability, so region access
-//     and macros still propagate through the fixpoint.
+// How a reference resolves depends on whether the Id is *possession-gated* -- a
+// shuffled item whose vanilla location holds some other random item this seed:
+//   - Possession-gated: possession only. It counts when held (toggled item, casual
+//     starting item) and NEVER via its own location's reachability -- reaching that
+//     location grants the random item placed there, not this one. Un-held ones
+//     resolve to 0.
+//   - Everything else -- Area* access, macros like "Any Sword", Setting* nodes, and
+//     shuffleable checks NOT shuffled this seed (a vanilla stray fairy still sits at
+//     its location): transitive. It resolves to its own computed reachability, so
+//     region access, macros, and unshuffled checks propagate through the fixpoint.
+//
+// The possession-gated set is the seed's shuffled subset (setEnabledChecks). The
+// broader *shuffleable* set (shuffled-item-ids.json -- Item.cs members with an
+// ItemPool ItemCategory) is separate: it marks which rule-less nodes are real
+// vanilla locations (freely reachable) rather than gating inputs, regardless of
+// whether the item there is shuffled.
 // Possession never short-circuits the held node's own value -- otherwise holding
 // an item would falsely mark the vanilla location it lives at as reachable. See
 // mm-logic-format memory for the format details.
@@ -61,26 +68,27 @@ export function buildNodes(entries) {
  * Solves the reachable time mask for every node by monotonic fixpoint. A held id
  * satisfies references to it in other nodes' rules (full mask), but never
  * short-circuits its own node -- that stays gated on its own location rule. An
- * un-held shuffled item resolves to 0 (possession-gated); any other un-held node
- * resolves to its own computed reachability (transitive). A leaf node is freely
- * reachable when it is a shuffled item (its rule-less vanilla location), but
- * unreachable otherwise -- non-item leaves (tricks, off-settings) only count when
- * seeded.
+ * un-held possession-gated id resolves to 0; any other un-held node resolves to
+ * its own computed reachability (transitive). A leaf node is freely reachable when
+ * it is a shuffleable check (its rule-less vanilla location), but unreachable
+ * otherwise -- non-item leaves (tricks, off-settings) only count when seeded.
  * @param {Array<object>} nodes - Nodes from buildNodes.
  * @param {Set<string>} seeded - Ids held as inputs (items, settings, starting items).
- * @param {Set<string>} [shuffledItems] - Ids that are possession-gated (default: none).
+ * @param {Set<string>} [shuffleable] - Ids whose rule-less node is a reachable vanilla location (default: none).
+ * @param {Set<string>} [possessionGated] - Ids that resolve by possession only (default: all shuffleable).
  * @returns {Map<string, number>} Map of node id to reachable time mask (0 = unreachable).
  */
-export function computeReachability(nodes, seeded, shuffledItems = new Set()) {
+export function computeReachability(nodes, seeded, shuffleable = new Set(), possessionGated = shuffleable) {
   const mask = new Map(nodes.map(node => [node.id, 0]));
-  // A held id resolves full when referenced as a requirement. An un-held shuffled
-  // item is not possessed, so it resolves to 0 -- reaching its vanilla location
-  // never grants it. Other un-held nodes contribute their own reachability.
+  // A held id resolves full when referenced as a requirement. An un-held
+  // possession-gated id is not possessed, so it resolves to 0 -- reaching its
+  // vanilla location never grants it. Other un-held nodes contribute their own
+  // reachability (transitive), including shuffleable checks left vanilla this seed.
   const lookup = id => {
     if (seeded.has(id)) {
       return TIME_FULL;
     }
-    if (shuffledItems.has(id)) {
+    if (possessionGated.has(id)) {
       return 0;
     }
     return mask.get(id) || 0;
@@ -92,12 +100,12 @@ export function computeReachability(nodes, seeded, shuffledItems = new Set()) {
     for (const node of nodes) {
       let next;
       if (node.isLeaf) {
-        // A shuffled item's leaf node is its vanilla location, which -- having no
-        // rule -- is freely reachable at its available times; possession is
-        // resolved separately in lookup. Every other leaf (tricks, off-settings,
-        // OtherInaccessible) is a gating input that only counts when seeded, so it
-        // stays unreachable here.
-        next = shuffledItems.has(node.id) ? node.time : 0;
+        // A shuffleable check's leaf node is its vanilla location, which -- having
+        // no rule -- is freely reachable at its available times; possession (when
+        // shuffled) is resolved separately in lookup. Every other leaf (tricks,
+        // off-settings, OtherInaccessible) is a gating input that only counts when
+        // seeded, so it stays unreachable here.
+        next = shuffleable.has(node.id) ? node.time : 0;
       } else {
         next = node.time;
         for (const reqId of node.required) {
@@ -142,6 +150,18 @@ const SHUFFLED_ITEMS = new Set(SHUFFLED_ITEM_IDS);
 class MMEvaluator {
   static mask = new Map();
 
+  // Ids resolved by possession only. Defaults to every shuffleable item (all
+  // gated) until a seed narrows it via setEnabledChecks; a shuffleable check left
+  // out of this set stays at its vanilla location and propagates transitively.
+  static possessionGated = SHUFFLED_ITEMS;
+
+  // Restricts possession-gating to the seed's actually-shuffled checks. `enabled`
+  // is the location set from deriveEnabledChecks; intersecting with SHUFFLED_ITEMS
+  // keeps non-item locations out so only real shuffled items are gated.
+  static setEnabledChecks(enabled) {
+    MMEvaluator.possessionGated = new Set([...SHUFFLED_ITEMS].filter(id => enabled.has(id)));
+  }
+
   static updateItems(parsedItems, _skipRegions) {
     const seeded = new Set(CASUAL_STARTING_ITEMS);
     for (const settingId of CASUAL_SETTINGS) {
@@ -152,7 +172,7 @@ class MMEvaluator {
         seeded.add(id);
       }
     }
-    MMEvaluator.mask = computeReachability(NODES, seeded, SHUFFLED_ITEMS);
+    MMEvaluator.mask = computeReachability(NODES, seeded, SHUFFLED_ITEMS, MMEvaluator.possessionGated);
   }
 
   static isLocationAvailable(id) {

@@ -75,6 +75,50 @@ describe("computeReachability (synthetic)", () => {
     expect(computeReachability(graph, new Set(["A"])).get("Consumer")).toBe(TIME_FULL);
   });
 
+  it("propagates a shuffleable check left unshuffled this seed transitively", () => {
+    // StrayFairy is a shuffleable check (its vanilla location is freely reachable),
+    // and FairyMagic requires it. When it is NOT shuffled this seed it stays at its
+    // location, so reaching that location should unlock FairyMagic without holding
+    // anything -- mirrors an unshuffled Clock Town stray fairy freeing Fairy Magic.
+    const graph = buildNodes([
+      { Id: "StrayFairy", RequiredItems: [], ConditionalItems: [] },
+      { Id: "FairyMagic", RequiredItems: ["StrayFairy"], ConditionalItems: [] },
+    ]);
+    const shuffleable = new Set(["StrayFairy"]);
+
+    // Shuffled (possession-gated): reaching the location does not grant the fairy.
+    const shuffled = computeReachability(graph, new Set(), shuffleable, shuffleable);
+    expect(shuffled.get("StrayFairy")).toBe(TIME_FULL); // location reachable
+    expect(shuffled.get("FairyMagic")).toBe(0); // but not possessed
+
+    // Unshuffled (empty possession-gated subset): the reference resolves to the
+    // location's own reachability, so FairyMagic is free from the start.
+    const unshuffled = computeReachability(graph, new Set(), shuffleable, new Set());
+    expect(unshuffled.get("StrayFairy")).toBe(TIME_FULL);
+    expect(unshuffled.get("FairyMagic")).toBe(TIME_FULL);
+  });
+
+  it("propagates an unshuffled check with a rule through its dependents", () => {
+    // SeaHorse needs the pictobox to reach; HeartPieceSeaHorse needs SeaHorse. When
+    // SeaHorse is not shuffled, holding the pictobox should chain through to the
+    // heart piece without ever holding a SeaHorse item.
+    const graph = buildNodes([
+      { Id: "Pictobox", RequiredItems: [], ConditionalItems: [] },
+      { Id: "SeaHorse", RequiredItems: ["Pictobox"], ConditionalItems: [] },
+      { Id: "HeartPieceSeaHorse", RequiredItems: ["SeaHorse"], ConditionalItems: [] },
+    ]);
+    const shuffleable = new Set(["SeaHorse", "HeartPieceSeaHorse"]);
+
+    const unshuffled = computeReachability(graph, new Set(["Pictobox"]), shuffleable, new Set());
+    expect(unshuffled.get("HeartPieceSeaHorse")).toBe(TIME_FULL);
+
+    // Shuffled: SeaHorse is possession-gated, so the heart piece stays locked until
+    // a SeaHorse item is actually held.
+    const seahorseGated = new Set(["SeaHorse"]);
+    const shuffled = computeReachability(graph, new Set(["Pictobox"]), shuffleable, seahorseGated);
+    expect(shuffled.get("HeartPieceSeaHorse")).toBe(0);
+  });
+
   it("marks a rule-less shuffled leaf reachable while other leaves stay gated", () => {
     const graph = buildNodes([
       { Id: "FreeChest", RequiredItems: [], ConditionalItems: [] }, // shuffled check, no rule
