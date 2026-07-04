@@ -14,6 +14,7 @@ const DEFAULT_STRING = "----1fbfc-5800000-";
 const SONG_TIME_UUID = "b87a2661d33c4256889c48ef83d6d646";
 const MASK_DEKU_UUID = "49311bcea5184cc98f5e5b80ae7a7a2a";
 const BOTTLE_UUID = "92e48794a0a94b59a4235ff3820b2f63";
+const GOLD_DUST_UUID = "63453628ad7d41699ec34e9c82192c74";
 
 /**
  * Encodes basis indices into a CustomStartingItemListString, mirroring mm-rando's
@@ -46,12 +47,17 @@ describe("deriveStartingInventory", () => {
     expect(deriveStartingInventory({ startingItemsString: string })).toEqual([MASK_DEKU_UUID]);
   });
 
-  it("collapses the six bottle ids to the single bottle element UUID", () => {
+  it("collapses the five interchangeable bottle ids to the single bottle element UUID", () => {
     const bottleIndices = [
-      "ItemBottleWitch", "ItemBottleAliens", "ItemBottleGoronRace",
+      "ItemBottleWitch", "ItemBottleAliens",
       "ItemBottleBeavers", "ItemBottleDampe", "ItemBottleMadameAroma",
     ].map(id => STARTING_ITEM_IDS.indexOf(id));
     expect(deriveStartingInventory({ startingItemsString: encode(bottleIndices) })).toEqual([BOTTLE_UUID]);
+  });
+
+  it("maps the Goron Race gold-dust bottle to its own element, separate from the bottle toggle", () => {
+    const goldDust = encode([STARTING_ITEM_IDS.indexOf("ItemBottleGoronRace")]);
+    expect(deriveStartingInventory({ startingItemsString: goldDust })).toEqual([GOLD_DUST_UUID]);
   });
 
   it("ignores starting items that have no tracked element", () => {

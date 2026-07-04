@@ -89,9 +89,9 @@
       "columns": 2,
       "padding": "3px",
       "elements": [
+        "RemainsOdolwa",
         "RemainsGoht",
         "RemainsGyorg",
-        "RemainsOdolwa",
         "RemainsTwinmold"
       ],
       "elementsSize": [
@@ -123,6 +123,8 @@
         "UpgradeMirrorShield",
         "FairyMagic",
         "ItemBottle",
+        "ItemBottleGoldDust",
+        "ItemMagicBean",
         "UpgradeAdultWallet",
         "ItemPictobox",
         "TradeItemKafeiLetter",

@@ -162,11 +162,13 @@
     "items": [
       "ItemBottleWitch",
       "ItemBottleAliens",
-      "ItemBottleGoronRace",
       "ItemBottleBeavers",
       "ItemBottleDampe",
       "ItemBottleMadameAroma"
     ]
+  },
+  "63453628ad7d41699ec34e9c82192c74": {
+    "item": "ItemBottleGoronRace"
   },
   "69625b3f25fd4a3a83dd3532da067d8f": {
     "item": "TradeItemKafeiLetter"

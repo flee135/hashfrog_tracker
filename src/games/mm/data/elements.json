@@ -956,6 +956,24 @@
     ]
   },
   {
+    "id": "6781d75dc10f418e8ec36a21f70670ec",
+    "type": "simple",
+    "name": "ItemBottleGoldDust",
+    "displayName": "Gold Dust",
+    "size": [
+      25,
+      25
+    ],
+    "icons": [
+      "ItemBottleGoldDust_bw.png",
+      "ItemBottleGoldDust.png"
+    ],
+    "items": [
+      null,
+      "63453628ad7d41699ec34e9c82192c74"
+    ]
+  },
+  {
     "id": "4775e5ca506c4b5da3bc03f78a0708d2",
     "type": "simple",
     "name": "TradeItemKafeiLetter",
