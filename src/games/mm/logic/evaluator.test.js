@@ -185,13 +185,29 @@ describe("MMEvaluator (casual graph)", () => {
     const unshuffledFairy = new Set(allIds);
     unshuffledFairy.delete("CollectibleStrayFairyClockTown");
 
-    MMEvaluator.setEnabledChecks(unshuffledFairy);
+    MMEvaluator.setShuffledLocations(unshuffledFairy);
     MMEvaluator.updateItems({}); // casual seed only, no masks
     expect(MMEvaluator.isLocationAvailable("MaskGreatFairy")).toBe(true);
 
     // Shuffled instead, the reward stays possession-gated on holding the fairy.
-    MMEvaluator.setEnabledChecks(allIds);
+    MMEvaluator.setShuffledLocations(allIds);
     MMEvaluator.updateItems({});
     expect(MMEvaluator.isLocationAvailable("MaskGreatFairy")).toBe(false);
+  });
+
+  it("gates a shuffled item at a force-junked vanilla location on possession", () => {
+    // Kamaro needs Play Song of Healing (Ocarina + SongHealing). When songs are
+    // shuffled, mm-rando force-junks the rule-less "Starting Song" vanilla slot, so
+    // SongHealing is randomized-but-junked. Possession-gating keys off the item-list
+    // (randomized) set, junk included -- otherwise SongHealing falls back to its
+    // free vanilla node and Kamaro unlocks with no song held.
+    const randomized = new Set(LOGIC.map(entry => entry.Id));
+    MMEvaluator.setShuffledLocations(randomized);
+
+    MMEvaluator.updateItems({ ItemOcarina: 1 });
+    expect(MMEvaluator.isLocationAvailable("MaskKamaro")).toBe(false); // no song held
+
+    MMEvaluator.updateItems({ ItemOcarina: 1, SongHealing: 1 });
+    expect(MMEvaluator.isLocationAvailable("MaskKamaro")).toBe(true);
   });
 });

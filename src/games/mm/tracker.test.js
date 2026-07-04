@@ -94,3 +94,20 @@ describe("parseItems starting-item seeding", () => {
     expect(await reachableCount(DEFAULT_STRING)).toBeGreaterThan(await reachableCount(""));
   });
 });
+
+describe("initializeLogic possession-gating", () => {
+  // A settings string is "itemList|junk". "2---" sets bit 97 (word 3, bit 1) =
+  // SongHealing: its "Starting Song" vanilla slot. When songs are shuffled that
+  // slot is randomized AND force-junked, so both fields set it here. Gating must
+  // key off the item-list alone -- subtracting junk would un-gate SongHealing and
+  // let its rule-less vanilla node freely unlock Kamaro (needs Play Song of Healing).
+  it("gates a shuffled item whose vanilla location is force-junked", async () => {
+    await initializeLogic({ settingsString: "2---|2---", startingItemsString: "" });
+
+    MMEvaluator.updateItems({ ItemOcarina: 1 });
+    expect(MMEvaluator.isLocationAvailable("MaskKamaro")).toBe(false); // no song held
+
+    MMEvaluator.updateItems({ ItemOcarina: 1, SongHealing: 1 });
+    expect(MMEvaluator.isLocationAvailable("MaskKamaro")).toBe(true);
+  });
+});

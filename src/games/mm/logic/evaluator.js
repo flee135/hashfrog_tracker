@@ -20,8 +20,8 @@ import { CASUAL_SETTINGS, CASUAL_STARTING_ITEMS, ENABLED_TRICKS } from "./settin
 //     its location): transitive. It resolves to its own computed reachability, so
 //     region access, macros, and unshuffled checks propagate through the fixpoint.
 //
-// The possession-gated set is the seed's shuffled subset (setEnabledChecks, drawn
-// from shuffled-item-ids.json). Reachability otherwise assumes every graph node is
+// The possession-gated set is the seed's shuffled subset (setShuffledLocations,
+// drawn from shuffled-item-ids.json). Reachability otherwise assumes every graph node is
 // a real spot: a rule-less node is freely reachable at its available times. The
 // only nodes that must NOT be are gating inputs -- tricks (all off in casual),
 // off-settings, and the Other* goal/count sentinels -- so those are dropped from
@@ -162,15 +162,17 @@ class MMEvaluator {
   static mask = new Map();
 
   // Ids resolved by possession only. Defaults to every shuffleable item (all
-  // gated) until a seed narrows it via setEnabledChecks; a shuffleable check left
-  // out of this set stays at its vanilla location and propagates transitively.
+  // gated) until a seed narrows it via setShuffledLocations; a shuffleable check
+  // left out of this set stays at its vanilla location and propagates transitively.
   static possessionGated = SHUFFLED_ITEMS;
 
-  // Restricts possession-gating to the seed's actually-shuffled checks. `enabled`
-  // is the location set from deriveEnabledChecks; intersecting with SHUFFLED_ITEMS
-  // keeps non-item locations out so only real shuffled items are gated.
-  static setEnabledChecks(enabled) {
-    MMEvaluator.possessionGated = new Set([...SHUFFLED_ITEMS].filter(id => enabled.has(id)));
+  // Restricts possession-gating to the seed's randomized locations. `randomized` is
+  // the item-list set (decodeLocationString), NOT minus enforce-junk: a force-junked
+  // location still holds junk rather than its vanilla item, so its item was shuffled
+  // out and must be gated. Intersecting with SHUFFLED_ITEMS keeps non-item locations
+  // out so only real shuffled items are gated.
+  static setShuffledLocations(randomized) {
+    MMEvaluator.possessionGated = new Set([...SHUFFLED_ITEMS].filter(id => randomized.has(id)));
   }
 
   static updateItems(parsedItems, _skipRegions) {

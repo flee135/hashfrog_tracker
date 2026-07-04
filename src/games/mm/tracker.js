@@ -5,7 +5,7 @@ import DEFAULT_ITEMS from "./data/default-items.json";
 import STARTING_ITEM_IDS from "./data/starting-item-ids.json";
 import UUID_TO_ITEM from "./data/uuid-to-item.json";
 import { splitChecksStrings } from "../checks-string";
-import { decodeLocationString, deriveEnabledChecks } from "./logic/checks";
+import { decodeLocationString } from "./logic/checks";
 import MMEvaluator from "./logic/evaluator";
 
 // Reverse of UUID_TO_ITEM: logic item id -> tracked-element UUID. A single
@@ -111,13 +111,15 @@ export function deriveStartingInventory(settings) {
  */
 export async function initializeLogic({ settingsString, startingItemsString } = {}) {
   STARTING_ITEM_SEED = decodeStartingItems(startingItemsString);
-  // Restrict the evaluator's possession-gating to the seed's shuffled checks so
-  // unshuffled ones (a vanilla stray fairy, seahorse) propagate transitively. A
-  // blank string leaves the default (all shuffleable items gated); the Checks tab
-  // is empty then anyway.
-  const [itemListString, junkString] = splitChecksStrings(settingsString || "", 2);
+  // Restrict the evaluator's possession-gating to the seed's shuffled locations so
+  // unshuffled ones (a vanilla stray fairy, seahorse) propagate transitively. This
+  // is the item-list set alone -- NOT minus enforce-junk: a force-junked location
+  // still holds junk rather than its vanilla item, so its item was shuffled out and
+  // must be possession-gated. A blank string leaves the default (all shuffleable
+  // items gated); the Checks tab is empty then anyway.
+  const [itemListString] = splitChecksStrings(settingsString || "", 2);
   if (itemListString) {
-    MMEvaluator.setEnabledChecks(deriveEnabledChecks(itemListString, junkString));
+    MMEvaluator.setShuffledLocations(decodeLocationString(itemListString));
   }
   return { startingItemsString };
 }
