@@ -3,8 +3,13 @@
 // consumed by src/games/mm/logic/evaluator.js.
 //
 // Inputs (drop these into scripts/mm/source/, they are gitignored):
-//   - Item.cs         : mm-rando MMR.Randomizer/GameObjects/Item.cs (the Item enum)
-//   - REQ_CASUAL.json : mm-rando MMR.Randomizer/Resources/REQ_CASUAL.txt (JSON despite .txt)
+//   - Item.cs         : mm-rando MMR.Randomizer/GameObjects/Item.cs, RELEASED master
+//                       (the graph + descriptive LocationNames we ship)
+//   - REQ_CASUAL.json : mm-rando MMR.Randomizer/Resources/REQ_CASUAL.txt (JSON despite .txt), master
+//   - Item.dev.cs     : the dev-branch Item.cs. Used ONLY for the bit-index decode
+//                       bases (all-locations, starting-item-ids), because generator
+//                       seeds encode their hex strings against dev's wider Item enum.
+//                       See the note in main(). Keep in sync with the dev generator.
 //
 // Outputs:
 //   - src/games/mm/data/logic-casual.json : trimmed graph, one entry per node:
@@ -62,8 +67,8 @@ function loadLogic() {
 // Parses the Item enum in declaration order, accumulating attribute lines until
 // each bare member line. Declaration order equals the enum value order (verified
 // to match REQ_CASUAL order across all shared ids).
-function loadItemMembers() {
-  const lines = fs.readFileSync(path.join(SOURCE_DIR, "Item.cs"), "utf8").split(/\r?\n/);
+function loadItemMembers(filename = "Item.cs") {
+  const lines = fs.readFileSync(path.join(SOURCE_DIR, filename), "utf8").split(/\r?\n/);
   const reserved = new Set(["public", "enum", "get", "set", "private", "return"]);
   const members = [];
   let attrs = [];
@@ -231,7 +236,16 @@ function main() {
   const leaves = trimmed.filter(e => !e.RequiredItems && !e.ConditionalItems).length;
   console.log(`Wrote ${trimmed.length} nodes (${leaves} leaves) to ${path.relative(process.cwd(), OUT_FILE)}`);
 
+  // Item.cs is the released master (v1.16): its reachability graph and, crucially,
+  // its descriptive LocationNames are what we ship. Item.dev.cs is the dev branch
+  // (the "v2.0.0" generator seeds are made with) -- used ONLY for the two bit-index
+  // decode bases below, because the generator encodes its starting-item / item-list
+  // strings against dev's wider Item enum (dev pins SongLullabyIntro at bit 209, past
+  // master's 150-entry basis; dev also appended ~20 checks near the tail). Everything
+  // display- and logic-facing stays on master so we keep its names and casual graph.
   const members = loadItemMembers();
+  const devMembers = loadItemMembers("Item.dev.cs");
+
   const locations = buildLocations(members, ids);
   fs.writeFileSync(LOCATIONS_FILE, JSON.stringify(locations, null, 2) + "\n");
 
@@ -239,15 +253,17 @@ function main() {
   const locationCount = Object.values(locations).reduce((sum, list) => sum + list.length, 0);
   console.log(`Wrote ${locationCount} locations across ${regionCount} regions to ${path.relative(process.cwd(), LOCATIONS_FILE)}`);
 
-  const allLocations = buildAllLocations(members);
-  fs.writeFileSync(ALL_LOCATIONS_FILE, JSON.stringify(allLocations, null, 2) + "\n");
-  console.log(`Wrote ${allLocations.length} ordered locations to ${path.relative(process.cwd(), ALL_LOCATIONS_FILE)}`);
-
   const shuffledItemIds = buildShuffledItemIds(members, ids);
   fs.writeFileSync(SHUFFLED_ITEMS_FILE, JSON.stringify(shuffledItemIds, null, 2) + "\n");
   console.log(`Wrote ${shuffledItemIds.length} shuffled item ids to ${path.relative(process.cwd(), SHUFFLED_ITEMS_FILE)}`);
 
-  const startingItemIds = buildStartingItemIds(members);
+  // Decode bases from dev (see note above) so the generator's hex strings index the
+  // same enum the seed was built against.
+  const allLocations = buildAllLocations(devMembers);
+  fs.writeFileSync(ALL_LOCATIONS_FILE, JSON.stringify(allLocations, null, 2) + "\n");
+  console.log(`Wrote ${allLocations.length} ordered locations to ${path.relative(process.cwd(), ALL_LOCATIONS_FILE)}`);
+
+  const startingItemIds = buildStartingItemIds(devMembers);
   fs.writeFileSync(STARTING_ITEMS_FILE, JSON.stringify(startingItemIds, null, 2) + "\n");
   console.log(`Wrote ${startingItemIds.length} starting item ids to ${path.relative(process.cwd(), STARTING_ITEMS_FILE)}`);
 }
