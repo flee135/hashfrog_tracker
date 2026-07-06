@@ -62,8 +62,14 @@ const Checks = () => {
 
   const counter = useMemo(() => {
     const totals = { checked: 0, available: 0, remaining: 0 };
+    // A check can be listed in several regions; count each id once.
+    const seen = new Set();
     _.forEach(locations, regionLocations => {
-      _.forEach(regionLocations, location => {
+      _.forEach(regionLocations, (location, id) => {
+        if (seen.has(id)) {
+          return;
+        }
+        seen.add(id);
         if (location.isChecked) {
           totals.checked += 1;
         } else {

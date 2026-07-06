@@ -50,6 +50,7 @@ const path = require("path");
 
 const SOURCE_DIR = path.join(__dirname, "source");
 const DATA_DIR = path.join(__dirname, "..", "..", "src", "games", "mm", "data");
+const MISC_REGIONS_FILE = path.join(DATA_DIR, "misc-check-regions.json");
 const OUT_FILE = path.join(DATA_DIR, "logic-casual.json");
 const LOCATIONS_FILE = path.join(DATA_DIR, "locations.json");
 const ALL_LOCATIONS_FILE = path.join(DATA_DIR, "all-locations.json");
@@ -114,7 +115,7 @@ function resolveRegion(member, byId) {
   return current.regionRef || null;
 }
 
-function buildLocations(members, logicIds) {
+function buildLocations(members, logicIds, miscRegions, validRegions) {
   const byId = new Map(members.map(member => [member.id, member]));
   const byRegion = {};
   for (const member of members) {
@@ -131,6 +132,31 @@ function buildLocations(members, logicIds) {
       category: member.category || null,
     });
   }
+
+  // Fan out misc checks that are reachable from several regions: move each mapped
+  // check out of "Misc" and into every region it appears in. The runtime keeps
+  // their checked-state in sync by id, so clicking any copy clears them all.
+  const misc = byRegion.Misc || [];
+  for (const [id, regions] of Object.entries(miscRegions)) {
+    if (!regions.length) {
+      continue;
+    }
+    const index = misc.findIndex(check => check.id === id);
+    if (index === -1) {
+      throw new Error(`misc-check-regions: "${id}" is not a Misc check`);
+    }
+    const [check] = misc.splice(index, 1);
+    for (const region of regions) {
+      if (!validRegions.has(region)) {
+        throw new Error(`misc-check-regions: "${id}" -> unknown region "${region}"`);
+      }
+      (byRegion[region] ||= []).push(check);
+    }
+  }
+  if (byRegion.Misc && !byRegion.Misc.length) {
+    delete byRegion.Misc;
+  }
+
   // Stable, alphabetical region order for a readable diff.
   const sorted = {};
   for (const region of Object.keys(byRegion).sort()) {
@@ -246,7 +272,11 @@ function main() {
   const members = loadItemMembers();
   const devMembers = loadItemMembers("Item.dev.cs");
 
-  const locations = buildLocations(members, ids);
+  const miscRegions = JSON.parse(fs.readFileSync(MISC_REGIONS_FILE, "utf8"));
+  const validRegions = new Set(Object.keys(JSON.parse(
+    fs.readFileSync(path.join(DATA_DIR, "region-short-names.json"), "utf8"),
+  )));
+  const locations = buildLocations(members, ids, miscRegions, validRegions);
   fs.writeFileSync(LOCATIONS_FILE, JSON.stringify(locations, null, 2) + "\n");
 
   const regionCount = Object.keys(locations).length;

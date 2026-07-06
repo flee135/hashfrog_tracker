@@ -803,6 +803,11 @@
       "id": "NotebookPostmansFreedom",
       "name": "Postman's Freedom Reward",
       "category": "NotebookEntries"
+    },
+    {
+      "id": "HeartPiecePostBox",
+      "name": "Postbox",
+      "category": "NpcRewards"
     }
   ],
   "GoronRaceItems": [
@@ -1127,6 +1132,11 @@
       "id": "CollectableGoronVillageWinterSmallSnowball10",
       "name": "Goron Village Small Snowball 10",
       "category": "SmallSnowballs"
+    },
+    {
+      "id": "UpgradeBiggestBombBag",
+      "name": "Biggest Bomb Bag Purchase",
+      "category": "Purchases"
     }
   ],
   "GreatBayCoast": [
@@ -1269,6 +1279,16 @@
       "id": "CollectableGrottosCowGrottoButterflyFairy2",
       "name": "Great Bay Coast Cow Grotto Butterfly Fairy",
       "category": "Butterflies"
+    },
+    {
+      "id": "ItemTingleMapGreatBay",
+      "name": "Great Bay Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapStoneTower",
+      "name": "Stone Tower Map Purchase",
+      "category": "Purchases"
     }
   ],
   "GreatBayTemple": [
@@ -1466,6 +1486,11 @@
       "id": "FrogGreatBayTemple",
       "name": "Frog in Great Bay Temple",
       "category": "Frogs"
+    },
+    {
+      "id": "SongOath",
+      "name": "Boss Blue Warp",
+      "category": "BossFights"
     }
   ],
   "IkanaCanyon": [
@@ -1558,6 +1583,16 @@
       "id": "CollectableIkanaCanyonSakonSHideoutAreaGossipFairy1",
       "name": "Ikana Canyon Ravine Gossip Fairy",
       "category": "Fairies"
+    },
+    {
+      "id": "ItemTingleMapTown",
+      "name": "Clock Town Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapStoneTower",
+      "name": "Stone Tower Map Purchase",
+      "category": "Purchases"
     }
   ],
   "IkanaCastle": [
@@ -2041,29 +2076,24 @@
       "id": "CollectableMilkRoadGossipFairy1",
       "name": "Milk Road Gossip Fairy",
       "category": "Fairies"
-    }
-  ],
-  "Misc": [
+    },
     {
-      "id": "UpgradeBiggestBombBag",
-      "name": "Biggest Bomb Bag Purchase",
+      "id": "ItemTingleMapRanch",
+      "name": "Romani Ranch Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapGreatBay",
+      "name": "Great Bay Map Purchase",
       "category": "Purchases"
     },
     {
       "id": "HeartPieceKeatonQuiz",
       "name": "Keaton Quiz",
       "category": "NpcRewards"
-    },
-    {
-      "id": "HeartPiecePostBox",
-      "name": "Postbox",
-      "category": "NpcRewards"
-    },
-    {
-      "id": "SongOath",
-      "name": "Boss Blue Warp",
-      "category": "BossFights"
-    },
+    }
+  ],
+  "Misc": [
     {
       "id": "ShopItemGoronBomb10",
       "name": "Goron Shop 10 Bombs",
@@ -2077,36 +2107,6 @@
     {
       "id": "ShopItemGoronRedPotion",
       "name": "Goron Shop Red Potion",
-      "category": "Purchases"
-    },
-    {
-      "id": "ItemTingleMapTown",
-      "name": "Clock Town Map Purchase",
-      "category": "Purchases"
-    },
-    {
-      "id": "ItemTingleMapWoodfall",
-      "name": "Woodfall Map Purchase",
-      "category": "Purchases"
-    },
-    {
-      "id": "ItemTingleMapSnowhead",
-      "name": "Snowhead Map Purchase",
-      "category": "Purchases"
-    },
-    {
-      "id": "ItemTingleMapRanch",
-      "name": "Romani Ranch Map Purchase",
-      "category": "Purchases"
-    },
-    {
-      "id": "ItemTingleMapGreatBay",
-      "name": "Great Bay Map Purchase",
-      "category": "Purchases"
-    },
-    {
-      "id": "ItemTingleMapStoneTower",
-      "name": "Stone Tower Map Purchase",
       "category": "Purchases"
     },
     {
@@ -2390,6 +2390,11 @@
       "id": "CollectableMountainVillageWinterMountainVillageSpringButterflyFairy2",
       "name": "Mountain Village Spring Butterfly Fairy 2",
       "category": "Butterflies"
+    },
+    {
+      "id": "HeartPieceKeatonQuiz",
+      "name": "Keaton Quiz",
+      "category": "NpcRewards"
     }
   ],
   "NorthClockTown": [
@@ -2477,6 +2482,26 @@
       "id": "NotebookSaveOldLady",
       "name": "Old Lady",
       "category": "NotebookEntries"
+    },
+    {
+      "id": "ItemTingleMapTown",
+      "name": "Clock Town Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapWoodfall",
+      "name": "Woodfall Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "HeartPieceKeatonQuiz",
+      "name": "Keaton Quiz",
+      "category": "NpcRewards"
+    },
+    {
+      "id": "HeartPiecePostBox",
+      "name": "Postbox",
+      "category": "NpcRewards"
     }
   ],
   "OceanSpiderHouseItems": [
@@ -3110,6 +3135,16 @@
       "id": "CollectableRoadToSouthernSwampGossipFairy1",
       "name": "Road to Southern Swamp Gossip Fairy",
       "category": "Fairies"
+    },
+    {
+      "id": "ItemTingleMapWoodfall",
+      "name": "Woodfall Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapSnowhead",
+      "name": "Snowhead Map Purchase",
+      "category": "Purchases"
     }
   ],
   "RomaniRanch": [
@@ -3738,6 +3773,11 @@
       "id": "CollectableSnowheadTempleMainRoomPot3",
       "name": "Snowhead Main Room Pot",
       "category": "Jars"
+    },
+    {
+      "id": "SongOath",
+      "name": "Boss Blue Warp",
+      "category": "BossFights"
     }
   ],
   "SouthClockTown": [
@@ -3775,6 +3815,11 @@
       "id": "CollectableSouthClockTownHitTag3",
       "name": "Clock Tower Clock 3",
       "category": "HitSpots"
+    },
+    {
+      "id": "HeartPiecePostBox",
+      "name": "Postbox",
+      "category": "NpcRewards"
     }
   ],
   "SouthernSwamp": [
@@ -3927,6 +3972,11 @@
       "id": "FrogSwamp",
       "name": "Frog in the Swamp",
       "category": "Frogs"
+    },
+    {
+      "id": "UpgradeBiggestBombBag",
+      "name": "Biggest Bomb Bag Purchase",
+      "category": "Purchases"
     }
   ],
   "StockPotInn": [
@@ -4448,6 +4498,11 @@
       "id": "CollectableStoneTowerTempleInvertedWizzrobeRoomPot1",
       "name": "Stone Tower Temple Wizzrobe Pot",
       "category": "Jars"
+    },
+    {
+      "id": "SongOath",
+      "name": "Boss Blue Warp",
+      "category": "BossFights"
     }
   ],
   "SwampSpiderHouseItems": [
@@ -5511,6 +5566,16 @@
       "id": "CollectablePathToGoronVillageWinterSmallSnowball3",
       "name": "Twin Islands Ramp Snowball",
       "category": "SmallSnowballs"
+    },
+    {
+      "id": "ItemTingleMapSnowhead",
+      "name": "Snowhead Map Purchase",
+      "category": "Purchases"
+    },
+    {
+      "id": "ItemTingleMapRanch",
+      "name": "Romani Ranch Map Purchase",
+      "category": "Purchases"
     }
   ],
   "WestClockTown": [
@@ -5897,6 +5962,11 @@
       "id": "FrogWoodfallTemple",
       "name": "Frog in Woodfall Temple",
       "category": "Frogs"
+    },
+    {
+      "id": "SongOath",
+      "name": "Boss Blue Warp",
+      "category": "BossFights"
     }
   ],
   "ZoraCape": [

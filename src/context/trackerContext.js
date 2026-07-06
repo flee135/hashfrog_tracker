@@ -216,8 +216,14 @@ function reducer(state, action) {
         return state;
       } else {
         const locations = _.cloneDeep(state.locations);
-        const isChecked = locations[regionName][locationName].isChecked;
-        _.set(locations, [regionName, locationName, "isChecked"], !isChecked);
+        const isChecked = !locations[regionName][locationName].isChecked;
+        // A check can be listed in several regions (see misc-check-regions.json);
+        // keep every copy in sync so clicking one clears them all.
+        _.forEach(locations, regionLocations => {
+          if (regionLocations[locationName]) {
+            regionLocations[locationName].isChecked = isChecked;
+          }
+        });
 
         const newState = {
           ...state,
@@ -234,8 +240,14 @@ function reducer(state, action) {
       // If at least one location is checked, then checks all locations. Otherwise, unchecks all locations.
       const locations = _.cloneDeep(state.locations);
       const setTo = _.every(_.values(locations[payload]), value => value.isChecked);
-      _.forEach(_.values(locations[payload]), locationData => {
-        _.set(locationData, "isChecked", !setTo);
+      // Mirror each toggled check into any other region it is also listed in, so
+      // copies of a multi-region check stay in sync (see misc-check-regions.json).
+      _.forEach(_.keys(locations[payload]), locationName => {
+        _.forEach(locations, regionLocations => {
+          if (regionLocations[locationName]) {
+            regionLocations[locationName].isChecked = !setTo;
+          }
+        });
       });
 
       const newState = {
