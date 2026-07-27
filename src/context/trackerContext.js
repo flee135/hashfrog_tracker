@@ -158,6 +158,8 @@ function buildSnapshot(state) {
     checksEnabled: !_.isEmpty(state.locations),
     // The layout active at save time, used to detect layout changes before resuming.
     layout: localStorage.getItem("layout"),
+    // The launcher's combined-regions choice, so Resume reopens the same check list view.
+    combine_region_tabs: localStorage.getItem("combine_region_tabs") === "true",
     // MQ/shortcut toggles live in the settings singletons, not in reducer state.
     mq_dungeons_specific: SettingsHelper.settings?.mq_dungeons_specific || [],
     dungeon_shortcuts: SettingsHelper.settings?.dungeon_shortcuts || [],

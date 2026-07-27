@@ -162,10 +162,18 @@ body {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   font-family: "BPmono", sans-serif;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 
 .check-tracker-locations .item {
   padding: 2px;
+}
+
+/* Full-width spacer that pushes the dungeon regions onto their own row. */
+.check-tracker-locations .dungeon-divider {
+  grid-column: 1 / -1;
+  height: 0.5rem;
 }
 
 .check-tracker-locations .item > button {

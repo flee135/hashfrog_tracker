@@ -22,6 +22,9 @@ const GENERATOR_VERSIONS = SettingStringsJSON.supportedVersions || ["9.0.0"];
 
 const TrackerLauncher = () => {
   const [checks, setChecks] = useState(false);
+  const [combineRegionTabs, setCombineRegionTabs] = useState(
+    () => localStorage.getItem("combine_region_tabs") === "true"
+  );
   const { state: layout } = useLayout();
 
   const layoutSize = useMemo(() => {
@@ -90,6 +93,7 @@ const TrackerLauncher = () => {
     localStorage.setItem("layout", JSON.stringify(layout));
     localStorage.setItem("settings_string", checks ? settingsString : "");
     localStorage.setItem("generator_version", generatorVersion);
+    localStorage.setItem("combine_region_tabs", String(checks && combineRegionTabs));
 
     const { width, height } = layoutSize;
 
@@ -98,7 +102,7 @@ const TrackerLauncher = () => {
       "HashFrog Tracker",
       `toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=0,width=${width},height=${height}`
     );
-  }, [checks, layout, settingsString, generatorVersion, layoutSize]);
+  }, [checks, combineRegionTabs, layout, settingsString, generatorVersion, layoutSize]);
 
   // Track whether a saved session exists so the Resume button reacts when one
   // is created in a popup window; refresh on focus when returning to the launcher.
@@ -119,6 +123,7 @@ const TrackerLauncher = () => {
     localStorage.setItem("layout", session.layout);
     localStorage.setItem("settings_string", session.settings_string);
     localStorage.setItem("generator_version", session.generator_version);
+    localStorage.setItem("combine_region_tabs", String(!!session.combine_region_tabs));
 
     const resumeChecks = !!session.checksEnabled;
     let url = resumeChecks ? `${baseURL}/tracker/checks` : `${baseURL}/tracker`;
@@ -326,6 +331,15 @@ const TrackerLauncher = () => {
                 {" "}To use a different version, select &ldquo;Other...&rdquo; in the Generator Version field and enter a version
                 (e.g., <code>7.1.0</code> for releases or <code>dev_9.0.1</code> or <code>devrreal_9.0.2-15</code> for dev branches).
               </Alert>
+
+              <Form.Check
+                type="switch"
+                id="combine_region_tabs"
+                label="Show overworld and dungeon regions in one tab"
+                checked={combineRegionTabs}
+                onChange={() => setCombineRegionTabs((prev) => !prev)}
+                className="mt-3 mb-0 text-light"
+              />
             </div>
           )}
         </Card.Body>

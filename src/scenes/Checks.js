@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { OverlayTrigger, Popover } from "react-bootstrap";
 
 import RequirementsTooltip from "../components/RequirementsTooltip";
@@ -25,6 +25,7 @@ const Checks = () => {
   const { settings_string } = useSettingsString();
   const efkActive = isEFK(settings_string);
   const selectedEFKDungeonNames = useSelectedEFKDungeons();
+  const combineRegionTabs = localStorage.getItem("combine_region_tabs") === "true";
   const [type, setType] = useState("overworld");
   const [selectedRegion, setSelectedRegion] = useState(null);
 
@@ -112,10 +113,11 @@ const Checks = () => {
 
   return (
     <div id="checks" className="check-tracker" style={{ backgroundColor: layoutContext.layoutConfig.backgroundColor }}>
-      <Buttons efkActive={efkActive} type={type} setType={setType} />
+      <Buttons combineRegionTabs={combineRegionTabs} efkActive={efkActive} type={type} setType={setType} />
       <StartingAgePrompt />
       <LocationsList
         actions={actions}
+        combineRegionTabs={combineRegionTabs}
         countLocations={countLocations}
         efkActive={efkActive}
         items={items}
@@ -132,8 +134,8 @@ const Checks = () => {
   );
 };
 
-const Buttons = ({ efkActive, type, setType }) => {
-  if (efkActive) {
+const Buttons = ({ combineRegionTabs, efkActive, type, setType }) => {
+  if (efkActive || combineRegionTabs) {
     return null;
   }
   return (
@@ -301,6 +303,7 @@ const HintRegion = ({ actions, items, locations, selectedRegion, setSelectedRegi
 
 const LocationsList = ({
   actions,
+  combineRegionTabs,
   countLocations,
   efkActive,
   items,
@@ -322,11 +325,21 @@ const LocationsList = ({
       />
     );
   } else {
-    const regionNames = efkActive
-      ? _.keys(locations).filter(regionName => isEFKRelevantRegion(regionName, selectedEFKDungeonNames))
-      : _.keys(locations).filter(regionName =>
-          type === "dungeon" ? _.includes(DUNGEONS, regionName) : !_.includes(DUNGEONS, regionName)
-        );
+    let regionNames = _.keys(locations);
+    if (efkActive) {
+      regionNames = regionNames.filter(regionName => isEFKRelevantRegion(regionName, selectedEFKDungeonNames));
+    } else if (!combineRegionTabs) {
+      regionNames = regionNames.filter(regionName =>
+        type === "dungeon" ? _.includes(DUNGEONS, regionName) : !_.includes(DUNGEONS, regionName)
+      );
+    }
+
+    // With combineRegionTabs, track the name of the first dungeon.
+    // Index 0 means there are no overworld regions to separate, so we don't track anything.
+    const dungeonStartIndex = combineRegionTabs && !efkActive
+      ? regionNames.findIndex(regionName => _.includes(DUNGEONS, regionName))
+      : -1;
+    const firstDungeonRegion = dungeonStartIndex > 0 ? regionNames[dungeonStartIndex] : null;
 
     const locationsList = regionNames.map(regionName => {
       const locationData = locations[regionName];
@@ -358,31 +371,35 @@ const LocationsList = ({
         }
       }
       return (
-        <div key={regionName} className="item">
-          <button
-            type="button"
-            className="btn btn-dark btn-sm"
-            onClick={() => onRegionClicked(regionName)}
-            onContextMenu={e => e.preventDefault()}
-            style={style}
-          >
-            <span>{_.toUpper(HINT_REGIONS_SHORT_NAMES[regionName])}</span>
-            <span style={{
-              fontSize: "0.7em",
-              display: "block",
-              color: locationsCounter.checked >= numLocations
-                ? undefined
-                : locationsCounter.available === 0
-                  ? "#dc3545"
-                  : locationsCounter.available + locationsCounter.checked >= numLocations
-                    ? "#198754"
-                    : "#ffc107",
-              opacity: locationsCounter.checked >= numLocations ? 0.75 : 1,
-            }}>
-              {locationsCounter.available}/{numLocations - locationsCounter.checked}
-            </span>
-          </button>
-        </div>
+        <Fragment key={regionName}>
+          {/* Dungeon divider added only before first dungeon */}
+          {regionName === firstDungeonRegion && <div className="dungeon-divider" />}
+          <div className="item">
+            <button
+              type="button"
+              className="btn btn-dark btn-sm"
+              onClick={() => onRegionClicked(regionName)}
+              onContextMenu={e => e.preventDefault()}
+              style={style}
+            >
+              <span>{_.toUpper(HINT_REGIONS_SHORT_NAMES[regionName])}</span>
+              <span style={{
+                fontSize: "0.7em",
+                display: "block",
+                color: locationsCounter.checked >= numLocations
+                  ? undefined
+                  : locationsCounter.available === 0
+                    ? "#dc3545"
+                    : locationsCounter.available + locationsCounter.checked >= numLocations
+                      ? "#198754"
+                      : "#ffc107",
+                opacity: locationsCounter.checked >= numLocations ? 0.75 : 1,
+              }}>
+                {locationsCounter.available}/{numLocations - locationsCounter.checked}
+              </span>
+            </button>
+          </div>
+        </Fragment>
       );
     });
 
