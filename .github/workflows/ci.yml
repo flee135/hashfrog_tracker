@@ -4,29 +4,39 @@ on:
   pull_request:
   push:
     branches:
-      - 'master'
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install Node
-        uses: actions/setup-node@v4.0.3
+        uses: actions/setup-node@v7
         with:
-          node-version: '20.x'
+          node-version-file: '.nvmrc'
+          cache: 'npm'
 
       - name: Install npm packages
         run: npm ci
 
-      - name: Build UI
-        run: npm run build
+      - name: Run eslint
+        run: npm run lint
 
       - name: Run tests
         run: npm test
 
-      - name: Run eslint
-        run: npm run lint
+      - name: Build UI
+        run: npm run build

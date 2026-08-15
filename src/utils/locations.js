@@ -180,7 +180,6 @@ class Locations {
 
             if (_.startsWith(type, "Hint")) {
               // Ignore hint locations
-              return;
             } else if (type === "Drop") {
               // Accessibility of drops is important for logic, but are stored separately from locations
               const dropData = {
