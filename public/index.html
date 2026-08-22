@@ -38,7 +38,7 @@
     -->
     <script>
       window.onload = () => {
-        if(window.location.pathname === "/") {
+        if(window.location.pathname.replace(/\/$/, "") === "%PUBLIC_URL%") {
           document.body.style.overflow = "auto";
         } else {
           document.body.style.overflow = "hidden";

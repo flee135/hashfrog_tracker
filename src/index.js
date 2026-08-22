@@ -16,7 +16,7 @@ root.render(
   <ErrorBoundary>
     <LayoutProvider>
       <TrackerProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <App />
         </BrowserRouter>
       </TrackerProvider>

@@ -2,6 +2,7 @@
   "name": "hashfrog_tracker",
   "version": "0.7.3",
   "private": true,
+  "homepage": "/hashfrog_tracker",
   "engines": {
     "node": ">=24"
   },
